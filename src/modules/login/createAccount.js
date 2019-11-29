@@ -1,15 +1,19 @@
-import React from 'react';
-import { View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react'
+import { Text, View ,TextInput} from 'react-native'
 import { styles } from './styles';
-import { color } from '../../Constants/colors';
+import {color} from '../../Constants/colors'
 
-export default class SignUp extends React.Component {
+export default class CreateAccount extends Component {
     render() {
-        return (<View style={styles.SignUpContainer}>
-            <View style={styles.screenImg}></View>
-            <View style={styles.InputFieldContainer}>
+        return (
+            <View style={styles.createAccountContainer}>
                 <View style={styles.screenTxtContainer}>
-                    <Text style={styles.screenTxt}>Sign Up</Text>
+                    <Text style={styles.screenTxt}>Create Account</Text>
+                </View>
+                <View style={styles.createAccountUserImgContainerout}>
+                    <View style={styles.userImgOuterContainer}>
+                        
+                    </View>
                 </View>
                 <View style={styles.inputTextField2Container}>
                     <TextInput style={styles.inputTextField2}
@@ -18,13 +22,15 @@ export default class SignUp extends React.Component {
                     ></TextInput>
                     <View style={styles.inputTextField2Img}></View>
                 </View>
+
                 <View style={styles.inputTextField2Container}>
                     <TextInput style={styles.inputTextField2}
-                        placeholder="Userame"
+                        placeholder="Username"
                         placeholderTextColor={color.placeholderText}
                     ></TextInput>
                     <View style={styles.inputTextField2Img}></View>
                 </View>
+
                 <View style={styles.inputTextField2Container}>
                     <TextInput style={styles.inputTextField2}
                         placeholder="Email"
@@ -32,6 +38,7 @@ export default class SignUp extends React.Component {
                     ></TextInput>
                     <View style={styles.inputTextField2Img}></View>
                 </View>
+
                 <View style={styles.inputTextField2Container}>
                     <TextInput style={styles.inputTextField2}
                         secureTextEntry={true}
@@ -41,16 +48,17 @@ export default class SignUp extends React.Component {
                     ></TextInput>
                     <View style={styles.inputTextField2Img}></View>
                 </View>
+
                 <View style={styles.checkBoxAndClickableLink}>
                     <View style={styles.checkBoxImg}></View>
                     <Text style={styles.clickableLinkTxt}>I agree to the <Text style={styles.clickableLinkTxt} onPress={() => { console.warn("show terms And Condition"); }} style={styles.TAndC}>Terms And Conditions </Text>of PhotoLoot</Text>
                 </View>
+                
                 <View style={styles.submitBtn}>
                     <Text style={styles.submitTxt}>Submit</Text>
                 </View>
+                
             </View>
-
-
-        </View>)
+        )
     }
 }
