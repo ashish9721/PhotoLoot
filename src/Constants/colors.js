@@ -5,5 +5,6 @@ export const color = {
     gray:'gray',
     yellow:'yellow',
     lGreen:'lightgreen',
-    TAndC:'rgb(255,152,3)'
+    TAndC:'rgb(255,152,3)',
+    blueishGreen : 'rgb(28,123,127)'
 }

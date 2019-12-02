@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import {vh,vw,DesignHeight,DesignWidth} from '../../Constants/Dimension'
-import {color} from '../../Constants/colors'
+import {color} from '../../Constants'
 export const styles =StyleSheet.create({
 SignUpContainer:{
     flex:1,
@@ -9,7 +9,7 @@ SignUpContainer:{
     alignItems:'center'
 },
 screenImg:{
-    height:vh(125),
+    height:vw(125),
     width:vw(125),
     backgroundColor:color.gray
 },
@@ -124,10 +124,10 @@ createAccountUserImgContainerout:{
     
 },
 userImgOuterContainer:{
-    height:vh(85),
-    width:vw(85),
+    height:vh(80),
+    width:vh(80),
     backgroundColor:'gray',
-    borderRadius:vw(50),
+    borderRadius:vh(40),
 }
 
 })
