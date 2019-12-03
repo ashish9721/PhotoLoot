@@ -1,21 +1,55 @@
 
 
 import React, { Component } from 'react'
-import { Text, View ,SafeAreaView,StyleSheet,Button} from 'react-native'
-import{PrizeViews} from './functional'
+import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
+import { PrizeViews, Description, Rules, CityLights } from './functional'
+import { vw, vh } from '../../Constants'
+import { ScrollView } from 'react-native-gesture-handler'
 
 // currently working
 export default class CurrentChallenges extends Component {
     render() {
         return (
-            <View style={styles.container}>
-           <PrizeViews/>
-            </View>
+            <>
+                <View
+                    style={styles.imgContainer} />
+                <ScrollView
+                    style={styles.scrollView}
+                    bounces={false}
+                    contentInset={{top:0,right:0,left:0,bottom:vh(30)}}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={styles.container}>
+                    <CityLights />
+                    <PrizeViews />
+                    <Description />
+                    <Rules />
+                </ScrollView>
+            </>
         )
     }
 }
 
-const styles=StyleSheet.create({
-    container:{flex:1,justifyContent:'center'}
-   
+const styles = StyleSheet.create({
+
+    imgContainer: {
+        width: vw(375),
+        height: vh(192),
+        backgroundColor: 'blue',
+
+    },
+    container: {
+        paddingHorizontal: vw(15),
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        borderTopLeftRadius: vw(10),
+        borderTopRightRadius: vw(10)
+
+    },
+    scrollView: {
+        marginTop: vh(186),
+        position: 'absolute',
+
+    }
+
+
 })

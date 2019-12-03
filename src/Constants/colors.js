@@ -6,5 +6,6 @@ export const color = {
     yellow:'yellow',
     lGreen:'lightgreen',
     TAndC:'rgb(255,152,3)',
-    blueishGreen : 'rgb(28,123,127)'
+    blueishGreen : 'rgb(28,123,127)',
+    description: 'rgba(0,0,0,0.6)'
 }

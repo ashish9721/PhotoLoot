@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
         // backgroundColor:'lightblue',
         // justifyContent:'center',
         flex:1,
-        alignItems:'center'
+        alignItems:'center',
+        // marginHorizontal:vw(16)
     },
     headerView:{
         width:vw(DesignWidth),
