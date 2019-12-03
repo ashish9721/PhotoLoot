@@ -8,6 +8,7 @@ const Images = {
     BACKBUTTON:require('../Assets/Images/backButton.png'),
     WHITEBACKIMAGE: require('../Assets/Images/whiteBackImage.png'),
     DESCRIPTIONICON: require('../Assets/Images/descriptionicon.png'),
+    CLOCK:require('../Assets/Images/clock.png'),
 }
 
 export default Images;

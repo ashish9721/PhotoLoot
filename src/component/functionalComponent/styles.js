@@ -63,7 +63,19 @@ export const styles = StyleSheet.create({
         color:color.gray,
         paddingLeft:vw(5),
         paddingTop:vh(5)
-    }
+    },
+    innercontainer2:{
+        // backgroundColor:'red',
+        flexDirection:'column',
+        // alignItems:'flex-start',
+        marginHorizontal:vw(30),
+        height:vh(44),
+        marginTop:vh(6),
+        justifyContent:'center'
+        
+        
+    },
+    innerinnercontainer:{justifyContent:'space-between',flexDirection:'row',backgroundColor:'white',alignItems:'flex-end'}
 
 
 

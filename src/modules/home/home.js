@@ -10,10 +10,11 @@ export default class Home extends Component {
                 {/* //Header */}
                 {/* <View style={styles.headerView}></View> */}
                {/*  pass a 2 images as a prop, one as imagebackground and 2nd as a image  */}
-               {/* <StickerAndImage txt1="Current Challenges" txt2="2 Ongoing" />
+                <StickerAndImage txt1="Current Challenges" txt2="2 Ongoing" innercontainer2={true} />
                <StickerAndImage txt1="Upcoming Challenges" txt2="2 Upcoming" />
-               <StickerAndImage txt1="Hall Of Fame" txt2="View Winners" /> */}
-               <CurrentChallenges/>
+               <StickerAndImage txt1="Hall Of Fame" txt2="View Winners" /> 
+               {/* <CurrentChallenges/> */}
+               
             </View>
         )
     }
