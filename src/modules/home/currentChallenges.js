@@ -1,21 +1,29 @@
 
 
 import React, { Component } from 'react'
-import { Text, View ,SafeAreaView,StyleSheet,Button} from 'react-native'
-import{PrizeViews} from './functional'
+import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
+import { PrizeViews, Description, Rules } from './functional'
+import { vw } from '../../Constants'
 
 // currently working
 export default class CurrentChallenges extends Component {
     render() {
         return (
             <View style={styles.container}>
-           <PrizeViews/>
+                <PrizeViews />
+                <Description />
+                <Rules />
             </View>
         )
     }
 }
 
-const styles=StyleSheet.create({
-    container:{flex:1,justifyContent:'center'}
-   
+const styles = StyleSheet.create({
+    container: {
+      
+        justifyContent: 'center',
+        paddingHorizontal:vw(16),
+        // backgroundColor:'red'
+    }
+
 })
