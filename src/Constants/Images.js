@@ -13,7 +13,9 @@ const Images = {
     PLUS:require('../Assets/Images/icPlus.png'),
     FOLLOWINGCHECK:require('../Assets/Images/icFollowingCheck.png'),
     TRANSCAMERA:require('../Assets/Images/icCameraTrans.png'),
-    CLOSEWHITE:require('../Assets/Images/icCloseWhite.png')
+    CLOSEWHITE:require('../Assets/Images/icCloseWhite.png'),
+    APPICON:require('../Assets/Images/appIcon.png'),
+    SPLASHBACKGROUND:require('../Assets/Images/bottomGraphic.png')
 }
 
 export default Images;

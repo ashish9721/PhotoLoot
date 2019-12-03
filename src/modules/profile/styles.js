@@ -67,13 +67,16 @@ export const styles = StyleSheet.create({
         shadowOffset: { width: 1, height: 4 },
         justifyContent: 'space-evenly',
         alignItems: 'center',
+        padding:vw(8)
     },
     followingTxt: {
-        fontWeight: '600'
+        fontWeight: '600',
+        fontSize:vh(11)
     },
     checkImage: {
         width: vw(12),
-        height: vh(12)
+        height: vh(12),
+        marginRight:vw(7)
     },
     nameTxt:{
         fontSize:vw(14),

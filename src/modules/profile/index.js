@@ -2,7 +2,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 
 //Custom Imports
-import { vh, vw, color } from '../../Constants';
+import {vw, color, vh } from '../../Constants';
 import Posts from './posts'
 import Followers from './follower'
 import Following from './following'
@@ -20,16 +20,17 @@ const NavTabBar = createMaterialTopTabNavigator({
     }
 },
     {
-        initialRouteName: 'Followers',
+        initialRouteName: 'Posts',
         tabBarOptions: {
             activeTintColor: color.white,
             inactiveTintColor: color.gray,
             style: {
-                backgroundColor: color.TAndC,
+                marginTop:vh(20),
+                backgroundColor: color.whiteTwo,
             },
             labelStyle: {
-                color: color.white,
-                fontSize: vw(16)
+                color: color.TAndC,
+                fontSize: vw(15)
             },
             indicatorStyle: {
                 backgroundColor: null,

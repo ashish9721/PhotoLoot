@@ -7,6 +7,7 @@ import { Verify } from './src/component/functionalComponent/functional';
 import Home from './src/modules/home/home';
 import Profile from './src/modules/profile/profile';
 import Edit from './src/modules/profile/edit';
+import Splash from './src/modules/splash/splash';
 
 export default class App extends React.Component{
   render(){
@@ -18,7 +19,8 @@ export default class App extends React.Component{
         {/* <CreateAccount/> */}
         {/* <SplashScreen/> */}
         {/* <Profile/> */}
-        <Edit/>
+        {/* <Edit/> */}
+        <Splash/>
     </View>)
   }
 } 
