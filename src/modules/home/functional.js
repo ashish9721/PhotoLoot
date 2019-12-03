@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { View, Text, Image, FlatList, StyleSheet } from 'react-native'
+import { View, Text, Image, FlatList, StyleSheet,TouchableOpacity } from 'react-native'
 import Images from '../../Constants/Images';
 import { vw, vh, color } from '../../Constants';
 
@@ -119,7 +119,18 @@ const Rules = () => {
             <FlatList
                 data={DataToShow}
                 keyExtractor={(item, index) => index.toString()}
+                scrollEnabled={false}
                 renderItem={this.renderItem} />
+                <View style={Styles.buttonView}>
+                        <TouchableOpacity style={Styles.galleryBackground}>
+                            <Text style={Styles.galleryTextColor}>View Gallery</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={Styles.plusBackground}>
+                            <Image
+                                style={Styles.plusIcon}
+                                source={Images.PLUS} resizeMode="contain" />
+                        </TouchableOpacity>
+                    </View>
 
         </View>
     )
@@ -223,7 +234,47 @@ const Styles = StyleSheet.create({
     checkImgStyle:{
         width:vw(10),
         height:vh(9)
+    },
+    //Gallery
+    buttonView: {
+        marginTop: vh(30),
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    plusBackground: {
+        backgroundColor: color.TAndC,
+        width: vw(55),
+        height: vh(45),
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: vw(10)
+    },
+    plusIcon: {
+        width: vw(20),
+        height: vw(20),
+        paddingHorizontal: vw(18),
+        paddingVertical: vh(12)
+    },
+    galleryTextColor: {
+        color: color.TAndC,
+        fontSize: vh(15),
+        fontWeight: '600'
+    },
+    galleryBackground: {
+        width: vw(125),
+        height: vh(45),
+        shadowColor: 'gray',
+        borderRadius: vw(10),
+        backgroundColor: 'white',
+        shadowOpacity: 0.5,
+        elevation: 12,
+        shadowOffset: { width: 1, height: 4 },
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        marginBottom: vh(50)
+
     }
+
 
 })
 export { PrizeViews, Rules, Description, CityLights };

@@ -10,6 +10,7 @@ const Images = {
     BACKBUTTON:require('../Assets/Images/backButton.png'),
     WHITEBACKIMAGE: require('../Assets/Images/whiteBackImage.png'),
     DESCRIPTIONICON: require('../Assets/Images/icDescription.png'),
+    PLUS:require('../Assets/Images/icPlus.png')
 }
 
 export default Images;
