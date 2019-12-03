@@ -1,52 +1,62 @@
 import React from 'react';
-import { View, StyleSheet, Text,SafeAreaView } from 'react-native';
-import { vh, vw } from '../../Constants/Dimension';
-export default class Notifications extends React.Component {
-    // State = {
-    //     data: [
-    //         { id: 1, text: 'Manny Dolores voted for your photo in “Beach Happy”challenge.', time: '2m ago' },
-    //           { id: 2, text: 'New challenge “Roads less travelled” added in upcoming challenges.', time: '15m ago' },
-    //           { id: 3, text: 'Peter Caullins started following you', time: '2h ago' },
-    //           { id: 4, text: 'Peter Caullins voted for your photo in “Beach Happy”challenge', time: '2h ago' },
-    //           { id: 5, text: 'Challnge “7 Wonders of world”  now active in current challenges.', time: '10h ago' },
-    //     ]
-    // }
-    render() {
-        return (
-            <SafeAreaView>
-            <View style={styles.parent}>
-                <View style={{flexDirection:'row',marginTop:vh(20)}}>
-                <View style={styles.firstimage}></View>
-                <View style={styles.new}>
-                    <Text style={styles.newtext}>New challenge “Roads less travelled” added in upcoming challenges.</Text>
-                </View>
-                </View>
-                <View style={styles.timestyle}>
-                    <Text style={styles.timetext}>15m ago</Text>
-                </View>
-                <View style={styles.line}></View>
-            </View>
-            </SafeAreaView>
-
-        )
+import { View, StyleSheet, Text, SafeAreaView, FlatList, Image } from 'react-native';
+import { vh, vw, } from '../../Constants/Dimension';
+import Strings from '../../Constants/Strings';
 
 
+notificationData = [
+    { title: Strings.heading1, time: Strings.time1ForNotification, image: require('../../Images/cross.png') },
+    { title: Strings.heading2, time: Strings.time2ForNotification, image: require('../../Images/add.png') },
+    { title: Strings.heading3, time: Strings.time3ForNotification, image: require('../../Images/cross.png') },
+    { title: Strings.heading4, time: Strings.time4ForNotification, image: require('../../Images/cross.png') },
+    { title: Strings.heading5, time: Strings.time5ForNotification, image: require('../../Images/add.png') },
+]
 
-    }
+
+const Notifications = (props) => {
+    return (
+        <SafeAreaView>
+            <FlatList
+                data={notificationData}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={rowData => {
+                    return (
+                        <View>
+                            <View style={styles.parent}>
+                                <Image
+                                    source={rowData.item.image}
+                                    style={styles.firstimage}
+                                />
+                                <View style={styles.new}>
+                                    <Text style={styles.newtext}>{rowData.item.title}</Text>
+                                </View>
+                            </View>
+                            <View style={styles.timestyle}>
+                                <Text style={styles.timetext}>{rowData.item.time}</Text>
+                            </View>
+                            <View style={styles.line}></View>
+                        </View>
+                    )
+                }
+                }
+            />
+        </SafeAreaView>
+
+    )
+
+
+
 }
 
 const styles = StyleSheet.create({
     parent: {
-        height: vh(80),
+        flexDirection: 'row',
+        marginTop: vh(20)
     },
-    // firstview: {
-    //     flexDirection: 'row',
-    // },
     firstimage: {
         width: vw(40),
         height: vh(40),
         borderRadius: vw(6),
-        backgroundColor: 'red',
         marginLeft: vw(15)
     },
     new: {
@@ -58,16 +68,18 @@ const styles = StyleSheet.create({
     },
     timestyle: {
         alignSelf: 'flex-end',
+        marginRight: vw(15)
     },
     timetext: {
         fontSize: vw(11),
-        marginRight
     },
     line: {
         height: vh(1),
-        marginTop:vh(10),
+        marginTop: vh(10),
         backgroundColor: 'lightgrey',
-        marginHorizontal:vh(10)
-      
-    }
+        marginHorizontal: vh(15)
+    },
+
 })
+
+export default Notifications;
