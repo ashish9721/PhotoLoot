@@ -4,7 +4,7 @@ import { vw, DesignWidth, vh, color } from '../../Constants';
 export const styles = StyleSheet.create({
     container:{flex:1,
         // backgroundColor:'lightblue',
-        // justifyContent:'center',
+        justifyContent:'center',
         flex:1,
         alignItems:'center'
     },

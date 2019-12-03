@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Text, Image, ImageBackground} from 'react-native';
+import { View, TextInput, StyleSheet, Text, TouchableOpacity,Image, ImageBackground} from 'react-native';
 import { styles } from './styles'
 import {Images,vw, vh,color} from '../../Constants'
 // import { color } from '../../Constants/colors'
@@ -40,27 +40,29 @@ import {Images,vw, vh,color} from '../../Constants'
 const StickerAndImage = (props) => {
     return (
         <View style={styles.container}>
-            <ImageBackground style={styles.imageContainer}>
-            </ImageBackground>
+            <View style={styles.imageContainer}>
+            </View>
             <View style={styles.icBaseContainer}>
                 <ImageBackground style={styles.icBaseImage} source={Images.ICWHITEBASE}  >
                     { !props.innercontainer2 &&  <View style={styles.innercontainer1}>
-                        <Image style={styles.dollarImage} source={Images.DOLLAR} resizeMode='contain' />
+                        
+                        <Image style={styles.dollarImage} source={props.img} resizeMode='contain' />
                         <View style={styles.textStickerContainer}>
                             <Text style={styles.txt1}>{props.txt1}</Text>
                             <Text style={styles.txt2}>{props.txt2}</Text>
                         </View>
-                    </View> }
+                    </View> 
+                }
                     
                     { props.innercontainer2 &&  <View style={styles.innercontainer2}>
                         <View style={styles.innerinnercontainer}>
-                            <Text style={{fontSize:14,fontWeight:'bold',color:'black'}}>Beach Happy</Text>
-                            <Text style={{color:'gray',fontSize:12}}>Total Prize </Text>
+                            <Text style={styles.innerinnertxt1}>Beach Happy</Text>
+                            <Text style={styles.innerinnertxt2}>Total Prize</Text>
                         </View>
                          
                         <View style={styles.innerinnercontainer}>
-                        <Text style={{color:'gray',fontSize:12}}><Image source={Images.CLOCK} style={{height:vw(11),width:vw(11)}}/> 2days left</Text>
-                        <Text style={{color:color.TAndC,fontSize:12}}>$ <Text style={{fontSize:20,color:color.TAndC}}>Prize</Text></Text>
+                        <Text style={styles.innerinnertxt2}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' /> 2days left</Text>
+                        <Text style={styles.innercontainerDollar}>$ <Text style={styles.innerinnerprice}>500</Text></Text>
                         </View>
                     </View>}
 
@@ -71,8 +73,49 @@ const StickerAndImage = (props) => {
         </View>
     )
 }
+const SmallSticker = (props)=>{
+return(
+<TouchableOpacity style={styles.smallsticker}>
+    <View  style={styles.smallstickerImg}/>
+     <View style={styles.smallstickerCard}>
+        <View style={styles.smallcardContainer}>
+            <Image style={styles.smallcardImg} source={Images.GOLDMEDAL}/>
+            <Text style={styles.innerinnertxt2}>{props.place}</Text>
+        </View>
+     </View>
+</TouchableOpacity>
+)
+}
+
+
+const ThreeStickerContainer=(props)=>{
+    return( <View style={styles.container}>
+        <View style={styles.imageContainer}>
+            <View style={styles.smallstickerContainer}>
+                    <SmallSticker place="1st"/>
+                    <SmallSticker place="2nd"/>
+                    <SmallSticker place="3rd"/>
+            </View>
+
+        </View>
+        <View style={styles.icBaseContainer}>
+            <ImageBackground style={styles.icBaseImage} source={Images.ICWHITEBASE}  >
+                <View style={styles.innercontainer1}>
+                     <View style={styles.textStickerContainer}>
+                        <Text style={styles.txt1}>{props.txt1}</Text>
+                        <Text style={styles.smallStickerDate}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' /> 1st Jan 2018 - 20th Jan 2018</Text>
+
+                    </View>
+                </View> 
+            
+            </ImageBackground>
+        </View>
+    </View>
+)
+}
 
 export {
     //  Verify,
-    StickerAndImage
+    StickerAndImage,
+    ThreeStickerContainer
 }
