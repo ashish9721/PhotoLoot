@@ -10,7 +10,10 @@ const Images = {
     BACKBUTTON:require('../Assets/Images/backButton.png'),
     WHITEBACKIMAGE: require('../Assets/Images/whiteBackImage.png'),
     DESCRIPTIONICON: require('../Assets/Images/icDescription.png'),
-    PLUS:require('../Assets/Images/icPlus.png')
+    PLUS:require('../Assets/Images/icPlus.png'),
+    FOLLOWINGCHECK:require('../Assets/Images/icFollowingCheck.png'),
+    TRANSCAMERA:require('../Assets/Images/icCameraTrans.png'),
+    CLOSEWHITE:require('../Assets/Images/icCloseWhite.png')
 }
 
 export default Images;

@@ -13,5 +13,6 @@ export const styles = StyleSheet.create({
         width:vw(DesignWidth),
         height:  Platform.OS === 'ios' ? vh(64) : vh(44),
         backgroundColor:color.TAndC
-    }
+    },
+    
 })
