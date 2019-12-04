@@ -21,7 +21,11 @@ const Images = {
     GRID:require('../Assets/Images/icGrid.png'),
     LISTIMAGE:require('../Assets/Images/icListView.png'),
     LISTFOCUSED:require('../Assets/Images/icList.png'),
-    PROFILEPIC:require('../Assets/Images/icPofPic.png')
+    PROFILEPIC:require('../Assets/Images/icPofPic.png'),
+    UNSELECTEDB:require('../Assets/Images/icUnselectedB.png'),
+    UNSELECTEDCLAP:require('../Assets/Images/icUnselectedClap.png'),
+    REPORT:require('../Assets/Images/icReport.png'),
+    SHARE:require('../Assets/Images/icShare.png')
 }
 
 export default Images;
