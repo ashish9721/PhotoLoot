@@ -36,10 +36,10 @@ export  class Home extends Component {
                <ThreeStickerContainer txt1="Jungle Safari"/> */}
                {/* <HallOfFame/> */}
                {/* <CurrentChallenges/> */}
-                          {/* {                  
+                         {                  
                             this.rendermap()
-                        }   */}
-                        <Profile/>
+                        }   
+                     
 
 
 
