@@ -38,8 +38,9 @@ import {Images,vw, vh,color} from '../../Constants'
 
 
 const StickerAndImage = (props) => {
+    // navigate to current challenges screen
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={()=>props.navProps.navigation.navigate(props.goto)}>
             <View style={styles.imageContainer}>
             </View>
             <View style={styles.icBaseContainer}>
@@ -48,21 +49,21 @@ const StickerAndImage = (props) => {
                         
                         <Image style={styles.dollarImage} source={props.img} resizeMode='contain' />
                         <View style={styles.textStickerContainer}>
-                            <Text style={styles.txt1}>{props.txt1}</Text>
-                            <Text style={styles.txt2}>{props.txt2}</Text>
+                            <Text style={styles.txt1}>{props.heading}</Text>
+                            <Text style={styles.txt2}>{props.current}</Text>
                         </View>
                     </View> 
                 }
                     
                     { props.innercontainer2 &&  <View style={styles.innercontainer2}>
                         <View style={styles.innerinnercontainer}>
-                            <Text style={styles.innerinnertxt1}>Beach Happy</Text>
+                            <Text style={styles.innerinnertxt1}>{props.heading}</Text>
                             <Text style={styles.innerinnertxt2}>Total Prize</Text>
                         </View>
                          
                         <View style={styles.innerinnercontainer}>
-                        <Text style={styles.innerinnertxt2}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' /> 2days left</Text>
-                        <Text style={styles.innercontainerDollar}>$ <Text style={styles.innerinnerprice}>500</Text></Text>
+                        <Text style={styles.innerinnertxt2}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' />{props.time}</Text>
+                        <Text style={styles.innercontainerDollar}>$ <Text style={styles.innerinnerprice}>{props.price}</Text></Text>
                         </View>
                     </View>}
 
@@ -70,7 +71,7 @@ const StickerAndImage = (props) => {
 
                 </ImageBackground>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 const SmallSticker = (props)=>{
@@ -102,8 +103,8 @@ const ThreeStickerContainer=(props)=>{
             <ImageBackground style={styles.icBaseImage} source={Images.ICWHITEBASE}  >
                 <View style={styles.innercontainer1}>
                      <View style={styles.textStickerContainer}>
-                        <Text style={styles.txt1}>{props.txt1}</Text>
-                        <Text style={styles.smallStickerDate}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' /> 1st Jan 2018 - 20th Jan 2018</Text>
+                        <Text style={styles.txt1}>{props.heading}</Text>
+                        <Text style={styles.smallStickerDate}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' /> {props.time}</Text>
 
                     </View>
                 </View> 
