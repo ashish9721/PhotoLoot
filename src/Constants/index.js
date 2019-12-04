@@ -1,6 +1,6 @@
 import { vh, vw, DesignHeight, DesignWidth } from './Dimension';
 import {color} from './colors'
-// import Strings from './Strings';
+import Strings from './Strings';
 // import videos from './Videos'
 import Images from './Images'
 export {
@@ -9,7 +9,7 @@ export {
     DesignHeight,
     DesignWidth,
     color,
-    // Strings,
+    Strings,
     // videos,
     Images,
 }

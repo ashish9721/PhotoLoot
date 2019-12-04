@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Text, Image, ImageBackground} from 'react-native';
+import { View, TextInput, StyleSheet, Text, TouchableOpacity,Image, ImageBackground} from 'react-native';
 import { styles } from './styles'
-import {Images} from '../../Constants'
+import {Images,vw, vh,color} from '../../Constants'
 // import { color } from '../../Constants/colors'
 // import {styles} from '../../modules/login/styles.js'
 
@@ -38,26 +38,85 @@ import {Images} from '../../Constants'
 
 
 const StickerAndImage = (props) => {
+    // navigate to current challenges screen
     return (
-        <View style={styles.container}>
-            <ImageBackground style={styles.imageContainer}>
-            </ImageBackground>
+        <TouchableOpacity style={styles.container} onPress={()=>props.navProps.navigation.navigate(props.goto)}>
+            <View style={styles.imageContainer}>
+            </View>
             <View style={styles.icBaseContainer}>
                 <ImageBackground style={styles.icBaseImage} source={Images.ICWHITEBASE}  >
-                    <View style={styles.innercontainer1}>
-                        <Image style={styles.dollarImage} source={Images.DOLLAR} resizeMode='contain' />
+                    { !props.innercontainer2 &&  <View style={styles.innercontainer1}>
+                        
+                        <Image style={styles.dollarImage} source={props.img} resizeMode='contain' />
                         <View style={styles.textStickerContainer}>
-                            <Text style={styles.txt1}>{props.txt1}</Text>
-                            <Text style={styles.txt2}>{props.txt2}</Text>
+                            <Text style={styles.txt1}>{props.heading}</Text>
+                            <Text style={styles.txt2}>{props.current}</Text>
                         </View>
-                    </View>
+                    </View> 
+                }
+                    
+                    { props.innercontainer2 &&  <View style={styles.innercontainer2}>
+                        <View style={styles.innerinnercontainer}>
+                            <Text style={styles.innerinnertxt1}>{props.heading}</Text>
+                            <Text style={styles.innerinnertxt2}>Total Prize</Text>
+                        </View>
+                         
+                        <View style={styles.innerinnercontainer}>
+                        <Text style={styles.innerinnertxt2}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' />{props.time}</Text>
+                        <Text style={styles.innercontainerDollar}>$ <Text style={styles.innerinnerprice}>{props.price}</Text></Text>
+                        </View>
+                    </View>}
+
+
+
                 </ImageBackground>
             </View>
-        </View>
+        </TouchableOpacity>
     )
+}
+const SmallSticker = (props)=>{
+return(
+<TouchableOpacity style={styles.smallsticker}>
+    <View  style={styles.smallstickerImg}/>
+     <View style={styles.smallstickerCard}>
+        <View style={styles.smallcardContainer}>
+            <Image style={styles.smallcardImg} source={Images.GOLDMEDAL}/>
+            <Text style={styles.innerinnertxt2}>{props.place}</Text>
+        </View>
+     </View>
+</TouchableOpacity>
+)
+}
+
+
+const ThreeStickerContainer=(props)=>{
+    return( <View style={styles.container}>
+        <View style={styles.imageContainer}>
+            <View style={styles.smallstickerContainer}>
+                    <SmallSticker place="1st"/>
+                    <SmallSticker place="2nd"/>
+                    <SmallSticker place="3rd"/>
+            </View>
+
+        </View>
+        <View style={styles.icBaseContainer}>
+            <ImageBackground style={styles.icBaseImage} source={Images.ICWHITEBASE}  >
+                <View style={styles.innercontainer1}>
+                     <View style={styles.textStickerContainer}>
+                        <Text style={styles.txt1}>{props.heading}</Text>
+                        <Text style={styles.smallStickerDate}><Image source={Images.CLOCK} style={styles.innerinnerImgclock} resizeMode='contain' /> {props.time}</Text>
+
+                    </View>
+                </View> 
+            
+            </ImageBackground>
+        </View>
+    </View>
+)
 }
 
 export {
     //  Verify,
-    StickerAndImage
+    StickerAndImage,
+    ThreeStickerContainer
 }
