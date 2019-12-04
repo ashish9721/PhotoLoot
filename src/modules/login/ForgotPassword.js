@@ -9,8 +9,9 @@ export default class ForgotPassword extends React.Component {
                     <View style={styles.main}></View>
                     <Text style={styles.ForgotPassword}>Forgot Password?</Text>
                 </View>
-                <Text style={styles.starttext}>Don't worry! enter your registered email ID in order to recieve rest password instructions.</Text>
-
+                <View style={styles.donttext}>
+                    <Text style={styles.starttext}>Don't worry! enter your registered email ID in order to recieve reset password instructions.</Text>
+                </View>
                 <View>
                     <TextInput style={styles.email} placeholder="Email Address"
                         placeholderTextColor="#b3b3b3" />
@@ -45,22 +46,26 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         marginTop: vh(30),
-        // alignSelf:'center'
+        //alignSelf:'flex-start'
 
+    },
+    donttext:{
+      width:vw(323),
+      marginLeft:vh(15)
     },
     starttext: {
         fontSize: vw(15),
         color: '#606060',
         marginTop: vh(16)
     },
-   
+
     email: {
         height: vh(45),
         width: vw(315),
         borderRadius: vw(10),
         backgroundColor: '#f5f5f5',
         padding: vw(10),
-        marginTop:vh(27)
+        marginTop: vh(27),
     },
     Buttonsubmit: {
         height: vh(45),

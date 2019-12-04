@@ -10,7 +10,14 @@ const Strings = {
     time3ForNotification: "2h ago",
     time4ForNotification: "2h ago",
     time5ForNotification: "10h ago",
-    //empty:"gndhfcud ",
+    search1:"Samuel Mathers",
+    search2:"Damiam Evra",
+    text1:"Change Password",
+    text2:"Terms & Conditions",
+    text3:"FAQ's",
+    text4:"About Us",
+    // text5:"Terms & Conditions",
+    // text6:"Terms & Conditions",
 }
 
 export default Strings;

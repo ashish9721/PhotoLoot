@@ -6,7 +6,10 @@ import React, { Component } from 'react'
 //import TnC from './src/modules/settings/TnC';
 //import Helpnsupport from './src/modules/settings/Helpnsupport';
 //import Faq from './src/modules/settings/Faq';
-import Notifications from './src/modules/notification/Notifications'
+//import Notifications from './src/modules/notification/Notifications'
+//import Search from './src/modules/search/Search';
+//import Aboutus from './src/modules/settings/Aboutus';
+import Notificationdisabled from './src/modules/settings/Notificationdisabled';
 export default class App extends Component {
   render() {
     return (
@@ -17,7 +20,10 @@ export default class App extends Component {
       // <Helpnsupport/>
       //<TnC/>
       //<Faq/>
-      <Notifications />
+      //<Notifications />
+      //<Search/>
+      //<Aboutus/>
+      <Notificationdisabled/>
     )
   }
 }
