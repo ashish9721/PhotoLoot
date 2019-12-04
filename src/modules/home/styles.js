@@ -12,5 +12,10 @@ export const styles = StyleSheet.create({
         width:vw(DesignWidth),
         height:  Platform.OS === 'ios' ? vh(64) : vh(44),
         backgroundColor:color.TAndC
+    },
+    bottomTabImg:{
+        height:vw(40),
+        width:vw(40),
+        marginTop:vh(15)
     }
 })
