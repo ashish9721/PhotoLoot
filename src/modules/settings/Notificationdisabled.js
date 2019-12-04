@@ -3,12 +3,11 @@ import { View, StyleSheet, Text, FlatList, Image, TextInput } from 'react-native
 import { vh, vw, } from '../../Constants/Dimension';
 import Strings from '../../Constants/Strings';
 notifydata = [
-    { title: Strings.text1, image: require('../../../src/Images/lock.jpeg'), image1: require('../../../src/Images/arrow.png') },
-    { title: Strings.text2, image: require('../../../src/Images/terms.png'), image1: require('../../../src/Images/arrow.png') },
-    { title: Strings.text3, image: require('../../../src/Images/question.png'), image1: require('../../../src/Images/arrow.png') },
-    { title: Strings.text4, image: require('../../../src/Images/about.png'), image1: require('../../../src/Images/arrow.png') },
-//     { title: Strings.text5, image: require('../../../src/Images/terms.png'), image1: require('../../../src/Images/arrow.png') },
-//     { title: Strings.text6, image: require('../../../src/Images/terms.png'), image1: require('../../../src/Images/arrow.png') }
+    { title: Strings.text1, image: require('../../../src/Images/terms.png'), image1: require('../../../src/Images/arrow.png') },
+    { title: Strings.text2, image: require('../../../src/Images/question.png'), image1: require('../../../src/Images/arrow.png') },
+    { title: Strings.text3, image: require('../../../src/Images/about.png'), image1: require('../../../src/Images/arrow.png') },
+    // { title: Strings.text4, image: require('../../../src/Images/terms.png'), image1: require('../../../src/Images/arrow.png') },
+    // { title: Strings.text5, image: require('../../../src/Images/terms.png'), image1: require('../../../src/Images/arrow.png') }
 ]
 const Notificationdisabled = (props) => {
     return (
@@ -17,14 +16,14 @@ const Notificationdisabled = (props) => {
                 <Text style={styles.textsettings}>Settings</Text>
             </View>
             <View style={styles.firstview}>
-               <View style= {styles.changeview}>
-                   <Image style={styles.image}
-                     source={require('../../../src/Images/lock.jpeg')}
-                   />
-                   <Text style={styles.text}>Change Password</Text>
-               </View>
-               <Image style={styles,imgarrow}
-                   source={require('../../../src/Images/arrow.png')}/>
+                <View style={styles.changeview}>
+                    <Image style={styles.image}
+                        source={require('../../../src/Images/lock.jpeg')}
+                    />
+                    <Text style={styles.text}>Change Password</Text>
+                </View>
+                <Image style={styles.imgarrow}
+                    source={require('../../../src/Images/arrow.png')} />
             </View>
             <FlatList
                 data={notifydata}
@@ -32,7 +31,7 @@ const Notificationdisabled = (props) => {
                 renderItem={rowData => {
                     return (
                         <View>
-                            {/* <View style={styles.commonview}>
+                            <View style={styles.commonview}>
                                 <View style = {{flexDirection: 'row'}}>
                                     <Image style={styles.image}
                                         source={rowData.item.image}
@@ -42,7 +41,7 @@ const Notificationdisabled = (props) => {
                                 <Image style={styles.imgarrow}
                                     source={rowData.item.image1}
                                 />
-                            </View> */}
+                            </View>
                         </View>
                     )
 
@@ -67,37 +66,36 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: vh(20)
     },
-    firstview:{
+    firstview: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginLeft: vw(15),
         marginTop: vh(17),
     },
-    changeview:{
-       flexDirection:'row'
+    changeview: {
+        flexDirection: 'row'
     },
-    // commonview: {
-    //     flexDirection: 'row',
-    //     justifyContent: 'space-between',
-    //     marginLeft: vw(15),
-    //     marginTop: vh(17),
-    // },
+     commonview: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginLeft: vw(15),
+        marginTop: vh(25),
+    },
     image: {
         width: vw(35),
         height: vw(35),
-        //backgroundColor: 'blue'
 
     },
     text: {
         fontSize: vw(15),
         alignSelf: 'center',
-        marginLeft:vw(10)
+        marginLeft: vw(10)
     },
     imgarrow: {
         width: vw(8),
         height: vw(14),
-        alignSelf:'center',
-        marginRight:vw(15),
+        alignSelf: 'center',
+        marginRight: vw(15),
     }
 
 })

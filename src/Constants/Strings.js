@@ -12,10 +12,11 @@ const Strings = {
     time5ForNotification: "10h ago",
     search1:"Samuel Mathers",
     search2:"Damiam Evra",
-    text1:"Change Password",
-    text2:"Terms & Conditions",
-    text3:"FAQ's",
-    text4:"About Us",
+    text1:"Terms & Conditions",
+    text2:"FAQ's",
+    text3:"About Us",
+    text4:"Help & Support ",
+    text5:"Invite Contact"
     // text5:"Terms & Conditions",
     // text6:"Terms & Conditions",
 }
