@@ -15,7 +15,13 @@ const Images = {
     TRANSCAMERA:require('../Assets/Images/icCameraTrans.png'),
     CLOSEWHITE:require('../Assets/Images/icCloseWhite.png'),
     APPICON:require('../Assets/Images/appIcon.png'),
-    SPLASHBACKGROUND:require('../Assets/Images/bottomGraphic.png')
+    SPLASHBACKGROUND:require('../Assets/Images/bottomGraphic.png'),
+    EDITIMAGE:require('../Assets/Images/icEditProfile.png'),
+    GRIDFOCUSED:require('../Assets/Images/icGridFocused.png'),
+    GRID:require('../Assets/Images/icGrid.png'),
+    LISTIMAGE:require('../Assets/Images/icListView.png'),
+    LISTFOCUSED:require('../Assets/Images/icList.png'),
+    PROFILEPIC:require('../Assets/Images/icPofPic.png')
 }
 
 export default Images;
