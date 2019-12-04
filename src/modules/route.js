@@ -4,9 +4,9 @@ import {createStackNavigator} from 'react-navigation-stack';
 //Custom Imports
 import CurrentChallenges from './home/currentChallenges';
 import Home from './home/home';
-import {Gallery} from './gallery/gallery'
 import {Index} from './gallery/index'
 import Profile from './profile/profile';
+import {Edit} from './profile/edit'
 const AppNavigator = createStackNavigator(
   {
     Home: {
@@ -21,10 +21,13 @@ const AppNavigator = createStackNavigator(
     
     Profile:{
         screen:Profile
+    },
+    Edit:{
+      screen:Edit
     }
   },
   {
-    initialRouteName: 'Gallery',
+    initialRouteName: 'Profile',
   },
 );
 export default createAppContainer(AppNavigator);

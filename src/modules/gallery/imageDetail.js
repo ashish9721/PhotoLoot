@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, Text} from 'react-native';
+import {FlatList} from 'react-native';
 //Custom Imports
 import {GalleryModel} from './galleryModel';
 
