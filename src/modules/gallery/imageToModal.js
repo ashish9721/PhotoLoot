@@ -5,7 +5,10 @@ import {styles} from '../profile/styles';
 
 export const ImageToModal = props => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+    activeOpacity={1}
+    onPress={()=>console.warn("Opens Modal for Image")
+    }>
       <Image
         style={styles.imgStyle}
         source={{

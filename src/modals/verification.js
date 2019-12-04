@@ -5,7 +5,7 @@ export default class Verification extends Component {
     render() {
         return (
             <View>
-                <Text> textInComponent </Text>
+                <Text> Verification </Text>
             </View>
         )
     }

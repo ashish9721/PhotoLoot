@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {PrizeViews, Description, Rules, CityLights} from './functional';
-import {vw, vh} from '../../Constants';
+import {vw, vh, Images} from '../../Constants';
 import {ScrollView} from 'react-native-gesture-handler';
 
 // currently working
@@ -9,7 +9,12 @@ export default class CurrentChallenges extends Component {
   render() {
     return (
       <>
-        <View style={styles.imgContainer} />
+        
+          <Image
+          style={styles.imgContainer}
+          source={Images.PLACEHOLDERIMAGE}
+          resizeMode="cover"/>
+        
         <ScrollView
           style={styles.scrollView}
           bounces={false}
@@ -30,8 +35,8 @@ const styles = StyleSheet.create({
   imgContainer: {
     width: vw(375),
     height: vh(192),
-    backgroundColor: 'green',
     position: 'absolute',
+    backgroundColor:'green'
   },
   container: {
     paddingHorizontal: vw(15),

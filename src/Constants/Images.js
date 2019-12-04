@@ -25,7 +25,8 @@ const Images = {
     UNSELECTEDB:require('../Assets/Images/icUnselectedB.png'),
     UNSELECTEDCLAP:require('../Assets/Images/icUnselectedClap.png'),
     REPORT:require('../Assets/Images/icReport.png'),
-    SHARE:require('../Assets/Images/icShare.png')
+    SHARE:require('../Assets/Images/icShare.png'),
+    PLACEHOLDERIMAGE:require('../Assets/Images/icPlacHolderDetail.png')
 }
 
 export default Images;

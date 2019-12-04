@@ -117,7 +117,6 @@
 				C236433128FEAE11DE839A0C /* Pods-PhotoLootTests.debug.xcconfig */,
 				C54BD6F5017CA15E94951644 /* Pods-PhotoLootTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
