@@ -1,9 +1,15 @@
 
 
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import { Text, View ,SafeAreaView,StyleSheet,Button} from 'react-native'
 import{PrizeViews} from './functional'
 import {ThreeStickerContainer,StickerAndImage} from '../../component/functionalComponent/functional'
+=======
+import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
+import { PrizeViews, Description, Rules } from './functional'
+import { vw } from '../../Constants'
+>>>>>>> c4fa14ff0524f02cb0944fd7a104342bd597c9ff
 
 // currently working
 export default class CurrentChallenges extends Component {
@@ -19,14 +25,21 @@ export default class CurrentChallenges extends Component {
     render() {
         return (
             <View style={styles.container}>
+<<<<<<< HEAD
            {
                this.renderData()
            }
+=======
+                <PrizeViews />
+                <Description />
+                <Rules />
+>>>>>>> c4fa14ff0524f02cb0944fd7a104342bd597c9ff
             </View>
         )
     }
 }
 
+<<<<<<< HEAD
 const styles=StyleSheet.create({
     container:{flex:1,justifyContent:'center'}
    
@@ -40,3 +53,14 @@ const Tempdata = [
 {txt1:"Beach Happy",txt2:"2 Days Left" , price:"500"},
 
 ]
+=======
+const styles = StyleSheet.create({
+    container: {
+      
+        justifyContent: 'center',
+        paddingHorizontal:vw(16),
+        // backgroundColor:'red'
+    }
+
+})
+>>>>>>> c4fa14ff0524f02cb0944fd7a104342bd597c9ff
