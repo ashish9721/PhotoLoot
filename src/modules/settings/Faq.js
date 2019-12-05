@@ -1,9 +1,31 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image, FlatList } from 'react-native';
 import { vh, vw } from '../../Constants/Dimension';
+import Strings from '../../Constants/Strings';
+// faqdata = [
+//     { title: Strings.question1, text: Strings.innertext },
+//     { title: Strings.question2, },
+//     { title: Strings.question3, },
+//     { title: Strings.question4, },
+//     { title: Strings.question5, },
+// ]
+
+
 export default class Faq extends React.Component {
     render() {
         return (
+            // <FlatList
+            //     data={faqdata}
+            //     keyExtractor={(item, index) => index.toString()}
+            //     renderItem={rowData => {
+            //         return (
+            //             <View>
+
+            //             </View>
+            //         )
+            //     }
+            //     }
+            ///>
             <View style={styles.parent}>
                 <View style={styles.firstview}>
                     <View style={styles.whenview}>
@@ -105,7 +127,7 @@ const styles = StyleSheet.create({
         marginTop: vh(25),
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems:'center',
+        alignItems: 'center',
         paddingVertical: vh(15)
     },
     text: {

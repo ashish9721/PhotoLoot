@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 import { vh, vw } from '../../Constants/Dimension';
 export default class Signin extends React.Component {
     render() {
         return (
             <View>
                 <View style={styles.parent}>
-                    <View style={styles.main}></View>
+                    <Image style={styles.main} source={require('../../../src/Images/Logo.png')} />
                     <Text style={styles.signin}>Sign In</Text>
                 </View>
                 <View style={styles.middle}>
@@ -17,7 +17,7 @@ export default class Signin extends React.Component {
                     <View style={styles.input2}>
                         <TextInput placeholder="Password"
                             placeholderTextColor="#b3b3b3" />
-                        <View style={styles.show}></View>
+                        <Image style={styles.show} source={require('../../../src/Images/Eye.png')} />
                     </View>
                     <Text style={styles.fpass}>Forgot Password?</Text>
                     <TouchableOpacity style={styles.Buttonsubmit}>
@@ -27,11 +27,11 @@ export default class Signin extends React.Component {
                 <Text style={styles.textconnect}>or Connect with</Text>
                 <View style={styles.twobutton}>
                     <TouchableOpacity style={styles.fbbuttuon}>
-                        <View style={styles.fbicon}></View>
+                        <Image style={styles.fbicon} source={require('../../../src/Images/Fb.png')} />
                         <Text style={styles.fbtext}>Facebook</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.instbuttuon}>
-                        <View style={styles.insticon}></View>
+                        <Image style={styles.insticon} source={require('../../../src/Images/Instagram.png')} />
                         <Text style={styles.insttext}>Instagram</Text>
                     </TouchableOpacity>
                 </View>
@@ -48,20 +48,19 @@ export default class Signin extends React.Component {
 const styles = StyleSheet.create({
     parent: {
         marginTop: vh(100),
-        paddingHorizontal:vw(29)
+        paddingHorizontal: vw(29)
     },
     main: {
-        height: vh(125),
-        width: vw(125.5),
-        backgroundColor: '#ff9803',
-        alignSelf:'center'
+        height: vw(125),
+        width: vw(125),
+        alignSelf: 'center'
     },
     signin: {
         fontSize: vw(25),
         color: 'black',
         fontWeight: 'bold',
         marginTop: vh(30),
-        
+
     },
     Buttonsubmit: {
         height: vh(45),
@@ -96,26 +95,25 @@ const styles = StyleSheet.create({
         width: vw(315),
         marginTop: vh(20),
         borderRadius: vw(10),
-        padding: vw(10)
+        padding: vw(5)
     },
     show: {
-        height: vh(11),
+        height: vw(11),
         width: vw(20),
-        backgroundColor: 'red',
         marginRight: vw(11)
     },
     fpass: {
         marginTop: vh(20),
         fontSize: vw(15),
         color: '#6E6E6E',
-        alignSelf:'flex-end',
-        marginRight:vw(30)
+        alignSelf: 'flex-end',
+        marginRight: vw(30)
     },
     textconnect: {
         fontSize: vw(15),
         color: '#6E6E6E',
         marginTop: vh(30),
-        alignSelf:'center'
+        alignSelf: 'center'
     },
     twobutton: {
         flexDirection: 'row',
@@ -137,9 +135,8 @@ const styles = StyleSheet.create({
 
     },
     fbicon: {
-        height: vh(20),
+        height: vw(20),
         width: vw(20),
-        backgroundColor: '#4172cb',
         marginRight: vw(10)
     },
     fbtext: {
@@ -161,9 +158,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     insticon: {
-        height: vh(20),
+        height: vw(20),
         width: vw(20),
-        backgroundColor: '#ef0011',
         marginRight: vw(10),
     },
     insttext: {
@@ -180,8 +176,8 @@ const styles = StyleSheet.create({
         color: '#ff9803'
     },
     last: {
-        marginTop: vh(60),
-        alignSelf:'center'
+        marginTop: vh(30),
+        alignSelf: 'center'
     }
 
 
