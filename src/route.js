@@ -11,8 +11,12 @@ import search from './modules/search/search';
 import Notifications from './modules/notification/Notifications';
 import Settings from './modules/settings/settings';
 import ChallengesInfo from './component/resuableClasses/challengesInfo'
+import Signin from './modules/login/Signin'
 const AppNavigator = createStackNavigator(
   {
+    Login:{
+      screen:Signin,
+    },
     Home: {
       screen: Home,
       navigationOptions:null
@@ -61,7 +65,7 @@ const AppNavigator = createStackNavigator(
     }
    },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
   },
 );
 export default createAppContainer(AppNavigator);

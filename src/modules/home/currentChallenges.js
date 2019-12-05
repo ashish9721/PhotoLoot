@@ -1,23 +1,11 @@
 
 
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
-import { PrizeViews, Description, Rules } from './functional'
-import { vw } from '../../Constants'
-import { StickerAndImage } from '../../component/functionalComponent/functional'
-=======
-<<<<<<< HEAD
-import { Text, View ,SafeAreaView,StyleSheet,Button} from 'react-native'
-import{PrizeViews} from './functional'
-import {ThreeStickerContainer,StickerAndImage} from '../../component/functionalComponent/functional'
-=======
-import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
-import { PrizeViews, Description, Rules } from './functional'
-import { vw } from '../../Constants'
->>>>>>> c4fa14ff0524f02cb0944fd7a104342bd597c9ff
 
->>>>>>> working
+import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
+import { PrizeViews, Description, Rules } from './functional'
+import { vw } from '../../Constants'
+
 // currently working
 export default class CurrentChallenges extends Component {
 
@@ -39,37 +27,17 @@ export default class CurrentChallenges extends Component {
     render() {
         return (
             <View style={styles.container}>
-<<<<<<< HEAD
-                {
-                    this.renderData()
-                }
-=======
-<<<<<<< HEAD
-           {
-               this.renderData()
-           }
-=======
+
                 <PrizeViews />
                 <Description />
                 <Rules />
->>>>>>> c4fa14ff0524f02cb0944fd7a104342bd597c9ff
->>>>>>> working
             </View>
         )
     }
 }
 
-<<<<<<< HEAD
-const styles = StyleSheet.create({
-    container: { flex: 1, justifyContent: 'center' }
 
-=======
-<<<<<<< HEAD
-const styles=StyleSheet.create({
-    container:{flex:1,justifyContent:'center'}
-   
->>>>>>> working
-})
+
 
 
 const Tempdata = [
@@ -79,7 +47,6 @@ const Tempdata = [
     { txt1: "Beach Happy", txt2: "2 Days Left", price: "500" },
 
 ]
-=======
 const styles = StyleSheet.create({
     container: {
       
@@ -89,4 +56,3 @@ const styles = StyleSheet.create({
     }
 
 })
->>>>>>> c4fa14ff0524f02cb0944fd7a104342bd597c9ff
