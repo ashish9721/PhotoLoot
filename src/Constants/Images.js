@@ -41,6 +41,8 @@ const Images = {
   FACEBOOK: require('../Assets/Images/icFb.png'),
   EYEACTIVE: require('../Assets/Images/icEyeActive.png'),
   EYEINACTIVE: require('../Assets/Images/icEyeInactive.png'),
+  VALID:require('../Assets/Images/icValid.png'),
+  INVALID:require('../Assets/Images/icInvalid.png')
 };
 
 export default Images;

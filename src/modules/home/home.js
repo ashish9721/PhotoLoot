@@ -51,7 +51,10 @@ export class Home extends Component {
   }
 }
 const HomeStack = createStackNavigator({
-  Home: {screen: Home},
+  Home: {screen: Home,
+  navigationOptions:{
+    header:null
+  }},
   CurrentChallenges: {screen: CurrentChallenges},
   HallOfFame: {screen: HallOfFame},
   UpComingChallenges: {screen: UpComingChallenges},
