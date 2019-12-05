@@ -37,6 +37,10 @@ export default class CurrentChallenges extends Component {
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2182b31ccf07814779b2d4ed387de4c49d63e40b
 
 
 const Tempdata = [
