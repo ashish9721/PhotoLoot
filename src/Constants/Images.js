@@ -25,7 +25,18 @@ const Images = {
     UNSELECTEDCLAP:require('../Assets/Images/icUnselectedClap.png'),
     REPORT:require('../Assets/Images/icReport.png'),
     SHARE:require('../Assets/Images/icShare.png'),
-    PLACEHOLDERIMAGE:require('../Assets/Images/icPlacHolderDetail.png')
+    PLACEHOLDERIMAGE:require('../Assets/Images/icPlacHolderDetail.png'),
+    HOME:require('../Assets/Images/icHomeSelected.png'),
+    SETTINGS:require('../Assets/Images/icSettingsSelected.png'),
+    NOTIFICATION:require('../Assets/Images/icNotificationSelected.png'),
+    PROFILE:require('../Assets/Images/icProfileSelected.png'),
+    SEARCH:require('../Assets/Images/icSearchSelected.png'),
+    UNHOME:require('../Assets/Images/icHomeUnselected.png'),
+    UNSETTINGS:require('../Assets/Images/icSettingsUnselected.png'),
+    UNNOTIFICATION:require('../Assets/Images/icNotificationUnselected.png'),
+    UNPROFILE:require('../Assets/Images/icProfileUnselected.png'),
+    UNSEARCH:require('../Assets/Images/icSearchUnselected.png'),
+
 }
 
 export default Images;

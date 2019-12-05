@@ -136,6 +136,125 @@ smallcardImg:{
     height:vw(25),
     marginRight:vw(4)
 },
+//Prize View
+  // this is 1st
+  mainViewStyle: {
+    flexDirection: 'row',
+    marginTop: vh(22),
+    justifyContent: 'space-between',
+  },
+  // 2nd
+  shadowViewStyle: {
+    flexDirection: 'row',
+    width: vw(105),
+    height: vh(58),
+    shadowColor: 'gray',
+    borderRadius: vw(5),
+    backgroundColor: 'white',
+    shadowOpacity: 0.5,
+    elevation: 12,
+    shadowOffset: {width: 1, height: 4},
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  // 3rd
+  imgStyle: {
+    width: vw(24),
+    height: vh(30),
+    marginRight: vw(10),
+  },
+  // 4th
+  grayTextStyle: {
+    color: 'gray',
+    fontSize: 12,
+    marginRight: 5,
+  },
+  // 5th
+  colorTextStyle: {
+    color: '#66D680',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  //Description Style
+  container: {
+    marginTop: vh(28),
+  },
+  Heading: {
+    fontSize: vw(13),
+    fontWeight: '700',
+    marginLeft: vw(7),
+  },
+  imgStyle: {
+    width: vw(14),
+    height: vh(16),
+  },
+  headingContainer: {
+    flexDirection: 'row',
+    marginBottom: vh(12),
+  },
+  rulesStyle: {
+    flexDirection: 'row',
+    marginLeft: vw(10),
+    marginBottom: vh(20),
+  },
+  descriptionStyle: {
+    color: color.description,
+    marginLeft: vw(8),
+  },
+  //CityLights
+  topView: {
+    marginTop: vh(15),
+    justifyContent: 'space-around',
+  },
+  alignView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  moneyTextView: {
+    flexDirection: 'row',
+  },
+  checkImgStyle: {
+    width: vw(10),
+    height: vh(9),
+  },
+  //Gallery
+  buttonView: {
+    marginTop: vh(30),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  plusBackground: {
+    backgroundColor: color.TAndC,
+    width: vw(55),
+    height: vh(45),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: vw(10),
+  },
+  plusIcon: {
+    width: vw(20),
+    height: vw(20),
+    paddingHorizontal: vw(18),
+    paddingVertical: vh(12),
+  },
+  galleryTextColor: {
+    color: color.TAndC,
+    fontSize: vh(15),
+    fontWeight: '600',
+  },
+  galleryBackground: {
+    width: vw(125),
+    height: vh(45),
+    shadowColor: 'gray',
+    borderRadius: vw(10),
+    backgroundColor: 'white',
+    shadowOpacity: 0.5,
+    elevation: 12,
+    shadowOffset: {width: 1, height: 4},
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    marginBottom: vh(50),
+  },
 }
 
 

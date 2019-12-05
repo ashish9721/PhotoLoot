@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Text, TouchableOpacity,Image, ImageBackground} from 'react-native';
+import { View, 
+    FlatList,
+      Text, 
+      TouchableOpacity,
+      Image,
+       ImageBackground
+    } from 'react-native';
 import { styles } from './styles'
 import {Images,vw, vh,color} from '../../Constants'
 // import { color } from '../../Constants/colors'
@@ -38,11 +44,16 @@ import {Images,vw, vh,color} from '../../Constants'
 
 
 const StickerAndImage = (props) => {
-    // navigate to current challenges screen
+  console.log("StickerImage",props.navProps)
+    // navigate to next screen
     return (
-        <TouchableOpacity style={styles.container} onPress={()=>props.navProps.navigation.navigate(props.goto)}>
-            <View style={styles.imageContainer}>
-            </View>
+      
+        <TouchableOpacity style={styles.container} activeOpacity={0.85}  onPress={()=>{
+          console.log("StickerImage",props.navProps)
+          props.navProps.navigation.navigate(props.goto)
+          }}>
+            <Image style={styles.imageContainer} source={{uri:'https://tse1.mm.bing.net/th?id=OIP.ZWCd2N3EHatubQsFCYKwrQHaFj&pid=Api'}}>
+            </Image>
             <View style={styles.icBaseContainer}>
                 <ImageBackground style={styles.icBaseImage} source={Images.ICWHITEBASE}  >
                     { !props.innercontainer2 &&  <View style={styles.innercontainer1}>
@@ -114,9 +125,162 @@ const ThreeStickerContainer=(props)=>{
     </View>
 )
 }
+const ViewGallery=(props)=>{
+    return(
+     <View style={styles.buttonView}>
+     <TouchableOpacity
+         activeOpacity={0.8}
+       onPress={() => props.prop.navigation.navigate('Gallery')}
+       style={styles.galleryBackground}>
+       <Text style={styles.galleryTextColor}>View Gallery</Text>
+     </TouchableOpacity>
+     <TouchableOpacity 
+     activeOpacity={0.8}
+     style={styles.plusBackground}>
+       <Image
+         style={styles.plusIcon}
+         source={Images.PLUS}
+         resizeMode="contain"
+       />
+     </TouchableOpacity>
+   </View>
+    )
+  }
+
+  const Rules = props => {
+    renderItem = rowData => {
+      return (
+        <View>
+          <View style={styles.rulesStyle}>
+            <Image
+              style={styles.checkImgStyle}
+              source={Images.CHECKMARK}
+              resizeMode="contain"
+            />
+            <Text style={styles.descriptionStyle}>{rowData.item.Rules}</Text>
+          </View>
+        </View>
+      );
+    };
+    return (
+      <View style={styles.container}>
+        <View style={styles.headingContainer}>
+          <Image style={styles.imgStyle} source={Images.RULESICON} />
+          <Text style={styles.Heading}>Rules</Text>
+        </View>
+        <FlatList
+          data={DataToShow}
+          keyExtractor={(item, index) => index.toString()}
+          scrollEnabled={false}
+          renderItem={this.renderItem}
+        />
+      </View>
+    );
+  };
+  const Description = () => {
+    return (
+      <View style={styles.container}>
+        <View style={styles.headingContainer}>
+          <Image style={styles.imgStyle} source={Images.DESCRIPTIONICON} />
+          <Text style={styles.Heading}>Description</Text>
+        </View>
+        <Text style={styles.descriptionStyle}>{description}</Text>
+      </View>
+    );
+  };
+
+  const PrizeViews = () => {
+    return (
+      <View style={styles.mainViewStyle}>
+        <View style={styles.shadowViewStyle}>
+          <Image style={styles.imgStyle} source={Images.GOLDMEDAL} />
+          <View>
+            <Text style={styles.grayTextStyle}>1st Prize</Text>
+            <Text style={styles.colorTextStyle}>$125</Text>
+          </View>
+        </View>
+        <View style={styles.shadowViewStyle}>
+          <Image style={styles.imgStyle} source={Images.SILVERMEDAL} />
+          <View>
+            <Text style={styles.grayTextStyle}>2nd Prize</Text>
+            <Text style={styles.colorTextStyle}>$60</Text>
+          </View>
+        </View>
+        <View style={styles.shadowViewStyle}>
+          <Image style={styles.imgStyle} source={Images.BRONZEMEDAL} />
+          <View>
+            <Text style={styles.grayTextStyle}>3rd Prize</Text>
+            <Text style={styles.colorTextStyle}>$35</Text>
+          </View>
+        </View>
+      </View>
+    );
+  };
+  const CityLights = () => {
+    renderText = (...rest) => {
+      return (
+        <Text
+          style={{
+            fontWeight: rest[1],
+            fontSize: rest[2],
+            color: rest[3],
+            alignSelf: rest[4],
+            marginTop: rest[5],
+          }}>
+          {rest[0]}
+        </Text>
+      );
+    };
+    return (
+      <View style={styles.topView}>
+        <View style={styles.alignView}>
+          {this.renderText('City Lights in Night', '700', vh(15))}
+          {this.renderText('Total Prize', '400', vh(15), color.gray)}
+        </View>
+        <View style={styles.alignView}>
+          {this.renderText(
+            '1 day to start',
+            '700',
+            vh(11),
+            color.gray,
+            '',
+            vh(13),
+          )}
+          <View style={styles.moneyTextView}>
+            {this.renderText('$', '700', vh(13), color.TAndC, 'flex-end')}
+            {this.renderText(
+              '220',
+              '700',
+              vh(20),
+              color.TAndC,
+              'flex-end',
+              vh(7),
+            )}
+          </View>
+        </View>
+      </View>
+    );
+  };
+  const DataToShow = [
+    {Rules: 'You must own the image you submit.'},
+    {Rules: 'No nudity/inappropriate content.'},
+    {Rules: 'Stick to the theme of the challange.'},
+    {Rules: 'No voting with fake accounts.'},
+    {Rules: 'To receive prizes, you must have a legitimate PayPal account.'},
+    {Rules: 'Photos that violate any of the rules will be removed.'},
+  ];
+  
+  const description =
+    'This challenge is all about uploading the posts about your recent travels to places usually less travelled. Post more of your travelling pictures and get the chance to win.';
+   
 
 export {
     //  Verify,
     StickerAndImage,
-    ThreeStickerContainer
+    ThreeStickerContainer,
+    ViewGallery,
+    Rules,
+    Description,
+    PrizeViews,
+    CityLights
 }
