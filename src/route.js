@@ -62,10 +62,9 @@ const AppNavigator = createStackNavigator(
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
-    }
+    },
+    initialRouteName: 'Home',
    },
-  {
-    initialRouteName: 'Login',
-  },
+  
 );
 export default createAppContainer(AppNavigator);
