@@ -16,9 +16,14 @@ import ForgotPassword from './modules/login/ForgotPassword';
 import Verification from './modules/login/verification';
 import Resend from './modules/login/Resend';
 import SignUp from './modules/login/SignUp';
+import Splash from './splash'
 
 const AppNavigator = createStackNavigator(
   {
+    Splash:{
+      screen:Splash,
+      header:null
+    },
     Login: {
       screen: Signin,
       navigationOptions:{
@@ -84,7 +89,7 @@ const AppNavigator = createStackNavigator(
     navigationOptions: {
       headerVisible: false,
    },
-    initialRouteName: 'Login',
+    initialRouteName: 'Splash',
   },
   
 );

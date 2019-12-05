@@ -35,7 +35,8 @@ export class Home extends Component {
     return (
       <ScrollView
       style={styles.scrollViewStyle}
-      bounces={false} 
+      contentInset={{top:0,left:0,right:0,bottom:500}}
+      bounces={true} 
       contentContainerStyle={styles.container}>
         {/* //Header */}
         {/* <View style={styles.headerView}></View> */}
@@ -151,6 +152,12 @@ const Tempdata = [
     txt2: '2 Ongoing',
     goto: 'HallOfFame',
   },
+  // {
+  //   txt1: 'Hall Of Fame',
+  //   img: Images.DOLLAR,
+  //   txt2: '2 Ongoing',
+  //   goto: 'HallOfFame',
+  // },
 ];
 
 {

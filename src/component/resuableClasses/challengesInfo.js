@@ -8,7 +8,7 @@ import {
   ViewGallery,
 } from '../functionalComponent/functional';
 //Custom Imports
-import {vw, vh, Images} from '../../Constants';
+import {vh, Images} from '../../Constants';
 import {styles} from './styles'
 
 // currently working
