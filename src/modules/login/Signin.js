@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image, Text, TouchableOpacity, TextInput} from 'react-native';
-//Custom Imports
+//Custom Imports add here
 import {vh, vw, Images, color} from '../../Constants';
 import {styles} from './styles';
 export default class Signin extends React.Component {

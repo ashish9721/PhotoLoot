@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
         // flex:1,
         // backgroundColor:'lightblue',
         // justifyContent:'center',
-        // alignItems:'center'
+        // alignItems:'center',
+        paddingVertical:vh(10),
         paddingHorizontal:vw(15),
        marginTop:vh(5)
     },
@@ -158,9 +159,9 @@ smallcardImg:{
     alignItems: 'center',
   },
   // 3rd
-  imgStyle: {
-    width: vw(24),
-    height: vh(30),
+  prizeimgStyle: {
+    width: vw(40),
+    height: vw(40),
     marginRight: vw(10),
   },
   // 4th
@@ -176,7 +177,7 @@ smallcardImg:{
     fontSize: 16,
   },
   //Description Style
-  container: {
+  descriptionContainer: {
     marginTop: vh(28),
   },
   Heading: {

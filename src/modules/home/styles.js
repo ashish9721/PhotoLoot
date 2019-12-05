@@ -2,11 +2,9 @@ import {StyleSheet,Platform} from 'react-native';
 import { vw, DesignWidth, vh, color } from '../../Constants';
 // 
 export const styles = StyleSheet.create({
-    container:{flex:1,
-        // backgroundColor:'lightblue',
-        justifyContent:'center',
-        flex:1,
-        alignItems:'center'
+    container:{
+        alignItems:'center',
+        height:vh(600)   // todo need to check 
     },
     headerView:{
         width:vw(DesignWidth),
@@ -17,5 +15,8 @@ export const styles = StyleSheet.create({
         height:vw(40),
         width:vw(40),
         marginTop:vh(15)
+    },
+    scrollViewStyle:{
+        
     }
 })

@@ -14,7 +14,6 @@ export const styles = StyleSheet.create({
     },
     scrollView: {
       marginTop: vh(186),
-      // position: 'absolute',
       backgroundColor: 'white',
       borderTopLeftRadius: vw(10),
       borderTopRightRadius: vw(10),

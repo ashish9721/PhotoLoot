@@ -5,7 +5,7 @@ export default class UpComingChallenges extends Component {
     renderData(){
         return Tempdata.map((result, index) => { 
             return (     
-                <StickerAndImage heading={result.txt1} img={result.img} time={result.txt2} price={result.price} innercontainer2={true} navProps={this.props}/> 
+                <StickerAndImage heading={result.txt1} img={result.img} time={result.txt2} price={result.price} innercontainer2={true} navProps={this.props} goto={'ChallengesInfo'}/> 
              )
         })
     }

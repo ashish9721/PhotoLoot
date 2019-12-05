@@ -2,36 +2,38 @@
 
 import React, { Component } from 'react'
 
-import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
-import { PrizeViews, Description, Rules } from './functional'
-import { vw } from '../../Constants'
-
+import { Text, View, SafeAreaView, StyleSheet, Button,ScrollView } from 'react-native'
+import { ThreeStickerContainer, StickerAndImage } from '../../component/functionalComponent/functional'
+import {styles} from './styles'
 // currently working
 export default class CurrentChallenges extends Component {
 
     renderData() {
         return Tempdata.map((result, index) => {
             return (
-                <StickerAndImage heading={result.txt1} 
-                img={result.img}
-                 time={result.txt2}
-                  price={result.price}
-                   innercontainer2={true}
+                <StickerAndImage
+                    key={index}
+                    heading={result.txt1}
+                    img={result.img}
+                    time={result.txt2}
+                    price={result.price}
+                    innercontainer2={true}
                     navProps={this.props}
-                     goto={'ChallengesInfo'} 
-                     />
+                    goto={'ChallengesInfo'}
+                />
             )
         })
     }
-
     render() {
         return (
-            <View style={styles.container}>
-
-                <PrizeViews />
-                <Description />
-                <Rules />
-            </View>
+            <ScrollView
+            style={styles.scrollViewStyle} 
+            bounces={false}
+            contentContainerStyle={styles.container}>
+                {
+                    this.renderData()
+                }
+            </ScrollView>
         )
     }
 }
@@ -42,17 +44,8 @@ export default class CurrentChallenges extends Component {
 
 const Tempdata = [
 
-    { txt1: "Beach Happy", txt2: "2 Days Left", price: "500" },
-    { txt1: "Beach Happy", txt2: "2 Days Left", price: "500" },
-    { txt1: "Beach Happy", txt2: "2 Days Left", price: "500" },
+    { txt1: "Beach Happy", txt2: "3 Days Left", price: "500" },
+    { txt1: "Happy", txt2: "4 Days Left", price: "600" },
+    { txt1: "Summer", txt2: "10 Days Left", price: "300" },
 
 ]
-const styles = StyleSheet.create({
-    container: {
-      
-        justifyContent: 'center',
-        paddingHorizontal:vw(16),
-        // backgroundColor:'red'
-    }
-
-})

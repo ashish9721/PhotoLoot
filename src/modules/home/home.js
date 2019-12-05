@@ -20,6 +20,7 @@ export class Home extends Component {
     return Tempdata.map((result, index) => {
       return (
         <StickerAndImage
+          key={index}
           heading={result.txt1}
           img={result.img}
           current={result.txt2}
@@ -32,7 +33,10 @@ export class Home extends Component {
 
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
+      <ScrollView
+      style={styles.scrollViewStyle}
+      bounces={true} 
+      contentContainerStyle={styles.container}>
         {/* //Header */}
         {/* <View style={styles.headerView}></View> */}
         {/*  pass a 2 images as a prop, one as imagebackground and 2nd as a image  */}
@@ -51,10 +55,7 @@ export class Home extends Component {
   }
 }
 const HomeStack = createStackNavigator({
-  Home: {screen: Home,
-  navigationOptions:{
-    header:null
-  }},
+  Home: {screen: Home,navigationOptions:{header:null}},
   CurrentChallenges: {screen: CurrentChallenges},
   HallOfFame: {screen: HallOfFame},
   UpComingChallenges: {screen: UpComingChallenges},
@@ -64,6 +65,7 @@ const TabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomeStack,
     navigationOptions: {
+      header:null,
       title: '',
       tabBarIcon: ({tintColor, focused}) => (
         <Image
@@ -126,9 +128,7 @@ const TabNavigator = createBottomTabNavigator({
       ),
     },
   },
-},
-
-);
+});
 
 export default createAppContainer(TabNavigator);
 
@@ -151,6 +151,12 @@ const Tempdata = [
     txt2: '2 Ongoing',
     goto: 'HallOfFame',
   },
+  // {
+  //   txt1: 'Hall Of Fame',
+  //   img: Images.DOLLAR,
+  //   txt2: '2 Ongoing',
+  //   goto: 'HallOfFame',
+  // },
 ];
 
 {
