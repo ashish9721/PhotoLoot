@@ -21,16 +21,18 @@ export default class Resend extends Component {
             Please enter your Password below.
           </Text>
           <View style={styles.inputTextField2Container}>
-          <TextInput
-            style={styles.inputTextField2}
-            placeholder="New Password"
-            placeholderTextColor={color.placeholderText}></TextInput>
-          <Image
-            style={styles.inputTextField2Img}
-            source={Images.EYEINACTIVE}
-          />
-        </View>
-          <TouchableOpacity activeOpacity={0.8} style={styles.submitBtn}>
+            <TextInput
+              style={styles.inputTextField2}
+              placeholder="New Password"
+              placeholderTextColor={color.placeholderText}></TextInput>
+            <Image
+              style={styles.inputTextField2Img}
+              source={Images.EYEINACTIVE}
+            />
+          </View>
+          <TouchableOpacity activeOpacity={0.8} 
+          onPress={()=>this.props.navigation.navigate('ResetPasswordModal')}
+          style={styles.submitBtn}>
             <Text style={styles.submitTxt}>Submit</Text>
           </TouchableOpacity>
         </View>

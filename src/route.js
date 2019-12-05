@@ -10,52 +10,61 @@ import {Edit} from './modules/profile/edit';
 import search from './modules/search/search';
 import Notifications from './modules/notification/Notifications';
 import Settings from './modules/settings/settings';
-import ChallengesInfo from './component/resuableClasses/challengesInfo'
+import ChallengesInfo from './component/resuableClasses/challengesInfo';
 import Signin from './modules/login/Signin';
 import ForgotPassword from './modules/login/ForgotPassword';
 import Verification from './modules/login/verification';
 import Resend from './modules/login/Resend';
 import SignUp from './modules/login/SignUp';
-import Splash from './splash'
-import VerificationModal from './modals/verificationModal';
+import Splash from './splash';
+import {VerificationModal} from './modals/verificationModal';
+import {ResetPasswordModal} from './modals/resetPasswordModal'
+
+import {color} from './Constants';
 
 const AppNavigator = createStackNavigator(
   {
-    Splash:{
-      screen:Splash,
-      navigationOptions:{
-        header:null
-      }
+    Splash: {
+      screen: Splash,
+      navigationOptions: {
+        header: null,
+      },
     },
     Login: {
       screen: Signin,
-      navigationOptions:{
-        header:null
-      }
+      navigationOptions: {
+        header: null,
+      },
     },
     ForgotPassword: {
       screen: ForgotPassword,
+      navigationOptions: {
+        header: null,
+      },
     },
     Verification: {
       screen: Verification,
+      navigationOptions: {
+        header: null,
+      },
     },
     Resend: {
       screen: Resend,
-    },
-    SignUp:{
-      screen:SignUp
-    },
-    VerificationModal:{
-      screen:VerificationModal,
-      navigationOptions:{
-        
+      navigationOptions: {
+        header: null,
       },
-      mode:"modal"
     },
+    SignUp: {
+      screen: SignUp,
+      navigationOptions: {
+        header: null,
+      },
+    },
+
     Home: {
       screen: Home,
       navigationOptions: {
-        header:null
+        header: null,
       },
     },
     CurrentChallenges: {
@@ -77,27 +86,37 @@ const AppNavigator = createStackNavigator(
     },
     ChallengesInfo: {
       screen: ChallengesInfo,
-      navigationOptions:null
-
+      navigationOptions: null,
     },
-    Signin:{screen:Signin},
-    Search: { screen: search,
-      navigationOptions:null
-    },
-    Notification: { screen: Notifications ,
-      navigationOptions:null
-    },
+    Signin: {screen: Signin},
+    Search: {screen: search, navigationOptions: null},
+    Notification: {screen: Notifications, navigationOptions: null},
     Search: {screen: search, navigationOptions: null},
     Notification: {screen: Notifications, navigationOptions: null},
     Settings: {screen: Settings, navigationOptions: null},
   },
   {
-    // headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
-   },
+    },
     initialRouteName: 'Splash',
   },
-  
 );
-export default createAppContainer(AppNavigator);
+
+const ModalStack = createStackNavigator(
+  {
+    Main: {screen: AppNavigator},
+    VerificationModal: {screen: VerificationModal},
+    ResetPasswordModal:{screen:ResetPasswordModal}
+  },
+  {
+    headerMode: 'none',
+    mode: 'modal',
+    transparentCard: true,
+    cardStyle: {
+      backgroundColor: color.transparentColorBlack,
+    },
+  },
+);
+
+export default createAppContainer(ModalStack);

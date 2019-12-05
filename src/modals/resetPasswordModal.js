@@ -4,7 +4,7 @@ import {Text, View, Image, TouchableOpacity} from 'react-native';
 import {Images} from '../Constants';
 import {styles} from './styles';
 
-export const VerificationModal = props => {
+export const ResetPasswordModal = props => {
   return (
     <View style={styles.container}>
       <View style={styles.modalContainer}>
@@ -13,17 +13,17 @@ export const VerificationModal = props => {
           source={Images.SUCCESSGRAPHIC}
           resizeMode="contain"
         />
-        <Text style={styles.verifyText}>Verification Succesful</Text>
+        <Text style={styles.verifyText}>Password reset successful</Text>
         <Text style={styles.detailTxt}>
-          Your details have been verified successfully. Welcome to PhotoLoot
-          app.
+          Your password was reset successfully. Please sign in with your new
+          password now.
         </Text>
         <TouchableOpacity
           onPress={() => props.navigation.goBack()}
           style={styles.goButton}>
-          <Text style={styles.letsGo}>Let's Go</Text>
+          <Text style={styles.letsGo}>Okay</Text>
         </TouchableOpacity>
       </View>
-     </View>
+    </View>
   );
 };

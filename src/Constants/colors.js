@@ -8,5 +8,6 @@ export const color = {
     TAndC:'rgb(255,152,3)',
     blueishGreen : 'rgb(28,123,127)',
     whiteTwo:'#f5f5f5',
-    brownishGray:'rgb(96,96,96)'
+    brownishGray:'rgb(96,96,96)',
+    transparentColorBlack:'rgba(0,0,0,0.3)',
 }
