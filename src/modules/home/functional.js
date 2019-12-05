@@ -123,24 +123,30 @@ const Rules = props => {
         scrollEnabled={false}
         renderItem={this.renderItem}
       />
-      <View style={Styles.buttonView}>
-        <TouchableOpacity
-          onPress={() => props.prop.navigation.navigate('Gallery')}
-          style={Styles.galleryBackground}>
-          <Text style={Styles.galleryTextColor}>View Gallery</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={Styles.plusBackground}>
-          <Image
-            style={Styles.plusIcon}
-            source={Images.PLUS}
-            resizeMode="contain"
-          />
-        </TouchableOpacity>
-      </View>
     </View>
   );
 };
-
+ const ViewGallery=(props)=>{
+   return(
+    <View style={Styles.buttonView}>
+    <TouchableOpacity
+        activeOpacity={0.8}
+      onPress={() => props.prop.navigation.navigate('Gallery')}
+      style={Styles.galleryBackground}>
+      <Text style={Styles.galleryTextColor}>View Gallery</Text>
+    </TouchableOpacity>
+    <TouchableOpacity 
+    activeOpacity={0.8}
+    style={Styles.plusBackground}>
+      <Image
+        style={Styles.plusIcon}
+        source={Images.PLUS}
+        resizeMode="contain"
+      />
+    </TouchableOpacity>
+  </View>
+   )
+ }
 const DataToShow = [
   {Rules: 'You must own the image you submit.'},
   {Rules: 'No nudity/inappropriate content.'},
@@ -274,4 +280,4 @@ const Styles = StyleSheet.create({
     marginBottom: vh(50),
   },
 });
-export {PrizeViews, Rules, Description, CityLights};
+export {PrizeViews, Rules, Description, CityLights,ViewGallery};

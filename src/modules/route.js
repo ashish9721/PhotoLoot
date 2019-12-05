@@ -27,7 +27,7 @@ const AppNavigator = createStackNavigator(
     }
   },
   {
-    initialRouteName: 'Profile',
+    initialRouteName: 'CurrentChallenges',
   },
 );
 export default createAppContainer(AppNavigator);

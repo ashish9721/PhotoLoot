@@ -19,7 +19,9 @@ export const styles = StyleSheet.create({
         width: vw(26),
         height: vw(26),
         borderRadius: vw(13),
-        backgroundColor: color.pale
+        backgroundColor: color.pale,
+        justifyContent:'center',
+        alignItems:'center'
     },
     texts: {
         width: vw(220)
