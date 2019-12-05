@@ -17,12 +17,15 @@ import Verification from './modules/login/verification';
 import Resend from './modules/login/Resend';
 import SignUp from './modules/login/SignUp';
 import Splash from './splash'
+import VerificationModal from './modals/verificationModal';
 
 const AppNavigator = createStackNavigator(
   {
     Splash:{
       screen:Splash,
-      header:null
+      navigationOptions:{
+        header:null
+      }
     },
     Login: {
       screen: Signin,
@@ -41,6 +44,13 @@ const AppNavigator = createStackNavigator(
     },
     SignUp:{
       screen:SignUp
+    },
+    VerificationModal:{
+      screen:VerificationModal,
+      navigationOptions:{
+        
+      },
+      mode:"modal"
     },
     Home: {
       screen: Home,

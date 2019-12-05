@@ -29,7 +29,7 @@ export default class Verification extends Component {
             <View style={styles.inputTextField2Img}></View>
           </View>
           <TouchableOpacity activeOpacity={0.8} 
-          onPress={()=>this.props.navigation.navigate('Home')}
+          onPress={()=>this.props.navigation.navigate('VerificationModal')}
           style={styles.submitBtn}>
             <Text style={styles.submitTxt}>Submit</Text>
           </TouchableOpacity>
