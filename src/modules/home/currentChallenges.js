@@ -41,7 +41,6 @@ export default class CurrentChallenges extends Component {
 
 
 
-
 const Tempdata = [
 
     { txt1: "Beach Happy", txt2: "3 Days Left", price: "500" },
