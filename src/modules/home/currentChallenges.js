@@ -14,29 +14,32 @@ export default class CurrentChallenges extends Component {
                 <StickerAndImage
                     key={index}
                     heading={result.txt1}
-                img={result.img}
-                 time={result.txt2}
-                  price={result.price}
-                   innercontainer2={true}
+                    img={result.img}
+                    time={result.txt2}
+                    price={result.price}
+                    innercontainer2={true}
                     navProps={this.props}
-                     goto={'ChallengesInfo'} 
-                     />
+                    goto={'ChallengesInfo'}
+                />
             )
         })
     }
     render() {
         return (
-            <ScrollView contentContainerStyle={styles.container}>
-           {
-               this.renderData()
-           }
+            <ScrollView
+            style={styles.scrollViewStyle} 
+            bounces={false}
+            contentContainerStyle={styles.container}>
+                {
+                    this.renderData()
+                }
             </ScrollView>
         )
     }
 }
 
 
-   
+
 
 
 const Tempdata = [

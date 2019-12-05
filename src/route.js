@@ -11,9 +11,32 @@ import search from './modules/search/search';
 import Notifications from './modules/notification/Notifications';
 import Settings from './modules/settings/settings';
 import ChallengesInfo from './component/resuableClasses/challengesInfo'
-import Signin from './modules/login/Signin'
+import Signin from './modules/login/Signin';
+import ForgotPassword from './modules/login/ForgotPassword';
+import Verification from './modules/login/verification';
+import Resend from './modules/login/Resend';
+import SignUp from './modules/login/SignUp';
+
 const AppNavigator = createStackNavigator(
   {
+    Login: {
+      screen: Signin,
+      navigationOptions:{
+        header:null
+      }
+    },
+    ForgotPassword: {
+      screen: ForgotPassword,
+    },
+    Verification: {
+      screen: Verification,
+    },
+    Resend: {
+      screen: Resend,
+    },
+    SignUp:{
+      screen:SignUp
+    },
     Home: {
       screen: Home,
       navigationOptions:null
@@ -44,6 +67,7 @@ const AppNavigator = createStackNavigator(
       navigationOptions:null
 
     },
+    Signin:{screen:Signin},
     Search: { screen: search,
       navigationOptions:null
     },
@@ -60,7 +84,7 @@ const AppNavigator = createStackNavigator(
     navigationOptions: {
       headerVisible: false,
    },
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
   },
   
 );

@@ -158,9 +158,9 @@ smallcardImg:{
     alignItems: 'center',
   },
   // 3rd
-  imgStyle: {
-    width: vw(24),
-    height: vh(30),
+  prizeimgStyle: {
+    width: vw(40),
+    height: vw(40),
     marginRight: vw(10),
   },
   // 4th

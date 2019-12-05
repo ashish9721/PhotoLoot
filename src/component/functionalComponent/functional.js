@@ -193,21 +193,21 @@ const ViewGallery=(props)=>{
     return (
       <View style={styles.mainViewStyle}>
         <View style={styles.shadowViewStyle}>
-          <Image style={styles.imgStyle} source={Images.GOLDMEDAL} />
+          <Image style={styles.prizeimgStyle} source={Images.GOLDMEDAL} resizeMode='contain' />
           <View>
             <Text style={styles.grayTextStyle}>1st Prize</Text>
             <Text style={styles.colorTextStyle}>$125</Text>
           </View>
         </View>
         <View style={styles.shadowViewStyle}>
-          <Image style={styles.imgStyle} source={Images.SILVERMEDAL} />
+          <Image style={styles.prizeimgStyle} source={Images.SILVERMEDAL} resizeMode='contain' />
           <View>
             <Text style={styles.grayTextStyle}>2nd Prize</Text>
             <Text style={styles.colorTextStyle}>$60</Text>
           </View>
         </View>
         <View style={styles.shadowViewStyle}>
-          <Image style={styles.imgStyle} source={Images.BRONZEMEDAL} />
+          <Image style={styles.prizeimgStyle} source={Images.BRONZEMEDAL} resizeMode='contain' />
           <View>
             <Text style={styles.grayTextStyle}>3rd Prize</Text>
             <Text style={styles.colorTextStyle}>$35</Text>
