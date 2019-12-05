@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { Text, View, SafeAreaView, StyleSheet, Button } from 'react-native'
 import { PrizeViews, Description, Rules } from './functional'
 import { vw } from '../../Constants'
+import {StickerAndImage} from '../../component/functionalComponent/functional'
 
 // currently working
 export default class CurrentChallenges extends Component {
@@ -12,7 +13,7 @@ export default class CurrentChallenges extends Component {
     renderData() {
         return Tempdata.map((result, index) => {
             return (
-                <StickerAndImage key={index} heading={result.txt1} 
+                <StickerAndImage  heading={result.txt1} 
                 img={result.img}
                  time={result.txt2}
                   price={result.price}
@@ -37,10 +38,6 @@ export default class CurrentChallenges extends Component {
 }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2182b31ccf07814779b2d4ed387de4c49d63e40b
 
 
 const Tempdata = [
