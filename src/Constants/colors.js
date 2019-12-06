@@ -1,5 +1,6 @@
 export const color = {
     white:'#ffffff',
+    whiteTwo:'#f5f5f5',
     inputTextField:'rgb(245, 245, 245)',
     placeholderText:'rgb(179,179,179)',
     gray:'gray',

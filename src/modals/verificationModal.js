@@ -104,24 +104,37 @@ export const Congratulations = () => {
   );
 };
 // Out Of votes
-export const OutOfVotes = () => {
+export const OutOfVotes = props => {
   return (
     <View style={styles.container}>
-      <View style={styles.modalContainer}>
-        <Image
-          style={styles.successImage}
-          source={Images.VOTESFINISHED}
-          resizeMode="contain"
-        />
+      <View style={styles.outOfvoteModalContainer}>
+        <View styles={styles.clapContainer}>
+          <Image
+            style={styles.successImage}
+            source={Images.VOTESFINISHED}
+            resizeMode="contain"
+          />
+        </View>
         <Text style={styles.verifyText}>Uh Oh!</Text>
-        <Text style={styles.detailTxt}>
-        looks like you ran out of votes.
+        <Text style={styles.outVotesText}>
+          looks like you ran out of votes.
         </Text>
-        <TouchableOpacity
-          onPress={() => props.navigation.goBack()}
-          style={styles.goButton}>
-          <Text style={styles.letsGo}>Watch Ad</Text>
-        </TouchableOpacity>
+        <Text styles={styles.noWorriesText}>
+          No worries, wait for 10m 13s to get a vote or watch 
+          an ad and get all the votes right away.
+        </Text>
+        <View style={{flexDirection: 'row'}}>
+          <TouchableOpacity
+            onPress={() => props.navigation.goBack()}
+            style={styles.okayButton}>
+            <Text style={styles.watchAd}>I'll wait</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigation.goBack()}
+            style={styles.goButton}>
+            <Text style={styles.letsGo}>Watch Ad</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

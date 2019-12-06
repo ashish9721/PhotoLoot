@@ -50,7 +50,6 @@ export const styles = StyleSheet.create({
   congratulationsContainer: {
     flex:1,
     alignItems: 'center',
-    backgroundColor:'red'
   },
   wonImage: {
     paddingHorizontal: vw(27),
@@ -129,5 +128,46 @@ export const styles = StyleSheet.create({
     color:color.brownishGray,
     marginLeft:vw(5),
     fontSize:vw(16)
+  },
+  // Out Of votes
+  outOfvoteModalContainer:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: vw(345),
+    height: vh(410),
+    marginHorizontal: vw(20),
+    backgroundColor: color.white,
+    borderRadius: vw(10),
+  },
+  outVotesText:{
+      fontSize:vw(14),
+      marginTop:vh(10),
+      color:color.brownishGray
+  },
+  clapContainer:{
+    width:vw(330),
+    height:vh(155),
+    backgroundColor:color.TAndC
+  },
+  okayButton:{
+    height: vh(45),
+    width: vw(145),
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: vw(10),
+    marginTop: vh(40),
+    borderWidth:vw(1),
+    borderColor:color.TAndC,
+    marginRight:vw(25)
+  },
+  watchAd:{
+    color:color.TAndC,
+    fontWeight: '700',
+    fontSize: vw(15),
+  },
+  noWorriesText:{
+    width:vw(281),
+    color:color.brownishGray
+    
   }
 });
