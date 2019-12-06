@@ -47,55 +47,87 @@ export const styles = StyleSheet.create({
     fontSize: vw(15),
   },
   //Congratulations
+  congratulationsContainer: {
+    flex:1,
+    alignItems: 'center',
+    backgroundColor:'red'
+  },
   wonImage: {
-    marginTop:vh(30),
-    paddingHorizontal:vw(27),
-    height:vh(45),
-    width:vw(320)
+    paddingHorizontal: vw(27),
+    height: vh(45),
+    width: vw(320),
+    marginTop:vh(51)
   },
-  topGraphic:{
-    height:vh(60),
-    width:vw(320),
-    marginTop:vh(20)
+  topGraphic: {
+    height: vh(60),
+    width: vw(320),
+    marginTop: vh(20),
   },
-  uploadedPhoto:{
-    position:'absolute',
-    width:vw(320),
-    height:vh(315),
+  uploadedPhoto: {
+    position: 'absolute',
+    width: vw(320),
+    height: vh(315),
+    borderRadius: vw(11),
+    top: vh(165),
+  },
+  congratsSayingView: {
+    backgroundColor: 'white',
+    width: vw(320),
+    height: vh(115),
+    justifyContent: 'space-between',
+    marginTop: vh(291),
+    borderRadius: vw(11),
+  },
+  congratsInnerView: {
+    flexDirection: 'row',
+    marginTop: vh(31),
+    justifyContent: 'space-around',
+  },
+  trophy: {
+    width: vw(40),
+    height: vw(40),
+    marginLeft: vw(11),
+  },
+  congratsTextsView: {
+    marginRight: vw(10),
+    justifyContent: 'space-between',
+  },
+  congratulationDarkText: {
+    fontSize: vw(12),
+    fontWeight: '700',
+  },
+  wonDesc: {
+    fontSize: vw(11),
+    color: color.brownishGray,
+  },
+  rowDirectionView: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    alignItems: 'center',
+    marginBottom: vh(8),
+  },
+  shareText: {
+    marginLeft: vw(8),
+  },
+  separator: {
+    width: vw(320),
+    backgroundColor: color.brownishGray,
+    height: vw(0.3),
+  },
+  prizeView:{
+    flexDirection:'row',
+    justifyContent:'center',
+    width:vw(74),
+    height:vh(41),
+    backgroundColor:'white',
+    alignItems:'center',
     borderRadius:vw(11),
-    
+    position:'absolute',
+    top:vh(141)
   },
-  congratsSayingView:{
-    backgroundColor:"white",
-    width:vw(320),
-    height:vh(115),
-    justifyContent:'space-between',
-  },
-  congratsInnerView:{
-    flexDirection:'row',
-    marginTop:vh(21),
-    justifyContent:'space-around'
-  },
-  trophy:{
-    width:vw(40),
-    height:vw(40),
-    marginLeft:vw(11)
-  },
-  congratsTextsView:{
-    marginRight:vw(10),
-    justifyContent:'space-around'
-  },
-  congratulationDarkText:{
-    fontSize:vw(12),
-    fontWeight:'700'
-  },
-  wonDesc:{
-    fontSize:vw(11),
+  rankText:{
     color:color.brownishGray,
-  },
-  rowDirectionView:{
-    flexDirection:'row',
-    alignSelf:'center'
+    marginLeft:vw(5),
+    fontSize:vw(16)
   }
-  
 });
