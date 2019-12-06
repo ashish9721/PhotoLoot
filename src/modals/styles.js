@@ -50,7 +50,6 @@ export const styles = StyleSheet.create({
   congratulationsContainer: {
     flex:1,
     alignItems: 'center',
-    backgroundColor:'red'
   },
   wonImage: {
     paddingHorizontal: vw(27),

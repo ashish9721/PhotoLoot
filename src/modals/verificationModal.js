@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
+import {Text, View, Image, TouchableOpacity,ImageBackground} from 'react-native';
 //Custom Imports
 import {Images, Strings} from '../Constants';
 import {styles} from './styles';
@@ -54,7 +54,9 @@ export const ResetPasswordModal = props => {
 
 export const Congratulations = () => {
   return (
-    <View style={styles.congratulationsContainer}>
+    <ImageBackground
+    source={Images.DECORATION}resizeMode="cover"
+    style={styles.congratulationsContainer}>
       <Image style={styles.wonImage} source={Images.WON} resizeMode="contain" />
       <Image
         style={styles.topGraphic}
@@ -100,7 +102,7 @@ export const Congratulations = () => {
         <Image source={Images.GOLDMEDAL} resizeMode="contain" />
         <Text style={styles.rankText}>1st</Text>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 // Out Of votes
