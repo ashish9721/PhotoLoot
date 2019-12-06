@@ -8,37 +8,40 @@ import {
   Image,
 } from 'react-native';
 import {vh, vw, Images} from '../../Constants';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 export default class ForgotPassword extends React.Component {
   render() {
     return (
-      <View style={styles.parentstyle}>
-        <View style={styles.parent}>
-          <Image
-            style={styles.main}
-            source={Images.LOGOORANGE}
-            resizeMode="contain"
-          />
-          <Text style={styles.ForgotPassword}>Forgot Password?</Text>
-        </View>
-        <Text style={styles.starttext}>
-          Don't worry! enter your registered email ID in order to recieve rest
-          password instructions.
-        </Text>
+      <KeyboardAwareScrollView>
+        <View style={styles.parentstyle}>
+          <View style={styles.parent}>
+            <Image
+              style={styles.main}
+              source={Images.LOGOORANGE}
+              resizeMode="contain"
+            />
+            <Text style={styles.ForgotPassword}>Forgot Password?</Text>
+          </View>
+          <Text style={styles.starttext}>
+            Don't worry! enter your registered email ID in order to recieve rest
+            password instructions.
+          </Text>
 
-        <View>
-          <TextInput
-            style={styles.email}
-            placeholder="Email Address"
-            placeholderTextColor="#b3b3b3"
-          />
+          <View>
+            <TextInput
+              style={styles.email}
+              placeholder="Email Address"
+              placeholderTextColor="#b3b3b3"
+            />
+          </View>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => this.props.navigation.navigate('Verification')}
+            style={styles.Buttonsubmit}>
+            <Text style={styles.submitstyle}>Submit</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity 
-        activeOpacity={.8}
-        onPress={()=>this.props.navigation.navigate('Verification')}
-        style={styles.Buttonsubmit}>
-          <Text style={styles.submitstyle}>Submit</Text>
-        </TouchableOpacity>
-      </View>
+      </KeyboardAwareScrollView>
     );
   }
 }

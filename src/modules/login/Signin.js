@@ -52,7 +52,9 @@ export default class Signin extends React.Component {
               />
               <Text style={styles.socialText}>FaceBook</Text>
             </TouchableOpacity>
-            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
+            <TouchableOpacity 
+            onPress={()=>{this.props.navigation.navigate('Congratulations')}}
+            activeOpacity={0.8} style={styles.socialButton}>
               <Image
                 style={styles.sociaImage}
                 source={Images.INSTAGRAM}

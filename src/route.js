@@ -17,8 +17,8 @@ import Verification from './modules/login/verification';
 import Resend from './modules/login/Resend';
 import SignUp from './modules/login/SignUp';
 import Splash from './splash';
-import {VerificationModal} from './modals/verificationModal';
-import {ResetPasswordModal} from './modals/resetPasswordModal'
+import {VerificationModal, Congratulations} from './modals/verificationModal';
+import {ResetPasswordModal} from './modals/verificationModal'
 
 import {color} from './Constants';
 
@@ -107,7 +107,8 @@ const ModalStack = createStackNavigator(
   {
     Main: {screen: AppNavigator},
     VerificationModal: {screen: VerificationModal},
-    ResetPasswordModal:{screen:ResetPasswordModal}
+    ResetPasswordModal:{screen:ResetPasswordModal},
+    Congratulations:{screen:Congratulations}
   },
   {
     headerMode: 'none',

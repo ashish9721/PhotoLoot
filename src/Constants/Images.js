@@ -46,7 +46,12 @@ const Images = {
     EYEINACTIVE: require('../Assets/Images/icEyeInactive.png'),
     VALID: require('../Assets/Images/icValid.png'),
     INVALID: require('../Assets/Images/icInvalid.png'),
-    SUCCESSGRAPHIC: require('../Assets/Images/icSuccessGraphic.png')
+    SUCCESSGRAPHIC: require('../Assets/Images/icSuccessGraphic.png'),
+    WON:require('../Assets/Images/icYouWon.png'),
+    TPOGRAPHIC:require('../Assets/Images/icTopGraphic.png'),
+    TROPHY:require('../Assets/Images/icTrophy.png'),
+    DECORATION:require('../Assets/Images/icDecoration.png')
+    
 
 }
 
