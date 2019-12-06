@@ -17,6 +17,9 @@ export default class Splash extends Component {
         duration: 3000,
       },
     ).start(()=>{this.props.navigation.navigate('Login')});
+
+
+
   }
   render() {
     return (

@@ -1,13 +1,16 @@
-import React, {Component} from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {Text, View, Image, TouchableOpacity,ImageBackground} from 'react-native';
 //Custom Imports
 import {Images, Strings} from '../Constants';
 import {styles} from './styles';
 
 export const VerificationModal = props => {
   return (
-    <View style={styles.container}>
-      <View style={styles.modalContainer}>
+    <TouchableOpacity
+      onPress={() => props.navigation.goBack()}
+      activeOpacity={1}
+      style={styles.container}>
+      <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
         <Image
           style={styles.successImage}
           source={Images.SUCCESSGRAPHIC}
@@ -20,16 +23,21 @@ export const VerificationModal = props => {
           style={styles.goButton}>
           <Text style={styles.letsGo}>Let's Go</Text>
         </TouchableOpacity>
-      </View>
-    </View>
+      </TouchableOpacity>
+    </TouchableOpacity>
   );
 };
 
 // Reset Password
 export const ResetPasswordModal = props => {
   return (
-    <View style={styles.container}>
-      <View style={styles.modalContainer}>
+    <TouchableOpacity 
+    activeOpacity={1}
+    onPress={()=>props.navigation.goBack()}
+    style={styles.container}>
+      <TouchableOpacity
+      activeOpacity={1}
+      style={styles.modalContainer}>
         <Image
           style={styles.successImage}
           source={Images.SUCCESSGRAPHIC}
@@ -45,16 +53,17 @@ export const ResetPasswordModal = props => {
           style={styles.goButton}>
           <Text style={styles.letsGo}>Okay</Text>
         </TouchableOpacity>
-      </View>
-    </View>
+      </TouchableOpacity>
+    </TouchableOpacity>
   );
 };
 
 // Congratulations
 
-export const Congratulations = () => {
+export const Congratulations = props => {
   return (
-    <View style={styles.congratulationsContainer}>
+    <ImageBackground style={styles.congratulationsContainer}
+    source={Images.DECORATION}resizeMode="cover">
       <Image style={styles.wonImage} source={Images.WON} resizeMode="contain" />
       <Image
         style={styles.topGraphic}
@@ -100,7 +109,7 @@ export const Congratulations = () => {
         <Image source={Images.GOLDMEDAL} resizeMode="contain" />
         <Text style={styles.rankText}>1st</Text>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 // Out Of votes
@@ -115,13 +124,13 @@ export const OutOfVotes = props => {
             resizeMode="contain"
           />
         </View>
-        <Text style={styles.verifyText}>Uh Oh!</Text>
+        {/* <Text style={styles.verifyText}>Uh Oh!</Text>
         <Text style={styles.outVotesText}>
           looks like you ran out of votes.
         </Text>
         <Text styles={styles.noWorriesText}>
-          No worries, wait for 10m 13s to get a vote or watch 
-          an ad and get all the votes right away.
+          No worries, wait for 10m 13s to get a vote or watch an ad and get all
+          the votes right away.
         </Text>
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity
@@ -134,7 +143,7 @@ export const OutOfVotes = props => {
             style={styles.goButton}>
             <Text style={styles.letsGo}>Watch Ad</Text>
           </TouchableOpacity>
-        </View>
+        </View> */}
       </View>
     </View>
   );

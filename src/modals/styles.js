@@ -136,7 +136,7 @@ export const styles = StyleSheet.create({
     width: vw(345),
     height: vh(410),
     marginHorizontal: vw(20),
-    backgroundColor: color.white,
+    backgroundColor: color.TAndC,
     borderRadius: vw(10),
   },
   outVotesText:{
