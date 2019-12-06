@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {vw, vh, color} from '../Constants';
+import { StyleSheet } from 'react-native';
+import { vw, vh, color } from '../Constants';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,18 +17,51 @@ export const styles = StyleSheet.create({
   successImage: {
     width: vw(75),
     height: vh(75),
-    marginTop: vh(35),
+    // marginTop: vh(35),
   },
   verifyText: {
     fontSize: vw(20),
     fontWeight: 'bold',
     marginTop: vh(25),
   },
+  UhOhContent:{
+    fontSize:vw(14),
+    textAlign:'left',
+    lineHeight:vw(22),
+    width:vw(281),
+        marginTop: vh(20),
+
+  },
   detailTxt: {
     fontSize: vw(15),
-    width: vw(300),
+    // width: vw(300),
     color: color.brownishGray,
-    marginTop: vh(20),
+    alignSelf: 'center',
+    // marginTop: vh(20),
+  },
+  //out of votes modal container
+  outOfVotesModalContainer: {
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    width: vw(345),
+    height: vh(413),
+    marginHorizontal: vw(20),
+    backgroundColor: color.white,
+    borderRadius: vw(10),
+  },
+  imgContainer:{
+    height:vh(156),
+    width:vw(345),
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:color.lighYellow
+  },
+  goButtonContainer: {
+    marginTop: vh(40),
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    width:vw(315)
+
   },
   goButton: {
     height: vh(45),
@@ -37,7 +70,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: vw(10),
-    marginTop: vh(30),
   },
   letsGo: {
     color: color.white,
@@ -46,14 +78,14 @@ export const styles = StyleSheet.create({
   },
   //Congratulations
   congratulationsContainer: {
-    flex:1,
+    flex: 1,
     alignItems: 'center',
   },
   wonImage: {
     paddingHorizontal: vw(27),
     height: vh(45),
     width: vw(320),
-    marginTop:vh(51)
+    marginTop: vh(51)
   },
   topGraphic: {
     height: vh(60),
@@ -111,20 +143,20 @@ export const styles = StyleSheet.create({
     backgroundColor: color.brownishGray,
     height: vw(0.3),
   },
-  prizeView:{
-    flexDirection:'row',
-    justifyContent:'center',
-    width:vw(74),
-    height:vh(41),
-    backgroundColor:'white',
-    alignItems:'center',
-    borderRadius:vw(11),
-    position:'absolute',
-    top:vh(141)
+  prizeView: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: vw(74),
+    height: vh(41),
+    backgroundColor: 'white',
+    alignItems: 'center',
+    borderRadius: vw(11),
+    position: 'absolute',
+    top: vh(141)
   },
-  rankText:{
-    color:color.brownishGray,
-    marginLeft:vw(5),
-    fontSize:vw(16)
+  rankText: {
+    color: color.brownishGray,
+    marginLeft: vw(5),
+    fontSize: vw(16)
   }
 });

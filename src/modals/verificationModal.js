@@ -1,14 +1,8 @@
-import React from 'react';
-import {
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
-} from 'react-native';
+import React, { Component } from 'react';
+import { Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
 //Custom Imports
-import {Images, Strings, color, vw,vh} from '../Constants';
-import {styles} from './styles';
+import { Images, Strings } from '../Constants';
+import { styles } from './styles';
 
 export const VerificationModal = props => {
   return (
@@ -67,8 +61,7 @@ export const ResetPasswordModal = props => {
 export const Congratulations = () => {
   return (
     <ImageBackground
-      source={Images.DECORATION}
-      resizeMode="cover"
+      source={Images.DECORATION} resizeMode="cover"
       style={styles.congratulationsContainer}>
       <Image style={styles.wonImage} source={Images.WON} resizeMode="contain" />
       <Image
@@ -122,19 +115,36 @@ export const Congratulations = () => {
 export const OutOfVotes = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.modalContainer}>
-        <Image
-          style={styles.successImage}
-          source={Images.VOTESFINISHED}
-          resizeMode="contain"
-        />
-        <Text style={styles.verifyText}>Uh Oh!</Text>
-        <Text style={styles.detailTxt}>looks like you ran out of votes.</Text>
-        <TouchableOpacity
-          onPress={() => props.navigation.goBack()}
-          style={styles.goButton}>
-          <Text style={styles.letsGo}>Watch Ad</Text>
-        </TouchableOpacity>
+      <View style={styles.outOfVotesModalContainer}>
+        <View style={styles.imgContainer}>
+          <Image
+            style={styles.successImage}
+            source={Images.VOTESFINISHED}
+            resizeMode="contain"
+          />
+        </View>
+
+        <View style={{alignItems:'center'}}>
+          <Text style={styles.verifyText}>Uh Oh!</Text>
+          <Text style={styles.detailTxt}>
+            looks like you ran out of votes.
+        </Text>
+        <Text style={styles.UhOhContent}>
+        No worries, wait for 10m 13s to get a vote or watch an ad and get all the votes right away.
+        </Text>
+          <View style={styles.goButtonContainer}>
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={styles.goButton}>
+              <Text style={styles.letsGo}>i'll Wait</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => props.navigation.goBack()}
+              style={styles.goButton}>
+              <Text style={styles.letsGo}>Watch Ad</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     </View>
   );
