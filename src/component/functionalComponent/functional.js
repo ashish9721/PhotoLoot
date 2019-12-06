@@ -168,7 +168,7 @@ const ViewGallery = props => {
 const Rules = props => {
   renderItem = rowData => {
     return (
-      <View>
+      <>
         <View style={styles.rulesStyle}>
           <Image
             style={styles.checkImgStyle}
@@ -177,7 +177,7 @@ const Rules = props => {
           />
           <Text style={styles.descriptionStyle}>{rowData.item.Rules}</Text>
         </View>
-      </View>
+      </>
     );
   };
   return (

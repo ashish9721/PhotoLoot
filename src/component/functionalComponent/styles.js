@@ -1,143 +1,141 @@
 import {StyleSheet} from 'react-native';
-import {vh,vw,color,DesignHeight,DesignWidth} from '../../Constants'
+import {vh, vw, color, DesignHeight, DesignWidth} from '../../Constants';
 export const styles = StyleSheet.create({
-    container:{
-        height:vh(190),
-        // todo height:vh(205) correct viewing
-        // flex:1,
-        // backgroundColor:'lightblue',
-        // justifyContent:'center',
-        // alignItems:'center',
-        paddingVertical:vh(10),
-        paddingHorizontal:vw(15),
-       marginTop:vh(5)
-    },
-    imageContainer:{
-        height:vh(160),
-        width:vw(345),
-        borderRadius:vw(10),
-        backgroundColor:color.blueishGreen
-    },
-    icBaseContainer:{
-        // position:'absolute',
-        // backgroundColor:'pink',
-        alignItems:'center',
-        // top:vh(100),
-        // left:vw(50),
-    },
-    icBaseImage:{
-        width:vw(266),
-        height:vw(70),
+  container: {
+    // height:vh(190),
+    // todo height:vh(205) correct viewing
+    // flex:1,
+    // backgroundColor:'lightblue',
+    // justifyContent:'center',
+    // alignItems:'center',
+    marginTop: vh(25),
+  },
+  imageContainer: {
+    height: vh(160),
+    width: vw(345),
+    borderRadius: vw(10),
+    backgroundColor: color.blueishGreen,
+  },
+  icBaseContainer: {
+    // position:'absolute',
+    // backgroundColor:'pink',
+    alignItems: 'center',
+    // top:vh(100),
+    // left:vw(50),
+  },
+  icBaseImage: {
+    width: vw(266),
+    height: vw(70),
     //    backgroundColor:'blue',
-       position:'absolute',
-       top:vh(-29)   
-    },
-    innercontainer1:{
-        flexDirection:'row',
-        justifyContent:'flex-start',
-        alignItems:'center',
-        // backgroundColor:'red',
-        // marginTop:vh(6),
-        height:vw(55),
-        marginHorizontal:vw(29)
-        // position:'absolute',
-        // top:vh(18),
-        // left:vw(30)
-    },
-    dollarImage:{
-        height:vw(24),
-        width:vw(24),
-        marginRight:vw(14),
-    },
-    textStickerContainer:{
-        flexDirection:'column',
-        // backgroundColor:'pink',
-       justifyContent:'flex-start'
-    },
-    txt1:{
-        fontSize:vw(15),
-        fontWeight:'bold',
-        textAlign:'left',
-    },
-    txt2:{
-        fontSize:vw(11),
-        color:color.gray,
-        paddingTop:vw(5)
-    },
-    innercontainer2:{
-        // backgroundColor:'red',
-        flexDirection:'column',
-        // alignItems:'flex-start',
-        marginHorizontal:vw(30),
-        height:vw(55),
-        // marginTop:vh(5),
-        justifyContent:'center',
-    },
-    innerinnercontainer:{
-        justifyContent:'space-between',
-    flexDirection:'row',
-    backgroundColor:'white',
-    alignItems:'flex-end'
-    },
-    innerinnertxt1:{
-        fontSize:14,
-        fontWeight:'bold',
-        color:'black'
-    },
-    innerinnertxt2:{color:'gray',fontSize:vw(12)},
-    smallStickerDate:{color:'gray',fontSize:vw(12),marginTop:vw(4)},
+    position: 'absolute',
+    top: vh(-29),
+  },
+  innercontainer1: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    // backgroundColor:'red',
+    // marginTop:vh(6),
+    height: vw(55),
+    marginHorizontal: vw(29),
+    // position:'absolute',
+    // top:vh(18),
+    // left:vw(30)
+  },
+  dollarImage: {
+    height: vw(24),
+    width: vw(24),
+    marginRight: vw(14),
+  },
+  textStickerContainer: {
+    flexDirection: 'column',
+    // backgroundColor:'pink',
+    justifyContent: 'flex-start',
+  },
+  txt1: {
+    fontSize: vw(15),
+    fontWeight: 'bold',
+    textAlign: 'left',
+  },
+  txt2: {
+    fontSize: vw(11),
+    color: color.gray,
+    paddingTop: vw(5),
+  },
+  innercontainer2: {
+    // backgroundColor:'red',
+    flexDirection: 'column',
+    // alignItems:'flex-start',
+    marginHorizontal: vw(30),
+    height: vw(55),
+    // marginTop:vh(5),
+    justifyContent: 'center',
+  },
+  innerinnercontainer: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    alignItems: 'flex-end',
+  },
+  innerinnertxt1: {
+    fontSize: vw(14),
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  innerinnertxt2: {color: 'gray', fontSize: vw(12)},
+  smallStickerDate: {color: 'gray', fontSize: vw(12), marginTop: vw(4)},
 
-    innerinnerImgclock:{
-        height:vw(11),
-        width:vw(11)
-    },
-    innercontainerDollar:{
-        color:color.TAndC,
-        fontSize:vw(12),
-        fontWeight:'bold'
-    },
-    innerinnerprice:{
-        fontSize:vw(20),
-        color:color.TAndC
-    },
-    smallsticker:{
-        height:vh(90),
-        width:vw(95),
-    },
-    smallstickerImg:{
-        width:vw(95),
-        height:vw(95),
-        backgroundColor:'pink',
-        borderRadius:vw(10)
-    },
-    smallstickerContainer:{
-        paddingTop:vw(15),
-        paddingLeft:vw(15),
-        paddingRight:vw(15),
-        flexDirection:'row',
-        justifyContent:'space-between'
-},
-smallstickerCard:{ 
-    position:'absolute', 
-    marginTop:vw(75),
-    height:vh(30),
-    width:vw(95),
-    justifyContent:'center',
-    alignItems:'center'
-},
-smallcardContainer:{
-    flexDirection:'row',
-alignItems:'center',
-backgroundColor:'white',
-borderRadius:vw(10),
-padding:vw(5)
-},
-smallcardImg:{
-    width:vw(24),
-    height:vw(25),
-    marginRight:vw(4)
-},
-//Prize View
+  innerinnerImgclock: {
+    height: vw(11),
+    width: vw(11),
+  },
+  innercontainerDollar: {
+    color: color.TAndC,
+    fontSize: vw(12),
+    fontWeight: 'bold',
+  },
+  innerinnerprice: {
+    fontSize: vw(20),
+    color: color.TAndC,
+  },
+  smallsticker: {
+    height: vh(90),
+    width: vw(95),
+  },
+  smallstickerImg: {
+    width: vw(95),
+    height: vw(95),
+    backgroundColor: 'pink',
+    borderRadius: vw(10),
+  },
+  smallstickerContainer: {
+    paddingTop: vw(15),
+    paddingLeft: vw(15),
+    paddingRight: vw(15),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  smallstickerCard: {
+    position: 'absolute',
+    marginTop: vw(75),
+    height: vh(30),
+    width: vw(95),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  smallcardContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderRadius: vw(10),
+    padding: vw(5),
+  },
+  smallcardImg: {
+    width: vw(24),
+    height: vw(25),
+    marginRight: vw(4),
+  },
+  //Prize View
   // this is 1st
   mainViewStyle: {
     flexDirection: 'row',
@@ -163,6 +161,7 @@ smallcardImg:{
     width: vw(40),
     height: vw(40),
     marginRight: vw(10),
+    marginLeft: vw(5)
   },
   // 4th
   grayTextStyle: {
@@ -174,7 +173,7 @@ smallcardImg:{
   colorTextStyle: {
     color: '#66D680',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: vw(16),
   },
   //Description Style
   descriptionContainer: {
@@ -191,16 +190,18 @@ smallcardImg:{
   },
   headingContainer: {
     flexDirection: 'row',
-    marginBottom: vh(12),
+    alignItems: 'center',
   },
   rulesStyle: {
     flexDirection: 'row',
-    marginLeft: vw(10),
-    marginBottom: vh(20),
+    marginTop: vh(5),
   },
   descriptionStyle: {
-    color: color.description,
-    marginLeft: vw(8),
+    color: color.brownishGray,
+    marginLeft: vw(21),
+    marginTop: vh(5),
+    fontSize: vw(12),
+    maxWidth: vw(311)
   },
   //CityLights
   topView: {
@@ -217,6 +218,7 @@ smallcardImg:{
   checkImgStyle: {
     width: vw(10),
     height: vh(9),
+    marginTop: vh(8),
   },
   //Gallery
   buttonView: {
@@ -256,7 +258,4 @@ smallcardImg:{
     alignItems: 'center',
     marginBottom: vh(50),
   },
-}
-
-
-)
+});
