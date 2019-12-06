@@ -54,6 +54,9 @@ const Images = {
   VOTESFINISHED: require('../Assets/Images/icGraphicVotesFinished.png'),
   IMAGEREMOVED: require('../Assets/Images/icImageRemovedgraphic.png'),
   UPDATE: require('../Assets/Images/icUpdateGraphic.png'),
+  BACKBUTTON:require('../Assets/Images/ic-back-btn.png'),
+  BACKBUTTONBLACK:require('../Assets/Images/ic-black-back-btn.png'),
+  
 };
 
 export default Images;
