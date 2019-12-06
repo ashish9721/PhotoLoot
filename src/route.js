@@ -22,6 +22,8 @@ import {
   Congratulations,
   ResetPasswordModal,
   OutOfVotes,
+  ImageRemove,
+  UpdateAvailable,
 } from './modals/verificationModal';
 
 import {color} from './Constants';
@@ -113,9 +115,9 @@ const ModalStack = createStackNavigator(
     VerificationModal: {screen: VerificationModal},
     ResetPasswordModal: {screen: ResetPasswordModal},
     Congratulations: {screen: Congratulations},
-    OutOfVotes: {
-      screen: OutOfVotes
-    },
+    OutOfVotes: {screen: OutOfVotes},
+    ImageRemove: {screen: ImageRemove},
+    UpdateAvailable: {screen: UpdateAvailable},
   },
   {
     headerMode: 'none',

@@ -1,13 +1,22 @@
-import React, {Component} from 'react';
-import {Text, View, Image, TouchableOpacity,ImageBackground} from 'react-native';
+import React from 'react';
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 //Custom Imports
-import {Images, Strings} from '../Constants';
+import {Images, Strings, color, vw,vh} from '../Constants';
 import {styles} from './styles';
 
 export const VerificationModal = props => {
   return (
-    <View style={styles.container}>
-      <View style={styles.modalContainer}>
+    <TouchableOpacity
+      onPress={() => props.navigation.goBack()}
+      activeOpacity={1}
+      style={styles.container}>
+      <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
         <Image
           style={styles.successImage}
           source={Images.SUCCESSGRAPHIC}
@@ -20,16 +29,19 @@ export const VerificationModal = props => {
           style={styles.goButton}>
           <Text style={styles.letsGo}>Let's Go</Text>
         </TouchableOpacity>
-      </View>
-    </View>
+      </TouchableOpacity>
+    </TouchableOpacity>
   );
 };
 
 // Reset Password
 export const ResetPasswordModal = props => {
   return (
-    <View style={styles.container}>
-      <View style={styles.modalContainer}>
+    <TouchableOpacity
+      onPress={() => props.navigation.goBack()}
+      activeOpacity={1}
+      style={styles.container}>
+      <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
         <Image
           style={styles.successImage}
           source={Images.SUCCESSGRAPHIC}
@@ -45,8 +57,8 @@ export const ResetPasswordModal = props => {
           style={styles.goButton}>
           <Text style={styles.letsGo}>Okay</Text>
         </TouchableOpacity>
-      </View>
-    </View>
+      </TouchableOpacity>
+    </TouchableOpacity>
   );
 };
 
@@ -55,8 +67,9 @@ export const ResetPasswordModal = props => {
 export const Congratulations = () => {
   return (
     <ImageBackground
-    source={Images.DECORATION}resizeMode="cover"
-    style={styles.congratulationsContainer}>
+      source={Images.DECORATION}
+      resizeMode="cover"
+      style={styles.congratulationsContainer}>
       <Image style={styles.wonImage} source={Images.WON} resizeMode="contain" />
       <Image
         style={styles.topGraphic}
@@ -116,9 +129,7 @@ export const OutOfVotes = () => {
           resizeMode="contain"
         />
         <Text style={styles.verifyText}>Uh Oh!</Text>
-        <Text style={styles.detailTxt}>
-        looks like you ran out of votes.
-        </Text>
+        <Text style={styles.detailTxt}>looks like you ran out of votes.</Text>
         <TouchableOpacity
           onPress={() => props.navigation.goBack()}
           style={styles.goButton}>
@@ -126,5 +137,74 @@ export const OutOfVotes = () => {
         </TouchableOpacity>
       </View>
     </View>
+  );
+};
+
+//Image Removed
+export const ImageRemove = props => {
+  return (
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={() => props.navigation.goBack()}
+      style={styles.container}>
+      <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
+        <Image
+          style={styles.successImage}
+          source={Images.IMAGEREMOVED}
+          resizeMode="contain"
+        />
+        <Text style={styles.verifyText}>Image Removed</Text>
+        <Text style={styles.detailTxt}>
+          Sorry but the Image is not available anymore as it was removed by
+          owner of the image.
+        </Text>
+        <TouchableOpacity
+          onPress={() => props.navigation.goBack()}
+          style={styles.goButton}>
+          <Text style={styles.letsGo}>Okay</Text>
+        </TouchableOpacity>
+      </TouchableOpacity>
+    </TouchableOpacity>
+  );
+};
+// Update Available
+
+export const UpdateAvailable = props => {
+  return (
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={() => props.navigation.goBack()}
+      style={styles.container}>
+      <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
+        <Image
+          style={styles.successImage}
+          source={Images.UPDATE}
+          resizeMode="contain"
+        />
+        <Text style={styles.verifyText}>New Update Available</Text>
+        <Text style={styles.detailTxt}>
+          Update your app and explore the latest features available in Photoloot
+          App.
+        </Text>
+        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <TouchableOpacity
+            onPress={() => props.navigation.goBack()}
+            style={{borderColor:color.TAndC,borderWidth:vw(1),height: vh(45),
+              width: vw(145),
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: vw(10),
+              marginTop: vh(30),
+              marginRight:vw(25)}}>
+            <Text style={{color:color.TAndC,fontSize:vw(15),fontWeight:'700'}}>Do It Later</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigation.goBack()}
+            style={styles.goButton}>
+            <Text style={styles.letsGo}>Okay</Text>
+          </TouchableOpacity>
+        </View>
+      </TouchableOpacity>
+    </TouchableOpacity>
   );
 };

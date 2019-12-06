@@ -7,9 +7,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalContainer: {
-    justifyContent: 'center',
     alignItems: 'center',
-    width: vw(330),
+    width: vw(350),
     height: vh(330),
     marginHorizontal: vw(20),
     backgroundColor: color.white,
@@ -29,7 +28,6 @@ export const styles = StyleSheet.create({
     fontSize: vw(15),
     width: vw(300),
     color: color.brownishGray,
-    alignSelf: 'center',
     marginTop: vh(20),
   },
   goButton: {
@@ -39,7 +37,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: vw(10),
-    marginTop: vh(40),
+    marginTop: vh(30),
   },
   letsGo: {
     color: color.white,

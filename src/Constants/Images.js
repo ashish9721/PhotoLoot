@@ -51,7 +51,9 @@ const Images = {
     TOPGRAPHIC:require('../Assets/Images/icTopGraphic.png'),
     TROPHY:require('../Assets/Images/icTrophy.png'),
     DECORATION:require('../Assets/Images/icDecoration.png'),
-    VOTESFINISHED:require('../Assets/Images/icGraphicVotesFinished.png')
+    VOTESFINISHED:require('../Assets/Images/icGraphicVotesFinished.png'),
+    IMAGEREMOVED: require('../Assets/Images/icImageRemovedgraphic.png'),
+    UPDATE:require('../Assets/Images/icUpdateGraphic.png')
     
 
 }

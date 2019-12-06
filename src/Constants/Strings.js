@@ -5,7 +5,7 @@ const Strings = {
   appreciation: 'Where creativity meets appreciation',
   PhotoLoot: 'PhotoLoot',
   VERIFYTEXT:
-    'our details have been verified successfully. Welcome to PhotoLoot app.',
+    'Your details have been verified successfully. Welcome to PhotoLoot app.',
 };
 
 export default Strings;
