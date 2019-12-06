@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, TextInput } from 'react-native';
 import { vh, vw } from '../../Constants/Dimension';
+import {styles} from './styles';
 export default class ForgotPassword extends React.Component {
     render() {
         return (
@@ -24,60 +25,3 @@ export default class ForgotPassword extends React.Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    parentstyle: {
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        paddingHorizontal: vw(29)
-    },
-    parent: {
-        alignItems: 'center',
-        marginTop: vh(100),
-        justifyContent: 'center'
-    },
-    main: {
-        height: vh(125),
-        width: vw(125.5),
-        backgroundColor: '#ff9803',
-    },
-    ForgotPassword: {
-        fontSize: vw(25),
-        color: 'black',
-        fontWeight: 'bold',
-        marginTop: vh(30),
-        //alignSelf:'flex-start'
-
-    },
-    donttext:{
-      width:vw(323),
-      marginLeft:vh(15)
-    },
-    starttext: {
-        fontSize: vw(15),
-        color: '#606060',
-        marginTop: vh(16)
-    },
-
-    email: {
-        height: vh(45),
-        width: vw(315),
-        borderRadius: vw(10),
-        backgroundColor: '#f5f5f5',
-        padding: vw(10),
-        marginTop: vh(27),
-    },
-    Buttonsubmit: {
-        height: vh(45),
-        width: vw(315),
-        backgroundColor: '#ff9803',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: vw(10),
-        marginTop: vh(25)
-    },
-    submitstyle: {
-        color: '#ffffff',
-        fontSize: 15
-    },
-})

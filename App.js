@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import Signin from './src/modules/login/Signin';
+// import Signin from './src/modules/login/Signin';
 //import ForgotPassword from './src/modules/login/ForgotPassword';
 //import Verification from './src/modules/login/Verification';
-//import ChangePassword from './src/modules/settings/ChangePassword';
-import TnC from './src/modules/settings/TnC';
+// import ChangePassword from './src/modules/settings/ChangePassword';
+// import TnC from './src/modules/settings/TnC';
 //import Helpnsupport from './src/modules/settings/Helpnsupport';
-//import Faq from './src/modules/settings/Faq';
+// import Faq from './src/modules/settings/Faq';
 // import Notifications from './src/modules/notification/Notifications'
 //import Search from './src/modules/search/Search';
-//import Aboutus from './src/modules/settings/Aboutus';
- //import Notificationdisabled from './src/modules/settings/Notificationdisabled';
+// import Aboutus from './src/modules/settings/Aboutus';
+ import Notificationdisabled from './src/modules/settings/Notificationdisabled';
 export default class App extends Component {
   render() {
     return (
@@ -17,13 +17,13 @@ export default class App extends Component {
       //<ForgotPassword/>
       // <Verification/>
       // <ChangePassword/>
-      // <Helpnsupport/>
-      <TnC/>
-      //<Faq/>
+      //<Helpnsupport/>
+      //  <TnC/>
+      // <Faq/>
       // <Notifications />
       //<Search/>
-      //<Aboutus/>
-       //<Notificationdisabled/>
+      // <Aboutus/>
+       <Notificationdisabled/>
     )
   }
 }

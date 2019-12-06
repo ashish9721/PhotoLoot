@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Text, SafeAreaView, FlatList, Image } from 'react-native';
-import { vh, vw, } from '../../Constants/Dimension';
+import { View, Text, SafeAreaView, FlatList, Image } from 'react-native';
 import Strings from '../../Constants/Strings';
-
+import {styles} from './styles';
 
 notificationData = [
     { title: Strings.heading1, time: Strings.time1ForNotification, image: require('../../Images/cross.png') },
@@ -47,39 +46,5 @@ const Notifications = (props) => {
 
 
 }
-
-const styles = StyleSheet.create({
-    parent: {
-        flexDirection: 'row',
-        marginTop: vh(20)
-    },
-    firstimage: {
-        width: vw(40),
-        height: vh(40),
-        borderRadius: vw(6),
-        marginLeft: vw(15)
-    },
-    new: {
-        width: vw(260),
-        marginLeft: vw(9)
-    },
-    newtext: {
-        fontSize: vw(12),
-    },
-    timestyle: {
-        alignSelf: 'flex-end',
-        marginRight: vw(15)
-    },
-    timetext: {
-        fontSize: vw(11),
-    },
-    line: {
-        height: vh(1),
-        marginTop: vh(10),
-        backgroundColor: 'lightgrey',
-        marginHorizontal: vh(15)
-    },
-
-})
 
 export default Notifications;
