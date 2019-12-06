@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
-import { Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
+import React, {Component} from 'react';
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 //Custom Imports
-import { Images, Strings } from '../Constants';
-import { styles } from './styles';
+import {Images, Strings} from '../Constants';
+import {styles} from './styles';
 
 export const VerificationModal = props => {
   return (
@@ -61,7 +67,8 @@ export const ResetPasswordModal = props => {
 export const Congratulations = () => {
   return (
     <ImageBackground
-      source={Images.DECORATION} resizeMode="cover"
+      source={Images.DECORATION}
+      resizeMode="cover"
       style={styles.congratulationsContainer}>
       <Image style={styles.wonImage} source={Images.WON} resizeMode="contain" />
       <Image
@@ -112,7 +119,7 @@ export const Congratulations = () => {
   );
 };
 // Out Of votes
-export const OutOfVotes = () => {
+export const OutOfVotes = props => {
   return (
     <View style={styles.container}>
       <View style={styles.outOfVotesModalContainer}>
@@ -124,23 +131,24 @@ export const OutOfVotes = () => {
           />
         </View>
 
-        <View style={{alignItems:'center'}}>
+        <View style={{alignItems: 'center'}}>
           <Text style={styles.verifyText}>Uh Oh!</Text>
-          <Text style={styles.detailTxt}>
+          <Text style={styles.noWorryText}>
             looks like you ran out of votes.
-        </Text>
-        <Text style={styles.UhOhContent}>
-        No worries, wait for 10m 13s to get a vote or watch an ad and get all the votes right away.
-        </Text>
+          </Text>
+          <Text style={styles.UhOhContent}>
+            No worries, wait for 10m 13s to get a vote or watch an ad and get
+            all the votes right away.
+          </Text>
           <View style={styles.goButtonContainer}>
             <TouchableOpacity
               onPress={() => props.navigation.goBack()}
-              style={styles.goButton}>
-              <Text style={styles.letsGo}>i'll Wait</Text>
+              style={styles.waitButton}>
+              <Text style={styles.waitText}>I'll Wait</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => props.navigation.goBack()}
-              style={styles.goButton}>
+              onPress={() => props.navigation.navigate('ImageRemove')}
+              style={styles.adButton}>
               <Text style={styles.letsGo}>Watch Ad</Text>
             </TouchableOpacity>
           </View>
@@ -196,17 +204,11 @@ export const UpdateAvailable = props => {
           Update your app and explore the latest features available in Photoloot
           App.
         </Text>
-        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <TouchableOpacity
             onPress={() => props.navigation.goBack()}
-            style={{borderColor:color.TAndC,borderWidth:vw(1),height: vh(45),
-              width: vw(145),
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: vw(10),
-              marginTop: vh(30),
-              marginRight:vw(25)}}>
-            <Text style={{color:color.TAndC,fontSize:vw(15),fontWeight:'700'}}>Do It Later</Text>
+            style={styles.waitButton}>
+            <Text style={styles.waitText}>Do It Later</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.goBack()}
@@ -218,3 +220,5 @@ export const UpdateAvailable = props => {
     </TouchableOpacity>
   );
 };
+
+

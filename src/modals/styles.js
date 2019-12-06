@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { vw, vh, color } from '../Constants';
+import {StyleSheet} from 'react-native';
+import {vw, vh, color} from '../Constants';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,27 +17,26 @@ export const styles = StyleSheet.create({
   successImage: {
     width: vw(75),
     height: vh(75),
-    // marginTop: vh(35),
+    marginTop: vh(35),
   },
   verifyText: {
     fontSize: vw(20),
     fontWeight: 'bold',
     marginTop: vh(25),
   },
-  UhOhContent:{
-    fontSize:vw(14),
-    textAlign:'left',
-    lineHeight:vw(22),
-    width:vw(281),
-        marginTop: vh(20),
-
+  UhOhContent: {
+    fontSize: vw(14),
+    textAlign: 'left',
+    lineHeight: vw(22),
+    width: vw(281),
+    marginTop: vh(20),
   },
   detailTxt: {
     fontSize: vw(15),
-    // width: vw(300),
+    width: vw(300),
     color: color.brownishGray,
     alignSelf: 'center',
-    // marginTop: vh(20),
+    marginTop: vh(20),
   },
   //out of votes modal container
   outOfVotesModalContainer: {
@@ -49,19 +48,31 @@ export const styles = StyleSheet.create({
     backgroundColor: color.white,
     borderRadius: vw(10),
   },
-  imgContainer:{
-    height:vh(156),
-    width:vw(345),
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor:color.lighYellow
+  imgContainer: {
+    height: vh(156),
+    width: vw(345),
+    // justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: color.lighYellow,
   },
   goButtonContainer: {
     marginTop: vh(40),
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    width:vw(315)
-
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: vw(315),
+  },
+  waitButton: {
+    borderColor: color.TAndC,
+    borderWidth: vw(1),
+    height: vh(45),
+    width: vw(145),
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: vw(10),
+  },
+  waitText: {color: color.TAndC, 
+    fontSize: vw(15), 
+    fontWeight: '700'
   },
   goButton: {
     height: vh(45),
@@ -70,11 +81,25 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: vw(10),
+    marginTop:vh(31)
   },
   letsGo: {
     color: color.white,
     fontWeight: '700',
     fontSize: vw(15),
+  },
+  noWorryText:{
+    fontSize: vw(15),
+    color: color.brownishGray,
+    alignSelf: 'center',
+  },
+  adButton:{
+    height: vh(45),
+    width: vw(145),
+    backgroundColor: color.TAndC,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: vw(10),
   },
   //Congratulations
   congratulationsContainer: {
@@ -85,7 +110,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: vw(27),
     height: vh(45),
     width: vw(320),
-    marginTop: vh(51)
+    marginTop: vh(51),
   },
   topGraphic: {
     height: vh(60),
@@ -152,11 +177,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: vw(11),
     position: 'absolute',
-    top: vh(141)
+    top: vh(141),
   },
   rankText: {
     color: color.brownishGray,
     marginLeft: vw(5),
-    fontSize: vw(16)
-  }
+    fontSize: vw(16),
+  },
 });
