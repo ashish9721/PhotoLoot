@@ -203,6 +203,13 @@ export const styles = StyleSheet.create({
     fontSize: vw(12),
     maxWidth: vw(311)
   },
+  rulesRowText:{
+    color: color.brownishGray,
+    marginLeft: vw(21),
+    marginTop: vh(5),
+    fontSize: vw(12),
+    maxWidth: vw(311)
+  },
   //CityLights
   topView: {
     marginTop: vh(15),

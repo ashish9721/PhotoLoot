@@ -2,7 +2,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
 //Custom Imports
-import CurrentChallenges from './modules/home/currentChallenges';
+import {CurrentChallenges} from './modules/home/currentChallenges';
 import Home from './modules/home/home';
 import {Index} from './modules/gallery/index';
 import Profile from './modules/profile/profile';
