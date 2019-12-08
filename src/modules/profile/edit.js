@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Text, View, Image, TextInput} from 'react-native';
 //Custom Imports
 import {Images} from '../../Constants';

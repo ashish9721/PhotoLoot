@@ -1,6 +1,6 @@
 // the prizeView Component 
 import React from 'react';
-import {View,Text,TouchableOpacity,Image,Button,StyleSheet,Dimensions} from 'react-native'
+import {View,Text,Image,StyleSheet} from 'react-native'
 import Images from '../../Constants/Images';
 import { vw, DesignWidth, vh } from '../../Constants';
 

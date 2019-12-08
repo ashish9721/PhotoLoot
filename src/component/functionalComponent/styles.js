@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {vh, vw, color, DesignHeight, DesignWidth} from '../../Constants';
+import {vh, vw, color,} from '../../Constants';
 export const styles = StyleSheet.create({
   container: {
     // height:vh(190),

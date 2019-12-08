@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, TextInput, FlatList } from 'react-native';
+import { View, StyleSheet, } from 'react-native';
 import { vh, vw } from '../../Constants';
 export default class Notifications extends React.Component {
     // State = {

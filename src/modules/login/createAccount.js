@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View ,TextInput} from 'react-native'
 import { styles } from './styles';
-import {color} from '../../Constants/colors'
+import {color} from '../../Constants'
 
 export default class CreateAccount extends Component {
     render() {

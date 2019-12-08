@@ -2,8 +2,8 @@
 
 import React, { Component } from 'react'
 
-import { Text, View, SafeAreaView, StyleSheet, Button,ScrollView } from 'react-native'
-import { ThreeStickerContainer, StickerAndImage } from '../../component/functionalComponent/functional'
+import {ScrollView } from 'react-native'
+import {  StickerAndImage } from '../../component/functionalComponent/functional'
 import {styles} from './styles'
 // currently working
 export default class CurrentChallenges extends Component {

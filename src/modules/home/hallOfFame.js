@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View ,SectionList,Image} from 'react-native'
+import { Text, StyleSheet, View ,SectionList} from 'react-native'
 import { vh,vw } from '../../Constants';
 // import styles from './styles'
-import {StickerAndImage,ThreeStickerContainer} from '../../component/functionalComponent/functional'
+import {ThreeStickerContainer} from '../../component/functionalComponent/functional'
 export default class HallOfFame extends Component {
 
     renderData(result){

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Image, ScrollView} from 'react-native';
+import { Image, ScrollView} from 'react-native';
 import {StickerAndImage} from '../../component/functionalComponent/functional';
 import {styles} from './styles';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -14,7 +14,6 @@ import Profile from '../profile/profile';
 import Notifications from '../notification/Notifications';
 import Settings from '../settings/settings';
 import search from '../search/search';
-import ChallengesInfo from '../../component/resuableClasses/challengesInfo';
 export class Home extends Component {
   rendermap() {
     return Tempdata.map((result, index) => {

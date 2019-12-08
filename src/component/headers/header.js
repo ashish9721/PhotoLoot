@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image, TouchableOpacity, Text} from 'react-native';
 import {styles} from './styles';
-import {Images, vw} from '../../Constants';
+import {Images,} from '../../Constants';
 const Header = props => {
   return (
     <View style={styles.headerContainer}>
