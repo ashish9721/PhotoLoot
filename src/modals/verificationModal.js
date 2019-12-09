@@ -7,7 +7,7 @@ import {
   ImageBackground,
 } from 'react-native';
 //Custom Imports
-import {Images, Strings} from '../Constants';
+import {Images, Strings, DesignWidth, vw, vh} from '../Constants';
 import {styles} from './styles';
 
 export const VerificationModal = props => {
@@ -122,9 +122,9 @@ export const Congratulations = () => {
 export const OutOfVotes = props => {
   return (
     <TouchableOpacity
-    activeOpacity={1}
-    onPress={() => props.navigation.goBack()}
-    style={styles.container}>
+      activeOpacity={1}
+      onPress={() => props.navigation.goBack()}
+      style={styles.container}>
       <View style={styles.outOfVotesModalContainer}>
         <View style={styles.imgContainer}>
           <Image
@@ -223,5 +223,59 @@ export const UpdateAvailable = props => {
     </TouchableOpacity>
   );
 };
-
-
+// Clear Search History
+export const showConfirmationModal = props => {
+  return (
+    <TouchableOpacity
+      activeOpacity={1}
+      // onPress={() => props.navigation.goBack()}
+      onPress = {()=>console.warn(props.navigation.getParam('title'))}
+      style={[styles.container, {justifyContent: 'flex-end'}]}>
+      <TouchableOpacity
+        activeOpacity={1}
+        style={{
+          backgroundColor: 'white',
+          width: vw(DesignWidth),
+          height: vh(155),
+        }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingHorizontal: vw(15),
+            paddingVertical: vh(20),
+          }}>
+          <Text style={{fontSize: vw(13), fontWeight: '700'}}>
+            {props.navigation.getParam('title')}
+          </Text>
+          <TouchableOpacity onPress={() => props.navigation.goBack()}>
+            <Text
+              style={{fontSize: vw(13), fontWeight: '700', marginTop: vh(2)}}>
+              Close
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity 
+        onPress = {() => props.navigation.goBack()}
+          style={{
+            flexDirection: 'row',
+            marginLeft: vw(15),
+            alignItems: 'center',
+          }}>
+          <Image source={Images.NO} />
+          <Text style={{marginLeft: vw(11),fontSize:vw(14)}}>No</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flexDirection: 'row',
+            marginLeft: vw(15),
+            alignItems: 'center',
+            marginTop: vh(22),
+          }}>
+          <Image source={Images.YES} />
+          <Text style={{marginLeft: vw(11),fontSize:vw(14)}}>Yes</Text>
+        </TouchableOpacity>
+      </TouchableOpacity>
+    </TouchableOpacity>
+  );
+};

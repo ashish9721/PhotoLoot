@@ -23,6 +23,7 @@ import SignUp from './modules/login/SignUp';
 import Splash from './splash';
 import HallOfFame from './modules/home/hallOfFame';
 import UpComingChallenges from './modules/home/upcomingChallenges';
+import ChangePassword from './modules/settings/ChangePassword';
 import {
   VerificationModal,
   Congratulations,
@@ -30,9 +31,13 @@ import {
   OutOfVotes,
   ImageRemove,
   UpdateAvailable,
+  showConfirmationModal,
 } from './modals/verificationModal';
 
 import {color} from './Constants';
+import TermsAndCondition from './modules/settings/TnC';
+import Faq from './modules/settings/Faq';
+import HelpnSupport from './modules/settings/Helpnsupport';
 
 const HomeStack = createStackNavigator(
   {
@@ -181,6 +186,10 @@ const AppNavigator = createStackNavigator(
     Search: {screen: search, navigationOptions: null},
     Notification: {screen: Notifications, navigationOptions: null},
     Settings: {screen: Settings, navigationOptions: null},
+    ChangePassword:{screen:ChangePassword},
+    TnC:{screen:TermsAndCondition},
+    FAQ:{screen:Faq},
+    HelpnSupport:{screen:HelpnSupport}
   },
   {
     navigationOptions: {
@@ -199,6 +208,7 @@ const ModalStack = createStackNavigator(
     OutOfVotes: {screen: OutOfVotes},
     ImageRemove: {screen: ImageRemove},
     UpdateAvailable: {screen: UpdateAvailable},
+    showConfirmationModal:{screen:showConfirmationModal}
   },
   {
     headerMode: 'none',

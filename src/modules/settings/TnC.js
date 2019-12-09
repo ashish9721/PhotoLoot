@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, TextInput } from 'react-native';
 import { vh, vw } from '../../Constants/Dimension';
-export default class TnC extends React.Component {
+export default class TermsAndCondition extends React.Component {
     render() {
         return (
             <View>

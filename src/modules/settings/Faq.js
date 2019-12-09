@@ -9,7 +9,7 @@ export default class Faq extends React.Component {
                     <View style={styles.whenview}>
                         <Text style={styles.whentext}>When does a new challenge start and how can I know?</Text>
                         <TouchableOpacity onPress={() => { console.warn("Hello"); }}>
-                            <Image style={styles.crossimg} source={require('../../../src/Images/cross.png')} />
+                            {/* <Image style={styles.crossimg} source={require('../../../src/Images/cross.png')} /> */}
                         </TouchableOpacity>
                     </View>
                     <View style={styles.Loremview}>
@@ -20,25 +20,25 @@ export default class Faq extends React.Component {
                 <View style={styles.commonview}>
                     <Text style={styles.text}>How will I know I have won the challenge and{'\n'}how will I get the prize money?</Text>
                     <TouchableOpacity onPress={() => { console.warn("Hello"); }}>
-                        <Image style={styles.addimg} source={require('../../../src/Images/add.png')} />
+                        {/* <Image style={styles.addimg} source={require('../../../src/Images/add.png')} /> */}
                     </TouchableOpacity>
                 </View>
                 <View style={styles.commonview}>
                     <Text style={styles.text}>How do I upload a picture in any challenge and what are the basic rules of submissions?</Text>
                     <TouchableOpacity onPress={() => { console.warn("Hello"); }}>
-                        <Image style={styles.addimg} source={require('../../../src/Images/add.png')} />
+                        {/* <Image style={styles.addimg} source={require('../../../src/Images/add.png')} /> */}
                     </TouchableOpacity>
                 </View>
                 <View style={styles.commonview}>
                     <Text style={styles.text}>Lorem ipsum dolor sit amet, consectetur piscing elit, sed do eiusmod tempor?</Text>
                     <TouchableOpacity onPress={() => { console.warn("Hello"); }}>
-                        <Image style={styles.addimg} source={require('../../../src/Images/add.png')} />
+                        {/* <Image style={styles.addimg} source={require('../../../src/Images/add.png')} /> */}
                     </TouchableOpacity>
                 </View>
                 <View style={styles.commonview}>
                     <Text style={styles.text}>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli?</Text>
                     <TouchableOpacity onPress={() => { console.warn("Hello"); }}>
-                        <Image style={styles.addimg} source={require('../../../src/Images/add.png')} />
+                        {/* <Image style={styles.addimg} source={require('../../../src/Images/add.png')} /> */}
                     </TouchableOpacity>
                 </View>
 
