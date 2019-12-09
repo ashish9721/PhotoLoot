@@ -1,5 +1,4 @@
 import {combineReducers} from 'redux';
-import { Images } from '../Constants';
 
 
 const Tempdata = [{txt1: 'check', txt2: '', price: ''}];
@@ -25,4 +24,3 @@ export const reducer = combineReducers({
   cardReducer: cardReducer,
   homeReducer: homeReducer,
 });
-

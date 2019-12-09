@@ -209,5 +209,4 @@ const ModalStack = createStackNavigator(
     },
   },
 );
-
 export default createAppContainer(ModalStack);
