@@ -57,7 +57,19 @@ const Images = {
   BACKBUTTON:require('../Assets/Images/ic-back-btn.png'),
   BACKBUTTONBLACK:require('../Assets/Images/ic-black-back-btn.png'),
   CALENDER: require('../Assets/Images/icCalendar.png'),
-  HOMETROPHY: require('../Assets/Images/ic-trophy.png')
+  HOMETROPHY: require('../Assets/Images/ic-trophy.png'),
+  // Settings
+  LOCK:require('../Assets/Images/icChangPass.png'),
+    ARROW:require('../Assets/Images/icArrow.png'),
+    TERMS:require('../Assets/Images/icTermsCon.png'),
+    FAQ:require('../Assets/Images/icFaq.png'),
+    ABOUT:require('../Assets/Images/icAboutUs.png'),
+    HELP:require('../Assets/Images/icHelpNSupport.png'),
+    INVITE:require('../Assets/Images/icInvite.png'),
+    NOTIFY:require('../Assets/Images/icNotif.png'),
+    CLEARSEARCH:require('../Assets/Images/icClearSearch.png'),
+    DEACTIVATE:require('../Assets/Images/icDeactivate.png'),
+    SIGN:require('../Assets/Images/icSignOut.png')
 };
 
 export default Images;

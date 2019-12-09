@@ -15,7 +15,7 @@ const NavTabBar = createMaterialTopTabNavigator(
           
           console.log(navigation.state)
           return ({
-        title: `${""}`,
+        title: `${"Posts"}`,
       })},
     },
     Followers: {

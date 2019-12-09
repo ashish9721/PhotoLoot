@@ -57,7 +57,6 @@ export default class Profile extends Component {
           </View>
         </View>
         <NavTabBar 
-            
         />
       </>
     );

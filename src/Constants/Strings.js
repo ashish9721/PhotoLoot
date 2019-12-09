@@ -6,6 +6,16 @@ const Strings = {
   PhotoLoot: 'PhotoLoot',
   VERIFYTEXT:
     'Your details have been verified successfully. Welcome to PhotoLoot app.',
+  CHANGEPASSWORD: 'Change Password',
+  TERMS: 'Terms & Conditions',
+  FAQs: "FAQ's",
+  ABOUTUS: 'About Us',
+  HELPSUPPORT: 'Help & Support ',
+  INVITECONTACT: 'Invite Contact',
+  NOTIFICATION: 'Notification',
+  HISTORY: 'Clear Search History',
+  ACCOUNT: 'Deactivate Account',
+  SIGNOUT: 'Sign Out',
 };
 
 export default Strings;
