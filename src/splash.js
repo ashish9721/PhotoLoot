@@ -3,7 +3,7 @@ import {Image, ImageBackground, Text, Animated,StyleSheet} from 'react-native';
 
 //Custom Import
 import {Images, Strings,vh,vw} from './Constants';
-
+import {styles} from './styles'
 export default class Splash extends Component {
   state = {
     fadeAnim: new Animated.Value(0),
@@ -34,24 +34,6 @@ export default class Splash extends Component {
     );
   }
 }
- const styles = StyleSheet.create({
-    imageView:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center'  
-    },
-    imageStyle:{
-
-    },
-    PhotoLootTxt:{
-        color:'white',
-        fontWeight:'700',
-        fontSize:vw(25)
-    },
-    appreciationText:{
-        color:'white',
-        fontWeight:'700',
-        fontSize:vw(17),
-        marginTop:vh(12)
-    }
-})
+//  const styles = StyleSheet.create({
+    
+// })

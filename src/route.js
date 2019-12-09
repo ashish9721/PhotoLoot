@@ -1,7 +1,11 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+import React from 'react'
+import {Image} from 'react-native'
 //Custom Imports
+import {Images} from './Constants'
+import {styles} from './styles'
 import CurrentChallenges from './modules/home/currentChallenges';
 import Home from './modules/home/home';
 import {Index} from './modules/gallery/index';
@@ -17,6 +21,8 @@ import Verification from './modules/login/verification';
 import Resend from './modules/login/Resend';
 import SignUp from './modules/login/SignUp';
 import Splash from './splash';
+import HallOfFame from './modules/home/hallOfFame';
+import UpComingChallenges from './modules/home/upcomingChallenges';
 import {
   VerificationModal,
   Congratulations,
@@ -27,6 +33,84 @@ import {
 } from './modals/verificationModal';
 
 import {color} from './Constants';
+
+const HomeStack = createStackNavigator({
+  Home: {screen: Home,navigationOptions:{header:null}},
+  CurrentChallenges: {screen: CurrentChallenges},
+  HallOfFame: {screen: HallOfFame},
+  UpComingChallenges: {screen: UpComingChallenges},
+});
+
+const TabNavigator = createBottomTabNavigator({
+  Home: {
+    screen: HomeStack,
+    navigationOptions: {
+      header:null,
+      title: '',
+      tabBarIcon: ({tintColor, focused}) => (
+        <Image
+          source={focused ? Images.HOME : Images.UNHOME}
+          style={styles.bottomTabImg}
+          resizeMode="contain"
+        />
+      ),
+    },
+  },
+  Search: {
+    screen: search,
+    navigationOptions: {
+      title: '',
+      tabBarIcon: ({tintColor, focused}) => (
+        <Image
+          source={focused ? Images.SEARCH : Images.UNSEARCH}
+          style={styles.bottomTabImg}
+          resizeMode="contain"
+        />
+      ),
+    },
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      title: '',
+      tabBarIcon: ({tintColor, focused}) => (
+        <Image
+          source={focused ? Images.PROFILE : Images.UNPROFILE}
+          style={styles.bottomTabImg}
+          resizeMode="contain"
+        />
+      ),
+    },
+  },
+  Notifications: {
+    screen: Notifications,
+    navigationOptions: {
+      title: '',
+      tabBarIcon: ({tintColor, focused}) => (
+        <Image
+          source={focused ? Images.NOTIFICATION : Images.UNNOTIFICATION}
+          style={styles.bottomTabImg}
+          resizeMode="contain"
+        />
+      ),
+    },
+  },
+  Settings: {
+    screen: Settings,
+    navigationOptions: {
+      title: '',
+      tabBarIcon: ({tintColor, focused}) => (
+        <Image
+          source={focused ? Images.SETTINGS : Images.UNSETTINGS}
+          style={styles.bottomTabImg}
+          resizeMode="contain"
+        />
+      ),
+    },
+  },
+});
+
+
 
 const AppNavigator = createStackNavigator(
   {
@@ -68,7 +152,7 @@ const AppNavigator = createStackNavigator(
     },
 
     Home: {
-      screen: Home,
+      screen: TabNavigator,
       navigationOptions: {
         header: null,
       },
@@ -128,5 +212,6 @@ const ModalStack = createStackNavigator(
     },
   },
 );
+ 
 
 export default createAppContainer(ModalStack);
