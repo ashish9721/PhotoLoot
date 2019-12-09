@@ -78,11 +78,22 @@ class Settings extends React.Component {
   };
   sendData = rowData => {
     switch (rowData.item.title) {
-      case 'Clear History':
-        this.props.navigation.navigate(rowData.item.goto,{title:rowData.item.title});
+      case 'Clear Search History':
+        this.props.navigation.navigate(rowData.item.goto, {
+          title: rowData.item.title,
+        });
         break;
       case 'Deactivate Account':
-        this.props.navigation.navigate(rowData.item.goto);
+        this.props.navigation.navigate(rowData.item.goto, {
+          title: rowData.item.title,
+        });
+        break;
+      case 'Sign Out':
+        this.props.navigation.navigate(rowData.item.goto, {
+          title: rowData.item.title,
+        });
+        break;
+
       default:
         this.props.navigation.navigate(rowData.item.goto);
     }

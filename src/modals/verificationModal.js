@@ -228,8 +228,7 @@ export const showConfirmationModal = props => {
   return (
     <TouchableOpacity
       activeOpacity={1}
-      // onPress={() => props.navigation.goBack()}
-      onPress = {()=>console.warn(props.navigation.getParam('title'))}
+      onPress={() => props.navigation.goBack()}
       style={[styles.container, {justifyContent: 'flex-end'}]}>
       <TouchableOpacity
         activeOpacity={1}
@@ -245,7 +244,7 @@ export const showConfirmationModal = props => {
             paddingHorizontal: vw(15),
             paddingVertical: vh(20),
           }}>
-          <Text style={{fontSize: vw(13), fontWeight: '700'}}>
+          <Text style={{fontSize: vw(15), fontWeight: '700'}}>
             {props.navigation.getParam('title')}
           </Text>
           <TouchableOpacity onPress={() => props.navigation.goBack()}>
