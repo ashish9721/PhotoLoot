@@ -121,7 +121,10 @@ export const Congratulations = () => {
 // Out Of votes
 export const OutOfVotes = props => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+    activeOpacity={1}
+    onPress={() => props.navigation.goBack()}
+    style={styles.container}>
       <View style={styles.outOfVotesModalContainer}>
         <View style={styles.imgContainer}>
           <Image
@@ -154,7 +157,7 @@ export const OutOfVotes = props => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

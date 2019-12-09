@@ -1,16 +1,12 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import React from 'react'
-import {Image} from 'react-native'
+import React from 'react';
+import {Image} from 'react-native';
 //Custom Imports
-<<<<<<< HEAD
-import {Images} from './Constants'
-import {styles} from './styles'
+import {Images} from './Constants';
+import {styles} from './styles';
 import CurrentChallenges from './modules/home/currentChallenges';
-=======
-import {CurrentChallenges} from './modules/home/currentChallenges';
->>>>>>> 358ed9417c258017a8105e4d1210fa2f49ea7f5e
 import Home from './modules/home/home';
 import {Index} from './modules/gallery/index';
 import Profile from './modules/profile/profile';
@@ -38,18 +34,20 @@ import {
 
 import {color} from './Constants';
 
-const HomeStack = createStackNavigator({
-  Home: {screen: Home,navigationOptions:{header:null}},
-  CurrentChallenges: {screen: CurrentChallenges},
-  HallOfFame: {screen: HallOfFame},
-  UpComingChallenges: {screen: UpComingChallenges},
-});
+const HomeStack = createStackNavigator(
+  {
+    Home: {screen: Home, navigationOptions: {header: null}},
+    CurrentChallenges: {screen: CurrentChallenges},
+    HallOfFame: {screen: HallOfFame},
+    UpComingChallenges: {screen: UpComingChallenges},
+  },
+);
 
 const TabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomeStack,
     navigationOptions: {
-      header:null,
+      header: null,
       title: '',
       tabBarIcon: ({tintColor, focused}) => (
         <Image
@@ -113,8 +111,6 @@ const TabNavigator = createBottomTabNavigator({
     },
   },
 });
-
-
 
 const AppNavigator = createStackNavigator(
   {
@@ -182,9 +178,6 @@ const AppNavigator = createStackNavigator(
       screen: ChallengesInfo,
       navigationOptions: null,
     },
-    Signin: {screen: Signin},
-    Search: {screen: search, navigationOptions: null},
-    Notification: {screen: Notifications, navigationOptions: null},
     Search: {screen: search, navigationOptions: null},
     Notification: {screen: Notifications, navigationOptions: null},
     Settings: {screen: Settings, navigationOptions: null},
@@ -216,6 +209,5 @@ const ModalStack = createStackNavigator(
     },
   },
 );
- 
 
 export default createAppContainer(ModalStack);

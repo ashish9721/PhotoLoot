@@ -1,20 +1,28 @@
 import {combineReducers} from 'redux';
+import { Images } from '../Constants';
 
-const Tempdata = [
-    {txt1: '', txt2: '', price: ''}
-  ];
-  
-  export const cardReducer =(state=Tempdata,action)=>{
-      switch(action.type){
-        case 'cardReducer':
-            return {...state, ...action.payload}
-  
-        default:
-          return state;
-      }
+
+const Tempdata = [{txt1: 'check', txt2: '', price: ''}];
+const HomeTempdata = [];
+export const cardReducer = (state = Tempdata, action) => {
+  switch (action.type) {
+    case 'cardReducer':
+      return {...state, ...action.payload};
+
+    default:
+      return state;
   }
-  export const reducer = combineReducers({
-    cardReducer: cardReducer
-  });
-  
-  
+};
+export const homeReducer = (state = HomeTempdata, action) => {
+    switch(action.type){
+        case 'homeReducer':
+            return{...state, ...action.payload};
+            default:
+                return state;
+    }
+};
+export const reducer = combineReducers({
+  cardReducer: cardReducer,
+  homeReducer: homeReducer,
+});
+

@@ -56,7 +56,8 @@ const Images = {
   UPDATE: require('../Assets/Images/icUpdateGraphic.png'),
   BACKBUTTON:require('../Assets/Images/ic-back-btn.png'),
   BACKBUTTONBLACK:require('../Assets/Images/ic-black-back-btn.png'),
-  
+  CALENDER: require('../Assets/Images/icCalendar.png'),
+  HOMETROPHY: require('../Assets/Images/ic-trophy.png')
 };
 
 export default Images;

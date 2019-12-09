@@ -9,13 +9,8 @@ import {
 } from 'react-native';
 
 //Custom Import
-<<<<<<< HEAD
-import {Images, Strings,vh,vw} from './Constants';
-import {styles} from './styles'
-=======
 import {Images, Strings, vh, vw} from './Constants';
-
->>>>>>> 358ed9417c258017a8105e4d1210fa2f49ea7f5e
+import {styles} from './styles';
 export default class Splash extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +31,9 @@ export default class Splash extends Component {
       this.state.height, // The animated value to drive
       {
         toValue: 750, // Animate to opacity: 1 (opaque)
-        duration: 10000, // Make it take a while
+        duration: 1000, // Make it take a while
       },
-    ).start(); // Starts the animation
-    this.props.navigation.navigate('Login')
+    ).start(() => this.props.navigation.navigate('Login')); 
   }
   render() {
     let {height} = this.state;
@@ -67,28 +61,3 @@ export default class Splash extends Component {
     );
   }
 }
-<<<<<<< HEAD
-//  const styles = StyleSheet.create({
-    
-// })
-=======
-const styles = StyleSheet.create({
-  imageView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  imageStyle: {},
-  PhotoLootTxt: {
-    color: 'white',
-    fontWeight: '700',
-    fontSize: vw(25),
-  },
-  appreciationText: {
-    color: 'white',
-    fontWeight: '700',
-    fontSize: vw(17),
-    marginTop: vh(50),
-  },
-});
->>>>>>> 358ed9417c258017a8105e4d1210fa2f49ea7f5e

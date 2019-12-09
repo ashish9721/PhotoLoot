@@ -1,16 +1,13 @@
-// import { actionName } from "../utils/actionName";
-// export const incrementCounter = ()=>{
-//   return(dispatch, getState)=>{
-//     const { counter } = getState().countereducer;
-//     dispatch({type: 'increment', payload:{counter: counter}})
-//   }
-// }
 
-
-export const cardData = (card)=>{
+ export const cardData = (card)=>{
   return(dispatch)=>{
-    dispatch(updateData(card))
+    dispatch(updateData('cardReducer',card))
   }
+}
+export const homeData= (data)=>{
+    return(dispatch)=>{
+        dispatch(updateData('homeReducer',data))
+      }
 }
 
 export const updateState = (key, value)=>{
@@ -19,6 +16,7 @@ export const updateState = (key, value)=>{
   }
 }
 
-function updateData(data){
-  return {type: 'cardReducer', payload: data }
+function updateData(actionType,data){
+  return {type: actionType, payload: {HomeTempdata: data }}
 }
+
