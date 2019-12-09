@@ -1,50 +1,90 @@
+import React, {Component} from 'react';
 
-
-import React, { Component } from 'react'
-
-import {ScrollView } from 'react-native'
-import {  StickerAndImage } from '../../component/functionalComponent/functional'
-import {styles} from './styles'
+import {ScrollView} from 'react-native';
+import {cardData} from '../../action/action';
+import {connect} from 'react-redux';
+import {StickerAndImage} from '../../component/functionalComponent/functional';
+import {styles} from './styles';
 // currently working
-export default class CurrentChallenges extends Component {
+export class CurrentChallenges extends Component {
+  constructor(props) {
+    super(props);
+    this.cardsToExport();
+  }
+  cardsToExport = () => {
+    let payload = [
+      {txt1: 'Beach Happy', txt2: '3 Days Left', price: '500'},
+      {txt1: 'Happy', txt2: '4 Days Left', price: '600'},
+      {txt1: 'Summer', txt2: '10 Days Left', price: '300'},
+    ];
 
-    renderData() {
-        return Tempdata.map((result, index) => {
-            return (
-                <StickerAndImage
-                    key={index}
-                    heading={result.txt1}
-                    img={result.img}
-                    time={result.txt2}
-                    price={result.price}
-                    innercontainer2={true}
-                    navProps={this.props}
-                    goto={'ChallengesInfo'}
-                />
-            )
-        })
-    }
-    render() {
+    this.props.cardData(payload);
+  };
+  renderData() {
+      console.log("tempdata is",this.props);
+    //  const data = this.props.Tempdata
+    return Object.keys(this.props.Tempdata || []).map((key,index)=>{
+        console.log(key);
+        
+        let result = this.props.Tempdata[key]
         return (
-            <ScrollView
-            style={styles.scrollViewStyle} 
-            bounces={false}
-            contentContainerStyle={styles.container}>
-                {
-                    this.renderData()
-                }
-            </ScrollView>
-        )
-    }
+                <StickerAndImage
+                  key={index}
+                  heading={result.txt1}
+                  img={result.img}
+                  time={result.txt2}
+                  price={result.price}
+                  innercontainer2={true}
+                  navProps={this.props}
+                  goto={'ChallengesInfo'}
+                />
+              ); 
+    })
+    // return this.props.Tempdata.map(function({result}, index) {
+    //   return (
+    //     <StickerAndImage
+    //       key={index}
+    //       heading={result.txt1}
+    //       img={result.img}
+    //       time={result.txt2}
+    //       price={result.price}
+    //       innercontainer2={true}
+    //       navProps={this.props}
+    //       goto={'ChallengesInfo'}
+    //     />
+    //   );
+    // });
+  }
+  render() {
+    return (
+      <ScrollView
+        style={styles.scrollViewStyle}
+        bounces={false}
+        contentContainerStyle={styles.container}>
+        {this.renderData()}
+      </ScrollView>
+    );
+  }
 }
+const mapStateToProps = state => {
+    console.log("state return is",state.cardReducer);
+    
+  const Tempdata = state.cardReducer;
+  console.log('cards data is ', {...state.cardReducer});
+  return {
+    Tempdata,
+  };
+};
 
+const mapDispatchToProps = dispatch => ({
+  incrementCounter: () => dispatch(incrementCounter()),
+  cardData: payload => dispatch(cardData(payload)),
+  updateState: (key, value) => dispatch(addUser(key, value)),
+});
 
-
-
-const Tempdata = [
-
-    { txt1: "Beach Happy", txt2: "3 Days Left", price: "500" },
-    { txt1: "Happy", txt2: "4 Days Left", price: "600" },
-    { txt1: "Summer", txt2: "10 Days Left", price: "300" },
-
-]
+export default connect(mapStateToProps, mapDispatchToProps)(CurrentChallenges);
+// const Tempdata = [
+//   {txt1: 'Beach Happy', txt2: '3 Days Left', price: '500'},
+//   {txt1: 'Happy', txt2: '4 Days Left', price: '600'},
+//   {txt1: 'Summer', txt2: '10 Days Left', price: '300'},
+// ];

@@ -4,9 +4,13 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import React from 'react'
 import {Image} from 'react-native'
 //Custom Imports
+<<<<<<< HEAD
 import {Images} from './Constants'
 import {styles} from './styles'
 import CurrentChallenges from './modules/home/currentChallenges';
+=======
+import {CurrentChallenges} from './modules/home/currentChallenges';
+>>>>>>> 358ed9417c258017a8105e4d1210fa2f49ea7f5e
 import Home from './modules/home/home';
 import {Index} from './modules/gallery/index';
 import Profile from './modules/profile/profile';
