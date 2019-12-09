@@ -7,35 +7,43 @@ import {StickerAndImage} from '../../component/functionalComponent/functional';
 import {styles} from './styles';
 
 export class CurrentChallenges extends Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
     this.cardsToExport();
-    console.log("asdas",this.props.Tempdata);
-    
   }
   cardsToExport = () => {
     let payload = [
-      {txt1: 'Beach Happy', txt2: '3 Days Left', price: '500'},
-      {txt1: 'Happy', txt2: '4 Days Left', price: '600'},
-      {txt1: 'Summer', txt2: '10 Days Left', price: '300'},
+      {
+        txt1: 'Beach Happy',
+        txt2: '3 Days Left',
+        price: '500',
+        goto: 'ChallengesInfo',
+      },
+      {
+        txt1: 'Happy',
+        txt2: '4 Days Left',
+        price: '600',
+        goto: 'ChallengesInfo',
+      },
+      {
+        txt1: 'Summer',
+        txt2: '10 Days Left',
+        price: '300',
+        goto: 'ChallengesInfo',
+      },
     ];
 
     this.props.cardData(payload);
   };
   renderData() {
-    console.log('tempdata is', this.props.Tempdata);
-    return Object.keys(this.props.Tempdata || []).map((key, index) => {
-      let result = this.props.Tempdata[key];
+    return this.props.Tempdata.map((result, index) => {
       return (
         <StickerAndImage
           key={index}
           heading={result.txt1}
           img={result.img}
-          time={result.txt2}
-          price={result.price}
-          innercontainer2={true}
+          current={result.txt2}
           navProps={this.props}
-          goto={'ChallengesInfo'}
+          goto={result.goto}
         />
       );
     });
@@ -46,7 +54,7 @@ export class CurrentChallenges extends Component {
         style={styles.scrollViewStyle}
         bounces={false}
         contentContainerStyle={styles.container}>
-        {this.renderData()}
+        {this.props.Tempdata && this.renderData()}
       </ScrollView>
     );
   }
@@ -54,7 +62,7 @@ export class CurrentChallenges extends Component {
 const mapStateToProps = state => {
   console.log('state return is', state.cardReducer);
 
-  const Tempdata = state.cardReducer;
+  const {Tempdata} = state.cardReducer;
   console.log('cards data is ', {...state.cardReducer});
   return {
     Tempdata,
@@ -67,5 +75,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CurrentChallenges);
-
-

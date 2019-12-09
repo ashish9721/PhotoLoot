@@ -6,6 +6,9 @@ import {vh, color, Strings, Images} from '../../Constants';
 import NavTabBar from './index';
 
 export default class Profile extends Component {
+  componentDidMount(){
+    this.props.navigation.setParams({ name: 'Lucy' })
+  }
   renderText = (...rest) => {
     return (
       <Text
@@ -53,7 +56,9 @@ export default class Profile extends Component {
             </View>
           </View>
         </View>
-        <NavTabBar />
+        <NavTabBar 
+            
+        />
       </>
     );
   }

@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.cardsToExport();
   }
   componentDidMount() {
     this.cardsToExport();
@@ -36,8 +37,10 @@ class Home extends Component {
 
     this.props.homeData(payload);
   };
-  rendermap() {
+  rendermap = () => {
     return this.props.HomeTempdata.map((result, index) => {
+      console.log('render data', result);
+
       return (
         <StickerAndImage
           key={index}
@@ -49,9 +52,11 @@ class Home extends Component {
         />
       );
     });
-  }
+  };
 
   render() {
+    console.log(' props.homedata', this.props.HomeTempdata);
+
     return (
       <ScrollView
         style={styles.scrollViewStyle}
@@ -59,47 +64,45 @@ class Home extends Component {
         contentContainerStyle={styles.container}>
         {/* //Header */}
 
-        {
-          this.props.HomeTempdata && 
-          this.rendermap()
-        }
+        {this.props.HomeTempdata && this.rendermap()}
       </ScrollView>
     );
   }
 }
 
-const Tempdata = [
-  {
-    txt1: 'current Challenges',
-    img: Images.DOLLAR,
-    txt2: '2 Ongoing',
-    goto: 'CurrentChallenges',
-  },
-  {
-    txt1: 'Upcoming Challenges',
-    img: Images.CALENDER,
-    txt2: '2 Upcoming',
-    goto: 'UpComingChallenges',
-  },
-  {
-    txt1: 'Hall Of Fame',
-    img: Images.HOMETROPHY,
-    txt2: '2 Ongoing',
-    goto: 'HallOfFame',
-  },
-  // {
-  //   txt1: 'Hall Of Fame',
-  //   img: Images.DOLLAR,
-  //   txt2: '2 Ongoing',
-  //   goto: 'HallOfFame',
-  // },
-];
+// const Tempdata = [
+//   {
+//     txt1: 'current Challenges',
+//     img: Images.DOLLAR,
+//     txt2: '2 Ongoing',
+//     goto: 'CurrentChallenges',
+//   },
+//   {
+//     txt1: 'Upcoming Challenges',
+//     img: Images.CALENDER,
+//     txt2: '2 Upcoming',
+//     goto: 'UpComingChallenges',
+//   },
+//   {
+//     txt1: 'Hall Of Fame',
+//     img: Images.HOMETROPHY,
+//     txt2: '2 Ongoing',
+//     goto: 'HallOfFame',
+//   },
+// {
+//   txt1: 'Hall Of Fame',
+//   img: Images.DOLLAR,
+//   txt2: '2 Ongoing',
+//   goto: 'HallOfFame',
+// },
+// ];
 
 const mapStateToProps = state => {
-  console.log('state return is', state.cardReducer);
+  // console.log('state return is', state.cardReducer);
+  console.log('data is ', {...state.homeReducer});
 
-  const { HomeTempdata } = state.homeReducer;
-  console.log('cards data is ', {...state.homeReducer});
+  const {HomeTempdata} = state.homeReducer;
+  console.log(' hnhnhn is ', HomeTempdata);
   return {
     HomeTempdata,
   };

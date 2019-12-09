@@ -1,44 +1,49 @@
-import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
-import { createAppContainer } from 'react-navigation';
+import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
+import {createAppContainer} from 'react-navigation';
 
 //Custom Imports
-import {vw, color, vh } from '../../Constants';
-import Posts from './posts'
-import Followers from './follower'
-import Following from './following'
+import {vw, color, vh} from '../../Constants';
+import Posts from './posts';
+import Followers from './follower';
+import Following from './following';
 
-const NavTabBar = createMaterialTopTabNavigator({
-
+const NavTabBar = createMaterialTopTabNavigator(
+  {
     Posts: {
-        screen: Posts,
+      screen: Posts,
+      navigationOptions: ({navigation}) => {
+          
+          console.log(navigation.state)
+          return ({
+        title: `${""}`,
+      })},
     },
     Followers: {
-        screen: Followers
+      screen: Followers,
     },
     Following: {
-        screen: Following
-    }
-},
-    {
-        initialRouteName: 'Posts',
-        tabBarOptions: {
-            activeTintColor: color.white,
-            inactiveTintColor: color.gray,
-            style: {
-                marginTop:vh(20),
-                backgroundColor: color.whiteTwo,
-            },
-            labelStyle: {
-                color: color.TAndC,
-                fontSize: vw(15)
-            },
-            indicatorStyle: {
-                backgroundColor: null,
-
-            },
-        },
-        swipeEnabled: false,
+      screen: Following,
     },
-)
+  },
+  {
+    initialRouteName: 'Posts',
+    tabBarOptions: {
+      activeTintColor: color.white,
+      inactiveTintColor: color.gray,
+      style: {
+        marginTop: vh(20),
+        backgroundColor: color.whiteTwo,
+      },
+      labelStyle: {
+        color: color.TAndC,
+        fontSize: vw(15),
+      },
+      indicatorStyle: {
+        backgroundColor: null,
+      },
+    },
+    swipeEnabled: false,
+  },
+);
 
 export default createAppContainer(NavTabBar);
