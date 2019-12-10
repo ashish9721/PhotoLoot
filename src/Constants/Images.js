@@ -58,6 +58,7 @@ const Images = {
   BACKBUTTONBLACK: require('../Assets/Images/ic-black-back-btn.png'),
   CALENDER: require('../Assets/Images/icCalendar.png'),
   HOMETROPHY: require('../Assets/Images/ic-trophy.png'),
+  WHITESEARCH: require('../Assets/Images/icWhiteSearch.png'),
   // Settings
   LOCK: require('../Assets/Images/icChangPass.png'),
   ARROW: require('../Assets/Images/icArrow.png'),
@@ -70,8 +71,8 @@ const Images = {
   CLEARSEARCH: require('../Assets/Images/icClearSearch.png'),
   DEACTIVATE: require('../Assets/Images/icDeactivate.png'),
   SIGN: require('../Assets/Images/icSignOut.png'),
-  YES:require('../Assets/Images/icYes.png'),
-  NO:require('../Assets/Images/icNo.png')
+  YES: require('../Assets/Images/icYes.png'),
+  NO: require('../Assets/Images/icNo.png'),
 };
 
 export default Images;

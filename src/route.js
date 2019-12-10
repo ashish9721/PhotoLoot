@@ -216,6 +216,7 @@ const ModalStack = createStackNavigator(
     transparentCard: true,
     cardStyle: {
       backgroundColor: color.transparentColorBlack,
+      opacity:1
     },
   },
 );

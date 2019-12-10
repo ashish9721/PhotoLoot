@@ -7,7 +7,8 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 export const GalleryModel = props => {
   return (
     <>
-      <View style={styles.detailImage} />
+      <Image style={styles.detailImage}
+      source={{uri:props.image}}resizeMode="stretch" />
       <View style={styles.detailImageBg}>
         <Image
           style={styles.detailBImage}

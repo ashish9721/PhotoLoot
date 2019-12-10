@@ -6,6 +6,7 @@ const Strings = {
   PhotoLoot: 'PhotoLoot',
   VERIFYTEXT:
     'Your details have been verified successfully. Welcome to PhotoLoot app.',
+  //Settings
   CHANGEPASSWORD: 'Change Password',
   TERMS: 'Terms & Conditions',
   FAQs: "FAQ's",
@@ -16,6 +17,11 @@ const Strings = {
   HISTORY: 'Clear Search History',
   ACCOUNT: 'Deactivate Account',
   SIGNOUT: 'Sign Out',
+
+  //Search
+  search1: 'Samuel Mathers',
+  search2: 'Damiam Evra',
+  search3: '#Jungle Safari',
 };
 
 export default Strings;
