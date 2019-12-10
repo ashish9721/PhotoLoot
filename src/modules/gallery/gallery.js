@@ -20,7 +20,9 @@ export const Gallery = props => {
         style={styles.flatStyle}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item, index) => index.toString}
-        renderItem={({item}) => <ImageToModal item={item.key} />}
+        renderItem={({item}) => <ImageToModal 
+        navigate={props.navigation.navigate}
+        item={item.key} />}
       />
     </View>
   );

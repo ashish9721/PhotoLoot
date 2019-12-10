@@ -58,7 +58,7 @@ export default class SignUp extends React.Component {
                 I agree to the{' '}
                 <Text
                   onPress={() => {
-                    console.warn('show terms And Condition');
+                    this.props.navigation.navigate('TnC')
                   }}
                   style={styles.TAndC}>
                   Terms And Conditions{' '}

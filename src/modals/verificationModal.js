@@ -19,11 +19,11 @@ export const VerificationModal = props => {
       <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
         <Image
           style={styles.successImage}
-          source={Images.SUCCESSGRAPHIC}
+          source={props.navigation.getParam('image')}
           resizeMode="contain"
         />
-        <Text style={styles.verifyText}>Verification Succesful</Text>
-        <Text style={styles.detailTxt}>{Strings.VERIFYTEXT}</Text>
+<Text style={styles.verifyText}>{props.navigation.getParam('title')}</Text>
+        <Text style={styles.detailTxt}>{props.navigation.getParam('detail')}</Text>
         <TouchableOpacity
           onPress={() => props.navigation.navigate('Home')}
           style={styles.goButton}>
@@ -34,33 +34,6 @@ export const VerificationModal = props => {
   );
 };
 
-// Reset Password
-export const ResetPasswordModal = props => {
-  return (
-    <TouchableOpacity
-      onPress={() => props.navigation.goBack()}
-      activeOpacity={1}
-      style={styles.container}>
-      <TouchableOpacity activeOpacity={1} style={styles.modalContainer}>
-        <Image
-          style={styles.successImage}
-          source={Images.SUCCESSGRAPHIC}
-          resizeMode="contain"
-        />
-        <Text style={styles.verifyText}>Password reset successful</Text>
-        <Text style={styles.detailTxt}>
-          Your password was reset successfully. Please sign in with your new
-          password now.
-        </Text>
-        <TouchableOpacity
-          onPress={() => props.navigation.goBack()}
-          style={styles.goButton}>
-          <Text style={styles.letsGo}>Okay</Text>
-        </TouchableOpacity>
-      </TouchableOpacity>
-    </TouchableOpacity>
-  );
-};
 
 // Congratulations
 

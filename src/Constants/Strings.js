@@ -6,6 +6,8 @@ const Strings = {
   PhotoLoot: 'PhotoLoot',
   VERIFYTEXT:
     'Your details have been verified successfully. Welcome to PhotoLoot app.',
+    RESETPASSWORDTEXT:
+      'Your password was reset successfully. Please sign in with your new password now.',
   //Settings
   CHANGEPASSWORD: 'Change Password',
   TERMS: 'Terms & Conditions',

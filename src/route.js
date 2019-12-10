@@ -27,7 +27,6 @@ import ChangePassword from './modules/settings/ChangePassword';
 import {
   VerificationModal,
   Congratulations,
-  ResetPasswordModal,
   OutOfVotes,
   ImageRemove,
   UpdateAvailable,
@@ -203,7 +202,7 @@ const ModalStack = createStackNavigator(
   {
     Main: {screen: AppNavigator},
     VerificationModal: {screen: VerificationModal},
-    ResetPasswordModal: {screen: ResetPasswordModal},
+    // ResetPasswordModal: {screen: ResetPasswordModal},
     Congratulations: {screen: Congratulations},
     OutOfVotes: {screen: OutOfVotes},
     ImageRemove: {screen: ImageRemove},

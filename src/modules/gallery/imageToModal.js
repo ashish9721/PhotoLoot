@@ -7,7 +7,7 @@ export const ImageToModal = props => {
   return (
     <TouchableOpacity
     activeOpacity={1}
-    onPress={()=>console.warn("Opens Modal for Image")
+    onPress={()=>{props.navigate('Login')}
     }>
       <Image
         style={styles.imgStyle}

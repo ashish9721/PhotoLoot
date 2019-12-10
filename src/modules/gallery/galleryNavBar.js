@@ -4,7 +4,7 @@ import {Image} from 'react-native';
 import React from 'react';
 //Custom Imports
 
-import {vw, color, Images, vh, DesignWidth} from '../../Constants';
+import {vw, color, Images} from '../../Constants';
 
 import {Gallery} from './gallery';
 import ImageDetail from './imageDetail';

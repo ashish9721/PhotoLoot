@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 //Custom Imports
 import {styles} from './styles';
-import {Images, color} from '../../Constants';
+import {Images, color,Strings} from '../../Constants';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 
 export default class Resend extends Component {
@@ -35,7 +35,11 @@ export default class Resend extends Component {
             <TouchableOpacity
               activeOpacity={0.8}
               onPress={() =>
-                this.props.navigation.navigate('ResetPasswordModal')
+                this.props.navigation.navigate('VerificationModal',{
+                  title: 'Password reset successfully',
+                  detail:Strings.RESETPASSWORDTEXT,
+                  image:Images.SUCCESSGRAPHIC
+                })
               }
               style={styles.submitBtn}>
               <Text style={styles.submitTxt}>Submit</Text>
