@@ -237,14 +237,20 @@ const CityLights = () => {
         {this.renderText('Total Prize', '400', vh(15), color.gray)}
       </View>
       <View style={styles.alignView}>
-        {this.renderText(
-          '1 day to start',
-          '700',
-          vh(11),
-          color.gray,
-          'center',
-          vh(13),
-        )}
+        <View style={styles.alignView}>
+          <Image
+            style={styles.clockImage}
+            source={Images.CLOCK}
+            resizeMode="contain"
+          />
+          {this.renderText(
+            '1 day to start',
+            '700',
+            vh(11),
+            color.gray,
+            'center',
+          )}
+        </View>
         <View style={styles.moneyTextView}>
           {this.renderText('$', '700', vh(13), color.TAndC, 'flex-end')}
           {this.renderText(

@@ -265,4 +265,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: vh(50),
   },
+  clockImage:{
+    width:vw(15),
+    height:vw(15),
+    alignSelf:'center',
+    marginRight:vw(10)
+  }
 });

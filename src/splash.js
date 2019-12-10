@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import {
-  Image,
   ImageBackground,
-  Text,
   Animated,
-  StyleSheet,
-  Easing,
 } from 'react-native';
 
 //Custom Import
@@ -19,17 +15,17 @@ export default class Splash extends Component {
  
   componentDidMount() {
     Animated.timing(
-      this.width, // The animated value to drive
+      this.width, 
       {
-        toValue: vw(200), // Animate to opacity: 1 (opaque)
-        duration: 3000, // Make it take a while
+        toValue: vw(200), 
+        duration: 3000, 
       },
-    ).start(); // Starts the animation
+    ).start(); 
     Animated.timing(
-      this.height, // The animated value to drive
+      this.height, 
       {
-        toValue: vh(120), // Animate to opacity: 1 (opaque)
-        duration: 2000, // Make it take a while
+        toValue: vh(150),
+        duration: 2000,
       },
     ).start(() => 
     setTimeout(() => {

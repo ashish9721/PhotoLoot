@@ -1,58 +1,83 @@
 import React from 'react';
-import { View, StyleSheet, } from 'react-native';
-import { vh, vw } from '../../Constants';
-export default class Notifications extends React.Component {
-    // State = {
-    //     data: [
-    //         { id: 1, text: 'Manny Dolores voted for your photo in “Beach Happy”challenge.', time: '2m ago' },
-    //         { id: 2, text: 'New challenge “Roads less travelled” added in upcoming challenges.', time: '15m ago' },
-    //         { id: 3, text: 'Peter Caullins started following you', time: '2h ago' },
-    //         { id: 4, text: 'Peter Caullins voted for your photo in “Beach Happy”challenge', time: '2h ago' },
-    //         { id: 5, text: 'Challnge “7 Wonders of world”  now active in current challenges.', time: '10h ago' },
-    //     ]
-    // }
-    render() {
-        return (
-            <View style={styles.parent}>
-                <View style={styles.firstview}>
-                    <View style={styles.firstimage}></View>
-                    <View style={styles.manny}></View>
-                    <View style={styles.timestyle}></View>
-                </View>
-            </View>
+import {View, Text, SafeAreaView, FlatList, Image} from 'react-native';
+import Strings from '../../Constants/Strings';
+import {styles} from './styles';
 
+notificationData = [
+  {
+    name: 'Manny Dolores',
+    title: Strings.heading1,
+    time: Strings.time1ForNotification,
+    isRead: 'first',
+  },
+  {
+    name: '',
+    moto: 'New Challenge',
+    place: '"Roads less travelled"',
+    title: Strings.heading2,
+    time: Strings.time2ForNotification,
+  },
+  {
+    name: ' Peter Caulins',
+    title: Strings.heading3,
+    time: Strings.time3ForNotification,
+  },
+  {
+    name: 'Peter Caulins',
+    title: Strings.heading4,
+    time: Strings.time4ForNotification,
+  },
+  {
+    name: '',
+    moto: 'Challenge',
+    place: '"7 Wonders of world"',
+    title: Strings.heading5,
+    time: Strings.time5ForNotification,
+  },
+];
+renderItem = rowData => {
+  if (rowData.item.name.length > 0) {
+    return (
+      <>
+        <View style={styles.parent}>
+          <Image style={styles.notificationImage} />
+          <Text style={styles.newText}>
+            <Text style={styles.nameText}>{rowData.item.name} </Text>
+            {rowData.item.title}
+          </Text>
+        </View>
+        <Text style={styles.timeText}>{rowData.item.time}</Text>
+        <View style={styles.line} />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <View style={styles.parent}>
+          <Image style={styles.notificationImage} />
+          <Text style={styles.startText}>
+            {rowData.item.moto}
+            <Text style={styles.nameText}> {rowData.item.place}</Text>
+            {rowData.item.title}
+          </Text>
+        </View>
+        <Text style={styles.timeText}>{rowData.item.time}</Text>
+        <View style={styles.line} />
+      </>
+    );
+  }
+};
 
-        )
+const Notifications = props => {
+  return (
+    <SafeAreaView>
+      <FlatList
+        data={notificationData}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={this.renderItem}
+      />
+    </SafeAreaView>
+  );
+};
 
-
-
-    }
-}
-
-const styles = StyleSheet.create({
-    parent:{
-      marginTop:vh(100)
-    },
-    firstview: {
-        flexDirection: 'row',
-        justifyContent:'space-between'
-    },
-    firstimage: {
-        width: vw(40),
-        height: vh(40),
-        backgroundColor: 'red',
-        marginLeft:vw(15)
-    },
-    manny:{
-        width:vw(297),
-        height:vh(27),
-        backgroundColor:'black',
-    },
-    timestyle:{
-        alignSelf:'flex-end',
-        width:vw(35),
-        height:vh(9),
-        backgroundColor:'pink',
-        marginRight:vw(16)
-    }
-})
+export default Notifications;

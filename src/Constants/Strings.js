@@ -6,8 +6,8 @@ const Strings = {
   PhotoLoot: 'PhotoLoot',
   VERIFYTEXT:
     'Your details have been verified successfully. Welcome to PhotoLoot app.',
-    RESETPASSWORDTEXT:
-      'Your password was reset successfully. Please sign in with your new password now.',
+  RESETPASSWORDTEXT:
+    'Your password was reset successfully. Please sign in with your new password now.',
   //Settings
   CHANGEPASSWORD: 'Change Password',
   TERMS: 'Terms & Conditions',
@@ -24,6 +24,17 @@ const Strings = {
   search1: 'Samuel Mathers',
   search2: 'Damiam Evra',
   search3: '#Jungle Safari',
+  // notification
+  heading1: 'voted for your photo in “Beach Happy”challenge.',
+  heading2: ' added in upcoming challenges.',
+  heading3: 'started following you',
+  heading4: 'voted for your photo in “Beach Happy”challenge',
+  heading5: ' now active in current challenges.',
+  time1ForNotification: '2m ago',
+  time2ForNotification: '15m ago',
+  time3ForNotification: '2h ago',
+  time4ForNotification: '2h ago',
+  time5ForNotification: '10h ago',
 };
 
 export default Strings;

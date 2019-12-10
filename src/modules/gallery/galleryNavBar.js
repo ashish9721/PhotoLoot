@@ -4,7 +4,7 @@ import {Image} from 'react-native';
 import React from 'react';
 //Custom Imports
 
-import {vw, color, Images} from '../../Constants';
+import {vw, color, Images, vh} from '../../Constants';
 
 import {Gallery} from './gallery';
 import ImageDetail from './imageDetail';
@@ -37,12 +37,14 @@ const NavTabBar = createMaterialTopTabNavigator(
       showLabel: false,
       style: {
         backgroundColor: color.white,
+        marginBottom:vh(10)
       },
     
       indicatorStyle: {
         backgroundColor:color.TAndC,
         width:vw(100),
-        marginLeft:vw(45)
+        marginLeft:vw(45),
+        height:vh(3),
       },
     },
     swipeEnabled: true,

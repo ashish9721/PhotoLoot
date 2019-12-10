@@ -1,8 +1,7 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {Text, View, StyleSheet, Image,TouchableOpacity} from 'react-native';
 //Custom Imports
 import {vw, vh, color, Images, DesignWidth} from '../../Constants';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export const GalleryModel = props => {
   return (
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
   },
   detailImage: {
     width: vw(375),
-    height: vh(375),
+    height: vh(305),
     backgroundColor: color.blueishGreen,
   },
   votes: {
@@ -88,7 +87,7 @@ const styles = StyleSheet.create({
   },
   detailImageBg: {
     position: 'absolute',
-    top: vh(350),
+    top: vh(280),
     left: vw(233),
     width: vw(56),
     height: vw(56),
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
   },
   detailClapBg: {
     position: 'absolute',
-    top: vh(350),
+    top: vh(280),
     left: vw(304),
     width: vw(56),
     height: vw(56),

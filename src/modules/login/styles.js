@@ -75,6 +75,7 @@ export const styles = StyleSheet.create({
     borderRadius: vh(10),
     shadowOffset: {height: vh(8), width: vw(1)},
     shadowColor: color.TAndC,
+    elevation:10,
     shadowOpacity: 0.4,
     marginTop: vh(30),
     justifyContent: 'center',
