@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {vh, vw, DesignWidth} from '../../Constants/Dimension';
-import {color} from '../../Constants';
+import {vh, vw, DesignWidth,color} from '../../Constants';
 export const styles = StyleSheet.create({
   header: {
     height: vh(64),
@@ -11,6 +10,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: vw(15),
   },
   imgSearch: {
+    marginTop:vh(30),
     width: vw(20),
     height: vw(20),
   },
@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     textAlign: 'left',
     height: vh(30),
     color: color.white,
+    marginTop:vh(30)
   },
   recentSearch: {
     fontSize: vw(12),

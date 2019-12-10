@@ -12,7 +12,7 @@ Searchdata = [
 
 const Search = (props) => {
     return (
-        <SafeAreaView>
+        <>
             <View style={styles.header}>
                 <Image style={styles.imgSearch} source={Images.WHITESEARCH} resizeMode='contain' />
                 <TextInput style={styles.searchInput} placeholder="Search"
@@ -42,7 +42,7 @@ const Search = (props) => {
                 }
 
             />
-        </SafeAreaView>
+        </>
     )
 }
 export default Search;
