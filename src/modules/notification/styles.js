@@ -5,25 +5,22 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: vh(20),
   },
-  firstimage: {
+  notificationImage: {
     width: vw(40),
-    height: vh(40),
-    borderRadius: vw(6),
+    height: vw(40),
+    borderRadius: vw(20),
     marginLeft: vw(15),
+    backgroundColor: 'blue',
   },
-  new: {
-    width: vw(260),
-    marginLeft: vw(9),
-  },
-  newtext: {
+  newText: {
     fontSize: vw(12),
+    width:vw(297),
+    marginLeft:vw(9)
   },
-  timestyle: {
+  timeText: {
+    fontSize: vw(11),
     alignSelf: 'flex-end',
     marginRight: vw(15),
-  },
-  timetext: {
-    fontSize: vw(11),
   },
   line: {
     height: vh(1),
@@ -31,4 +28,16 @@ export const styles = StyleSheet.create({
     backgroundColor: 'lightgrey',
     marginHorizontal: vh(15),
   },
+  nameText:{
+    fontWeight:'bold',
+    fontSize:vw(12),
+  },
+  startText:{
+    fontSize:vw(12),
+    width:vw(260),
+    marginLeft:vw(9)
+  },
+  Text:{
+    fontSize:vw(12)
+  }
 });

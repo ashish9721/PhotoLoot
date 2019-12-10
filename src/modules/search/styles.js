@@ -9,18 +9,18 @@ export const styles =StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal:vw(15)
     },
-    imgsearch: {
+    imgSearch: {
         width: vw(20),
         height: vw(20),
     },
-    searchinput: {
+    searchInput: {
         fontSize: vw(15),
         marginLeft: vw(10),
         width:vw(300),
         textAlign:'left',
         height:vh(30),
     },
-    recentsearch: {
+    recentSearch: {
         fontSize: vw(12),
         color: 'black',
         fontWeight: 'bold',
@@ -28,12 +28,12 @@ export const styles =StyleSheet.create({
         marginTop: vh(19)
 
     },
-    firstview: {
+    firstView: {
         marginLeft: vw(15),
         marginTop: vh(20),
         flexDirection: 'row'
     },
-    firstimage: {
+    firstImage: {
         height: vw(30),
         width: vw(30),
         borderRadius: vw(7),
@@ -44,10 +44,10 @@ export const styles =StyleSheet.create({
         marginLeft: vw(9),
         alignSelf: 'center'
     },
-    commonview: {
+    commonView: {
         marginLeft: vw(15),
         marginTop: vh(15),
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     image: {
         width: vw(30),
@@ -55,7 +55,7 @@ export const styles =StyleSheet.create({
         borderRadius: vw(15),
         backgroundColor: 'red'
     },
-    commontext: {
+    commonText: {
         fontSize: vw(15),
         marginLeft: vw(10),
         alignSelf: 'center'

@@ -1,19 +1,19 @@
 import {StyleSheet} from 'react-native';
 import {vh, vw} from '../../Constants/Dimension';
 export const styles = StyleSheet.create({
-  parent: {
+  parent: {                         //ChangePassword
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: vh(89),
   },
-  oldpassword: {
+  oldpassword: {                     //ChangePassword
     height: vh(45),
     width: vw(315),
     borderRadius: vw(10),
     backgroundColor: '#f5f5f5',
     padding: vw(10),
   },
-  input2: {
+  input2: {                           //ChangePassword
     flexDirection: 'row',
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
@@ -22,18 +22,18 @@ export const styles = StyleSheet.create({
     marginTop: vh(20),
     borderRadius: vw(10),
   },
-  newpassword: {
+  newpassword: {                       //ChangePassword
     height: vh(45),
     width: vw(290),
     borderRadius: vw(10),
     backgroundColor: '#f5f5f5',
     padding: vw(10),
   },
-  eye: {
+  eye: {                               //ChangePassword
     height: vw(11),
     width: vw(20),
   },
-  Buttonupdate: {
+  Buttonupdate: {                       //ChangePassword
     height: vh(45),
     width: vw(315),
     backgroundColor: '#ff9803',
@@ -42,63 +42,61 @@ export const styles = StyleSheet.create({
     borderRadius: vw(10),
     marginTop: vh(25),
   },
-  updatestyle: {
+  updatestyle: {                          //ChangePassword
     color: '#ffffff',
     fontSize: vw(15),
   },
-  privacytext: {
+  privacytext: {                          //Aboutus
     fontSize: vw(15),
     color: '#ff9803',
     fontWeight: 'bold',
     marginLeft: vw(12),
     marginTop: vh(106),
   },
-  middleview: {
+  middleview: {                           //Aboutus
     marginLeft: vw(15),
     marginTop: vh(15),
   },
-  accounttext: {
+  accounttext: {                         //Aboutus
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
   },
-  firsttext: {
+  firsttext: {                            //Aboutus
     width: vw(339),
   },
-  middletext: {
+  middletext: {                            //Aboutus
     fontSize: vw(12),
     color: '#A4A4A4',
+    width: vw(339),
   },
-  Contenttext: {
+  Contenttext: {                           //Aboutus
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
-    marginTop: vh(15),
+    marginTop: vh(19),
   },
-  secondtextview: {
+  secondtextview: {                        //Aboutus
     width: vw(343),
   },
-  parent2: {
+  textAmet:{
+    fontSize: vw(12),
+    color: '#A4A4A4',
+    width: vw(343),
+  },
+  parent2: {                               //Helpnsupport
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: vh(110),
   },
-  name: {
+  name: {                                    //Helpnsupport
     height: vh(45),
     width: vw(315),
     borderRadius: vw(10),
     backgroundColor: '#f5f5f5',
     padding: vw(10),
   },
-  email: {
-    height: vh(45),
-    width: vw(315),
-    borderRadius: vw(10),
-    backgroundColor: '#f5f5f5',
-    padding: vw(10),
-    marginTop: vh(15),
-  },
-  title: {
+  email: {                                     //Helpnsupport
     height: vh(45),
     width: vw(315),
     borderRadius: vw(10),
@@ -106,7 +104,15 @@ export const styles = StyleSheet.create({
     padding: vw(10),
     marginTop: vh(15),
   },
-  description: {
+  title: {                                       //Helpnsupport
+    height: vh(45),
+    width: vw(315),
+    borderRadius: vw(10),
+    backgroundColor: '#f5f5f5',
+    padding: vw(10),
+    marginTop: vh(15),
+  },
+  description: {                                   //Helpnsupport
     height: vh(90),
     width: vw(315),
     borderRadius: vw(10),
@@ -115,7 +121,7 @@ export const styles = StyleSheet.create({
     paddingLeft: vw(15),
     paddingTop: vh(17),
   },
-  Buttonsubmit: {
+  Buttonsubmit: {                                    //Helpnsupport
     height: vh(45),
     width: vw(315),
     backgroundColor: '#ff9803',
@@ -124,131 +130,100 @@ export const styles = StyleSheet.create({
     borderRadius: vw(10),
     marginTop: vh(25),
   },
-  submitstyle: {
+  submitstyle: {                                        //Helpnsupport
     color: '#ffffff',
     fontSize: vw(15),
     fontWeight: '600',
   },
-  header: {
-    height: vh(64),
-    width: vw(375),
-    marginTop: vh(48),
-    backgroundColor: '#ff9803',
-  },
-  textsettings: {
-    fontSize: vw(17),
-    color: 'white',
-    alignSelf: 'center',
-    marginTop: vh(30),
-    width: vw(63),
-  },
-  firstview: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: vw(15),
-    marginTop: vh(17),
-  },
-  changeview: {
-    flexDirection: 'row',
-  },
-  commonview: {
+  
+  commonview: {                                   //Settings
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginLeft: vw(15),
     marginTop: vh(25),
   },
-  image: {
+  changeview: {                                   //Settings
+    flexDirection: 'row',
+  },
+  image: {                                        //Settings
     width: vw(35),
     height: vw(35),
   },
-  textchallenge: {
-    fontSize: vw(12),
+  notifytext: {                                   //Settings
+    fontSize: vw(15),
     alignSelf: 'center',
-    marginLeft: vw(15),
-    width: vw(252),
+    marginLeft: vw(10),
   },
-  textupload: {
-    fontSize: vw(12),
-    alignSelf: 'center',
-    marginLeft: vw(15),
-    width: vw(261),
-  },
-  textipsum: {
-    fontSize: vw(12),
-    alignSelf: 'center',
-    marginLeft: vw(15),
-    width: vw(270),
-  },
-  imgarrow: {
-    width: vw(8),
-    height: vw(14),
-    alignSelf: 'center',
-    marginRight: vw(15),
-    marginTop:vh(10)
-  },
-  imgtoggle: {
+  switchtoggle: {                                 //Settings
     width: vw(51),
     height: vw(31),
     borderRadius: vw(15),
     alignSelf: 'center',
     marginRight: vw(15),
   },
-  termstext: {
+  imgarrow: {                                      //Settings
+    width: vw(8),
+    height: vw(14),
+    alignSelf: 'center',
+    marginRight: vw(15),
+    marginTop:vh(10)
+  },
+  termstext: {                                  //TnC
     fontSize: vw(15),
     color: '#ff9803',
     fontWeight: 'bold',
     marginLeft: vw(15),
     marginTop: vh(85),
   },
-  middle: {
+  middle: {                                      //TnC
     marginTop: vh(15),
     marginLeft: vw(15),
   },
-  usertext: {
+  usertext: {                                    //TnC
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
   },
-  middletextLorem: {
+  middletextLorem: {                             //TnC
     fontSize: vw(12),
     color: '#A4A4A4',
     width: vw(344),
     marginTop: vh(13),
   },
-  Content: {
+  Content: {                                     //TnC
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
     marginTop: vh(18),
   },
-  secondtext: {
+  secondtext: {                                   //TnC
     width: vw(332.5),
     height: vh(57.5),
     marginTop: vh(10),
   },
-  middletextnext: {
+  middletextnext: {                                //TnC
     fontSize: vw(12),
     color: '#A4A4A4',
   },
-  condtext: {
+  condtext: {                                      //TnC
     fontSize: vw(15),
     color: '#ff9803',
     fontWeight: 'bold',
     marginTop: vh(40),
     marginLeft: vw(13),
   },
-  lasttext: {
+  lasttext: {                                       //TnC
     marginTop: vh(15),
     paddingHorizontal: vw(15),
     fontSize: vw(12),
     color: '#A4A4A4',
   },
-  parent1: {
+  parent1: {                                       //Faq
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: vh(80),
   },
-  first: {
+  first: {                                          //Faq
     width: vw(345),
     borderRadius: vw(10),
     shadowOpacity: 0.3,
@@ -257,7 +232,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
   },
-  whenview: {
+  whenview: {                                         //Faq
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: '#fff0d9',
@@ -267,29 +242,29 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingRight: vw(10),
   },
-  whentext: {
+  whentext: {                                           //Faq
     fontSize: vw(12),
     width: vw(267),
     marginLeft: vw(10),
     marginTop: vh(10),
     marginBottom: vh(10),
   },
-  crossimg: {
+  crossimg: {                                         //Faq
     width: vw(15),
     height: vh(15),
     marginTop: vh(10),
     marginRight: vw(12),
   },
-  Loremview: {
+  Loremview: {                                    //Faq
     width: vw(305),
     marginTop: vh(10),
   },
-  Loremtext: {
+  Loremtext: {                               //Faq
     fontSize: vw(12.5),
     color: '#A4A4A4',
     marginVertical: vh(15),
   },
-  common: {
+  common: {                                   //Faq
     width: vw(345),
     borderRadius: vw(10),
     backgroundColor: '#fff0d9',
@@ -299,22 +274,35 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: vh(15),
   },
-  textExc: {
+  textchallenge: {                           //Faq
     fontSize: vw(12),
-    marginLeft: vw(10),
-    marginTop: vh(10),
-    width: vw(269),
+    alignSelf: 'center',
+    marginLeft: vw(15),
+    width: vw(252),
   },
-  addimg: {
+  textupload: {                               //Faq
+    fontSize: vw(12),
+    alignSelf: 'center',
+    marginLeft: vw(15),
+    width: vw(261),
+  },
+  textipsum: {                                //Faq
+    fontSize: vw(12),
+    alignSelf: 'center',
+    marginLeft: vw(15),
+    width: vw(270),
+  },
+  addimg: {                                       //Faq
     width: vw(19),
     height: vh(19),
     marginTop: vh(10),
     marginRight: vw(30),
     alignSelf: 'center',
   },
-  notifytext: {
-    fontSize: vw(15),
-    alignSelf: 'center',
+  textExc: {                                   //Faq
+    fontSize: vw(12),
     marginLeft: vw(10),
+    marginTop: vh(10),
+    width: vw(269),
   },
 });
