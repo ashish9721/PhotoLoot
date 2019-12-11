@@ -132,7 +132,6 @@ export const styles = StyleSheet.create({
     fontSize: vw(15),
     fontWeight: '600',
   },
-  
   commonview: {                                   //Settings
     flexDirection: 'row',
     justifyContent: 'space-between',
