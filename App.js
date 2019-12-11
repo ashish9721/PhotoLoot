@@ -17,10 +17,10 @@ export default class App extends Component {
       //<ForgotPassword/>
       // <Verification/>
       // <ChangePassword/>
-      // <Helpnsupport/>
+      <Helpnsupport/>
       //  <TnC/>
       // <Faq/>
-      <Notifications />
+      // <Notifications />
       // <Search/>
       // <Aboutus/>
     //  <Settings/>

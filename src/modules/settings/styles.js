@@ -45,49 +45,46 @@ export const styles = StyleSheet.create({
   updatestyle: {                          //ChangePassword
     color: '#ffffff',
     fontSize: vw(15),
+    fontWeight:'700'
   },
-  privacytext: {                          //Aboutus
+  privacyText: {                          //Aboutus
     fontSize: vw(15),
     color: '#ff9803',
     fontWeight: 'bold',
     marginLeft: vw(12),
     marginTop: vh(106),
   },
-  middleview: {                           //Aboutus
+  middleView: {                           //Aboutus
     marginLeft: vw(15),
     marginTop: vh(15),
   },
-  accounttext: {                         //Aboutus
+  accountText: {                         //Aboutus
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
   },
-  firsttext: {                            //Aboutus
-    width: vw(339),
-  },
-  middletext: {                            //Aboutus
+  textLorem: {                            //Aboutus
     fontSize: vw(12),
     color: '#A4A4A4',
     width: vw(339),
+    marginTop:vh(14)
   },
-  Contenttext: {                           //Aboutus
+  ContentText: {                           //Aboutus
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
     marginTop: vh(19),
   },
-  secondtextview: {                        //Aboutus
-    width: vw(343),
-  },
-  textAmet:{
+  textAmet:{                               //Aboutus
     fontSize: vw(12),
     color: '#A4A4A4',
     width: vw(343),
+    marginTop:vh(13)
   },
-  parent2: {                               //Helpnsupport
+  parentHelpnSupport: {                               //Helpnsupport
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: vh(110),
+    marginTop: vh(25),
   },
   name: {                                    //Helpnsupport
     height: vh(45),
@@ -168,53 +165,47 @@ export const styles = StyleSheet.create({
     marginRight: vw(15),
     marginTop:vh(10)
   },
-  termstext: {                                  //TnC
+  ParentTnC:{                                     //TnC
+    paddingHorizontal: vw(15), 
+    marginTop: vh(25)
+  },
+  termsTextTnC: {                                  //TnC
     fontSize: vw(15),
     color: '#ff9803',
     fontWeight: 'bold',
-    marginLeft: vw(15),
-    marginTop: vh(85),
   },
-  middle: {                                      //TnC
-    marginTop: vh(15),
-    marginLeft: vw(15),
-  },
-  usertext: {                                    //TnC
+  userTextTnC: {   
+    marginTop:vh(20),                                 //TnC
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
   },
-  middletextLorem: {                             //TnC
+  userDescTnC: {                             //TnC
     fontSize: vw(12),
     color: '#A4A4A4',
     width: vw(344),
     marginTop: vh(13),
   },
-  Content: {                                     //TnC
+  ContentTnC: {                                     //TnC
     fontSize: vw(12),
     color: 'black',
     fontWeight: 'bold',
     marginTop: vh(18),
   },
-  secondtext: {                                   //TnC
-    width: vw(332.5),
-    height: vh(57.5),
-    marginTop: vh(10),
-  },
-  middletextnext: {                                //TnC
+  contDescTnC: {                                //TnC
     fontSize: vw(12),
     color: '#A4A4A4',
+    marginTop:vh(13)
   },
-  condtext: {                                      //TnC
+  condTextTnC: {                                      //TnC
     fontSize: vw(15),
     color: '#ff9803',
     fontWeight: 'bold',
     marginTop: vh(40),
     marginLeft: vw(13),
   },
-  lasttext: {                                       //TnC
+  condDescText: {                                       //TnC
     marginTop: vh(15),
-    paddingHorizontal: vw(15),
     fontSize: vw(12),
     color: '#A4A4A4',
   },
