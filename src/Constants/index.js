@@ -1,13 +1,15 @@
 import { vh, vw, DesignHeight, DesignWidth } from './Dimension';
-import Strings from './strings';
-// import videos from './videos'
-// import images from './images'
+import {color} from './colors'
+import Strings from './Strings';
+// import videos from './Videos'
+import Images from './Images'
 export {
     vh,
     vw,
     DesignHeight,
     DesignWidth,
+    color,
     Strings,
     // videos,
-    // images,
+    Images,
 }

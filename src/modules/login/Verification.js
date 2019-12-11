@@ -1,33 +1,63 @@
-import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, TextInput } from 'react-native';
-import { vh, vw } from '../../Constants/Dimension';
+import React, {Component} from 'react';
+import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
+//Custom Imports
 import {styles} from './styles';
-export default class Verification extends React.Component {
-    render() {
-        return (
-            <View style={styles.parent}>
-                <View style={styles.main}></View>
-                <Text style={styles.Verification}>Verification</Text>
+import {Images, color, Strings} from '../../Constants';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 
-                <Text style={styles.starttext}>To verify it's you please enter your OTP sent to your registered email ID.</Text>
-                <View style={styles.middle}>
-                    <View>
-                        <TextInput style={styles.otp} placeholder="Enter OTP"
-                            placeholderTextColor="#b3b3b3" />
-                    </View>
-                    <TouchableOpacity style={styles.Buttonsubmit}>
-                        <Text style={styles.submitstyle}>Submit</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.last}>
-                    <Text style={styles.lasttext}>Didn't receive OTP?<Text style={styles.resend} onPress={() => { console.warn("Resend"); }}> Resend</Text></Text>
-                </View>
+export default class Verification extends Component {
+  render() {
+    return (
+      <KeyboardAwareScrollView>
+        <View style={styles.SignUpContainer}>
+          <Image
+            style={styles.screenImg}
+            source={Images.LOGOORANGE}
+            resizeMode="contain"
+          />
+          <View style={styles.InputFieldContainer}>
+            <View style={styles.screenTxtContainer}>
+              <Text style={styles.screenTxt}>Verification</Text>
             </View>
-        )
-    }
-
-
-
-
-
+            <Text style={styles.verifyTxt}>
+              To verify it’s you please enter the OTP sent to your registered
+              email ID.
+            </Text>
+            <View style={styles.inputTextField2Container}>
+              <TextInput
+                style={styles.inputTextField2}
+                placeholder="Enter OTP"
+                placeholderTextColor={color.placeholderText}></TextInput>
+              <View style={styles.inputTextField2Img}></View>
+            </View>
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={() =>
+                this.props.navigation.navigate('VerificationModal', {
+                  title: 'Verification Successful',
+                  detail:Strings.VERIFYTEXT,
+                  image:Images.SUCCESSGRAPHIC
+                })
+              }
+              style={styles.submitBtn}>
+              <Text style={styles.submitTxt}>Submit</Text>
+            </TouchableOpacity>
+            <View style={styles.clickableLinkContVerification}>
+              <Text style={styles.dontHaveText}>
+                Didn't Receive OTP?
+                <Text
+                  onPress={() => {
+                    this.props.navigation.navigate('Resend');
+                  }}
+                  style={styles.SignUpText}>
+                  {' '}
+                  Resend
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </KeyboardAwareScrollView>
+    );
+  }
 }

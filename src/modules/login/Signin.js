@@ -1,47 +1,83 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, TextInput, Image } from 'react-native';
-import { vh, vw } from '../../Constants/Dimension';
+import {View, Image, Text, TouchableOpacity, TextInput} from 'react-native';
+//Custom Imports add here
+import {Images, color} from '../../Constants';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 import {styles} from './styles';
 export default class Signin extends React.Component {
-    render() {
-        return (
-            <View>
-                <View style={styles.parent}>
-                    <Image style={styles.main} source={require('../../../src/Images/Logo.png')} />
-                    <Text style={styles.signin}>Sign In</Text>
-                </View>
-                <View style={styles.middle}>
-                    <View>
-                        <TextInput style={styles.email} placeholder="Email Address"
-                            placeholderTextColor="#b3b3b3" />
-                    </View>
-                    <View style={styles.input2}>
-                        <TextInput placeholder="Password"
-                            placeholderTextColor="#b3b3b3" />
-                        <Image style={styles.show} source={require('../../../src/Images/Eye.png')} />
-                    </View>
-                    <Text style={styles.fpass}>Forgot Password?</Text>
-                    <TouchableOpacity style={styles.Buttonsubmit}>
-                        <Text style={styles.submitstyle}>Submit</Text>
-                    </TouchableOpacity>
-                </View>
-                <Text style={styles.textconnect}>or Connect with</Text>
-                <View style={styles.twobutton}>
-                    <TouchableOpacity style={styles.fbbuttuon}>
-                        <Image style={styles.fbicon} source={require('../../../src/Images/Fb.png')} />
-                        <Text style={styles.fbtext}>Facebook</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.instbuttuon}>
-                        <Image style={styles.insticon} source={require('../../../src/Images/Instagram.png')} />
-                        <Text style={styles.insttext}>Instagram</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.last}>
-                    <Text style={styles.lasttext}>Don't have an account?<Text style={styles.signup} onPress={() => { console.warn("show terms And Condition"); }}>Sign Up</Text></Text>
-                </View>
-            </View>
-        )
-
-
-    }
+  render() {
+    return (
+      <KeyboardAwareScrollView>
+        <View style={styles.SignInContainer}>
+          <Image style={styles.screenImg} source={Images.LOGOORANGE} />
+          <View style={styles.screenTxtContainer}>
+            <Text style={styles.screenTxt}>Sign In</Text>
+          </View>
+          <View style={styles.inputTextField2Container}>
+            <TextInput
+              style={styles.inputTextField2}
+              placeholder="Email Address"
+              placeholderTextColor={color.placeholderText}></TextInput>
+            <View style={styles.inputTextField2Img}></View>
+          </View>
+          <View style={styles.inputTextField2Container}>
+            <TextInput
+              style={styles.inputTextField2}
+              placeholder="Password"
+              placeholderTextColor={color.placeholderText}></TextInput>
+            <Image
+              style={styles.inputTextField2Img}
+              source={Images.EYEINACTIVE}
+            />
+          </View>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => this.props.navigation.navigate('ForgotPassword')}
+            style={styles.forgotButton}>
+            <Text style={styles.forgotText}>Forgot Password?</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => this.props.navigation.navigate('Home')}
+            style={styles.submitBtn}>
+            <Text style={styles.submitTxt}>Submit</Text>
+          </TouchableOpacity>
+          <Text style={styles.connectText}>or Connect With</Text>
+          <View style={styles.socialView}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
+              <Image
+                style={styles.sociaImage}
+                source={Images.FACEBOOK}
+                resizeMode="contain"
+              />
+              <Text style={styles.socialText}>FaceBook</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            onPress={()=>{this.props.navigation.navigate('OutOfVotes')}}
+            activeOpacity={0.8} style={styles.socialButton}>
+              <Image
+                style={styles.sociaImage}
+                source={Images.INSTAGRAM}
+                resizeMode="contain"
+              />
+              <Text style={styles.socialText}>Instagram</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.clickableLinkContVerification}>
+            <Text style={styles.dontHaveText}>
+              Don't have an account
+              <Text
+                style={styles.SignUpText}
+                onPress={() => {
+                  this.props.navigation.navigate('SignUp');
+                }}>
+                {' '}
+                Sign Up
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </KeyboardAwareScrollView>
+    );
+  }
 }

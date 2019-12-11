@@ -1,8 +1,50 @@
 import React from 'react';
-import {View, Text, SafeAreaView, FlatList, Image} from 'react-native';
+import {View, Text, FlatList, Image} from 'react-native';
 import Strings from '../../Constants/Strings';
 import {styles} from './styles';
 
+renderItem = rowData => {
+  if (rowData.item.name.length > 0) {
+    return (
+      <>
+        <View style={styles.parent}>
+          <Image style={styles.notificationImage} />
+          <Text style={styles.newText}>
+            <Text style={styles.nameText}>{rowData.item.name} </Text>
+            {rowData.item.title}
+          </Text>
+        </View>
+        <Text style={styles.timeText}>{rowData.item.time}</Text>
+        <View style={styles.line} />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <View style={styles.parent}>
+          <Image style={styles.notificationImage} />
+          <Text style={styles.startText}>
+            {rowData.item.moto}
+            <Text style={styles.nameText}> {rowData.item.place}</Text>
+            {rowData.item.title}
+          </Text>
+        </View>
+        <Text style={styles.timeText}>{rowData.item.time}</Text>
+        <View style={styles.line} />
+      </>
+    );
+  }
+};
+
+const Notifications = props => {
+  return (
+    <FlatList
+      data={notificationData}
+      keyExtractor={(item, index) => index.toString()}
+      renderItem={this.renderItem}
+    />
+  );
+};
 notificationData = [
   {
     name: 'Manny Dolores',
@@ -35,51 +77,4 @@ notificationData = [
     time: Strings.time5ForNotification,
   },
 ];
-renderItem = rowData => {
-  console.warn(rowData.item.name.length);
-  if (rowData.item.name.length > 0) {
-    return (
-      <>
-        <View style={styles.parent}>
-          <Image style={styles.notificationImage} />
-
-          <Text style={styles.newText}>
-            <Text style={styles.nameText}>{rowData.item.name} </Text>
-            {rowData.item.title}
-          </Text>
-        </View>
-        <Text style={styles.timeText}>{rowData.item.time}</Text>
-        <View style={styles.line} />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <View style={styles.parent}>
-          <Image style={styles.notificationImage} />
-          <Text style={styles.startText}>
-            {rowData.item.moto}
-            <Text style={styles.nameText}> {rowData.item.place}</Text>
-            {rowData.item.title}
-          </Text>
-        </View>
-        <Text style={styles.timeText}>{rowData.item.time}</Text>
-        <View style={styles.line} />
-      </>
-    );
-  }
-};
-
-const Notifications = props => {
-  return (
-    <SafeAreaView>
-      <FlatList
-        data={notificationData}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={this.renderItem}
-      />
-    </SafeAreaView>
-  );
-};
-
 export default Notifications;

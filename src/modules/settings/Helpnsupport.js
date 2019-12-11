@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
-import {styles} from './styles';
-export default class Helpnsupport extends React.Component {
+import {styles} from './styles'
+export default class HelpnSupport extends React.Component {
   render() {
     return (
       <View style={styles.parentHelpnSupport}>

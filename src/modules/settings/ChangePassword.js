@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 import {styles} from './styles';
+import {Images} from '../../Constants'
 
 export default class ChangePassword extends React.Component {
   render() {
@@ -21,7 +22,7 @@ export default class ChangePassword extends React.Component {
           <TouchableOpacity>
             <Image
               style={styles.eye}
-              source={require('../../../src/Images/Eye.png')}
+              source={Images.EYEINACTIVE}
             />
           </TouchableOpacity>
         </View>
