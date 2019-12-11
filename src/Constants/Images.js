@@ -73,6 +73,8 @@ const Images = {
   SIGN: require('../Assets/Images/icSignOut.png'),
   YES: require('../Assets/Images/icYes.png'),
   NO: require('../Assets/Images/icNo.png'),
+  OPENQUESTION:require('../Assets/Images/icOpenQues.png'),
+  CLOSEQUESTION:require('../Assets/Images/icCloseQues.png'),
 };
 
 export default Images;

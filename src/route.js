@@ -37,6 +37,7 @@ import {color} from './Constants';
 import TermsAndCondition from './modules/settings/TnC';
 import Faq from './modules/settings/Faq';
 import HelpnSupport from './modules/settings/Helpnsupport';
+import Aboutus from './modules/settings/AboutUs';
 
 const HomeStack = createStackNavigator(
   {
@@ -188,7 +189,8 @@ const AppNavigator = createStackNavigator(
     ChangePassword:{screen:ChangePassword},
     TnC:{screen:TermsAndCondition},
     FAQ:{screen:Faq},
-    HelpnSupport:{screen:HelpnSupport}
+    HelpnSupport:{screen:HelpnSupport},
+    AboutUs:{screen:Aboutus}
   },
   {
     navigationOptions: {

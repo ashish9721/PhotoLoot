@@ -10,5 +10,6 @@ export const color = {
     whiteTwo:'#f5f5f5',
     brownishGray:'rgb(96,96,96)',
     transparentColorBlack:'rgba(0,0,0,0.3)',
-    lighYellow:'rgb(255,229,191)'
+    lighYellow:'rgb(255,229,191)',
+    questionPale:'rgb(255,240,217)'
 }

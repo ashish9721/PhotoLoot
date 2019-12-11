@@ -34,6 +34,7 @@ notifydata = [
     title: Strings.ABOUTUS,
     image: Images.ABOUT,
     sign: Images.ARROW,
+    goto:'AboutUs'
   },
   {
     title: Strings.HELPSUPPORT,

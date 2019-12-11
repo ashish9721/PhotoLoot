@@ -1,40 +1,8 @@
 import React from 'react';
-import {View, Text, SafeAreaView, FlatList, Image} from 'react-native';
+import {View, Text, FlatList, Image} from 'react-native';
 import Strings from '../../Constants/Strings';
 import {styles} from './styles';
 
-notificationData = [
-  {
-    name: 'Manny Dolores',
-    title: Strings.heading1,
-    time: Strings.time1ForNotification,
-    isRead: 'first',
-  },
-  {
-    name: '',
-    moto: 'New Challenge',
-    place: '"Roads less travelled"',
-    title: Strings.heading2,
-    time: Strings.time2ForNotification,
-  },
-  {
-    name: ' Peter Caulins',
-    title: Strings.heading3,
-    time: Strings.time3ForNotification,
-  },
-  {
-    name: 'Peter Caulins',
-    title: Strings.heading4,
-    time: Strings.time4ForNotification,
-  },
-  {
-    name: '',
-    moto: 'Challenge',
-    place: '"7 Wonders of world"',
-    title: Strings.heading5,
-    time: Strings.time5ForNotification,
-  },
-];
 renderItem = rowData => {
   if (rowData.item.name.length > 0) {
     return (
@@ -70,14 +38,43 @@ renderItem = rowData => {
 
 const Notifications = props => {
   return (
-    <SafeAreaView>
-      <FlatList
-        data={notificationData}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={this.renderItem}
-      />
-    </SafeAreaView>
+    <FlatList
+      data={notificationData}
+      keyExtractor={(item, index) => index.toString()}
+      renderItem={this.renderItem}
+    />
   );
 };
-
+notificationData = [
+  {
+    name: 'Manny Dolores',
+    title: Strings.heading1,
+    time: Strings.time1ForNotification,
+    isRead: 'first',
+  },
+  {
+    name: '',
+    moto: 'New Challenge',
+    place: '"Roads less travelled"',
+    title: Strings.heading2,
+    time: Strings.time2ForNotification,
+  },
+  {
+    name: ' Peter Caulins',
+    title: Strings.heading3,
+    time: Strings.time3ForNotification,
+  },
+  {
+    name: 'Peter Caulins',
+    title: Strings.heading4,
+    time: Strings.time4ForNotification,
+  },
+  {
+    name: '',
+    moto: 'Challenge',
+    place: '"7 Wonders of world"',
+    title: Strings.heading5,
+    time: Strings.time5ForNotification,
+  },
+];
 export default Notifications;

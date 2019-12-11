@@ -35,6 +35,24 @@ const Strings = {
   time3ForNotification: '2h ago',
   time4ForNotification: '2h ago',
   time5ForNotification: '10h ago',
+  //About Us
+  //About Us
+  AccountDesc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing diam donec. Vulputate odio ut enim blandit volutpat maecenas volutpat. Quisque egestas diam in arcu.Cursus euismod quis viverra. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Consequat interdum varius sit amet mattis vulputate. Vel facilisis volutpat est velit egestas dui id. Purus non enim praesent elementum facilisis leo vel.\n\n    Sed felis eget velit aliquet.Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Vitae semper quis lectus nulla. Consequat id porta nibh venenatis cras sed felis.Sed pulvinar proin gravida hendrerit lectus a. Turpis egestas maecenas pharetra convallis.",
+  ContentDesc:"Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing diam donec. Vulputate odio ut enim blandit volutpat maecenas volutpat. Quisque egestas diam in arcu.Cursus euismod quis viverra. Fames ac turpis egestas maecenas pharetra convallis posuere morbi.Consequat interdum varius sit amet.\n\n                                                             Rulit egestas dui id. Purus non enim praesent elementum facilisis leo vel. Sed felis eget velit aliquet.Posuere lorem ipsum dolor sit amet consectetur iscing elit duis. Vitae semper quis lectus nulla. Consequat id porta nibh venenatis cras sed feli. Sed pulvinar proin gravida hendrerit lectus a. Turpis egestas maecenas pharetra convallis.",
+
+  Privacy:"Privacy Policy",
+  Account:"Your Account Information",
+  Content:"Your Content",
+  // TnC
+  //tnc
+  userdesc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing diam donec. Vulputate odio ut enim blandit volutpat maecenas volutpat. Quisque egestas diam in arcu.\n\n                                                     Cursus euismod quis viverra. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Consequat interdum varius sit amet mattis vulputate. Vel facilisis volutpat est velit egestas dui id. Purus non enim praesent elementum facilisis leo vel. Sed felis eget velit aliquet.",
+  Contdesc:"Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Vitae semper quis lectus nulla. Consequat id porta nibh venenatis cras sed felis. Sed pulvinar proin gravida hendrerit lectus a. Turpis egestas maecenas pharetra convallis.",
+  Conditiondesc:"Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing diam donec. Vulputate odio ut enim blandit volutpat maecenas volutpat. Quisque egestas diam in arcu.Cursus euismod quis viverra. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Consequat interdum varius sit amet mattis vulputate. Vel facilisis volutpat.\n\n    Est velit egestas dui id.Purus non enim praesent elementum facilisis leo vel. Sed felis eget velit aliquet.Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Vitae semper",
+  
+  Termsdesc:"Terms of Use",
+  Userdesc:"User",
+  Cont:"Content",
+  Conddesc:"Conditions",
 };
 
 export default Strings;
