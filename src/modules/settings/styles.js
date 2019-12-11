@@ -220,4 +220,63 @@ export const styles = StyleSheet.create({
     width: vw(343),
     marginTop: vh(13),
   },
+  // Help And Support
+  parentHelpnSupport: {
+    //Helpnsupport
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: vh(25),
+  },
+  name: {
+    //Helpnsupport
+    height: vh(45),
+    width: vw(315),
+    borderRadius: vw(10),
+    backgroundColor: '#f5f5f5',
+    padding: vw(10),
+  },
+  email: {
+    //Helpnsupport
+    height: vh(45),
+    width: vw(315),
+    borderRadius: vw(10),
+    backgroundColor: '#f5f5f5',
+    padding: vw(10),
+    marginTop: vh(15),
+  },
+  title: {
+    //Helpnsupport
+    height: vh(45),
+    width: vw(315),
+    borderRadius: vw(10),
+    backgroundColor: '#f5f5f5',
+    padding: vw(10),
+    marginTop: vh(15),
+  },
+  description: {
+    //Helpnsupport
+    height: vh(90),
+    width: vw(315),
+    borderRadius: vw(10),
+    backgroundColor: '#f5f5f5',
+    marginTop: vh(15),
+    paddingLeft: vw(15),
+    paddingTop: vh(17),
+  },
+  Buttonsubmit: {
+    //Helpnsupport
+    height: vh(45),
+    width: vw(315),
+    backgroundColor: '#ff9803',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: vw(10),
+    marginTop: vh(25),
+  },
+  submitstyle: {
+    //Helpnsupport
+    color: '#ffffff',
+    fontSize: vw(15),
+    fontWeight: '600',
+  },
 });
