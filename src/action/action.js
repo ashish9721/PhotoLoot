@@ -23,6 +23,11 @@ export const updateState = (key, value) => {
   };
 };
 
+export const faqDataList = data => {
+  return dispatch => {
+    dispatch(dataUpdate('faqReducer', 'faqData', data));
+  };
+};
 
 
 function dataUpdate(actionType, key, data) {

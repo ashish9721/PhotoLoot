@@ -34,7 +34,7 @@ notifydata = [
     title: Strings.ABOUTUS,
     image: Images.ABOUT,
     sign: Images.ARROW,
-    goto:'AboutUs'
+    goto: 'AboutUs',
   },
   {
     title: Strings.HELPSUPPORT,
@@ -46,6 +46,7 @@ notifydata = [
     title: Strings.INVITECONTACT,
     image: Images.INVITE,
     sign: Images.ARROW,
+    // goto:null
   },
   {
     title: Strings.NOTIFICATION,
@@ -95,21 +96,23 @@ class Settings extends React.Component {
         });
         break;
 
-      default:
-        this.props.navigation.navigate(rowData.item.goto);
+      default: {
+        rowData.item.goto && this.props.navigation.navigate(rowData.item.goto);
+      }
     }
   };
   render() {
     return (
       <FlatList
+        bounces={false}
         data={notifydata}
         keyExtractor={index => index.toString()}
         renderItem={rowData => {
           return (
-            <View>
+            <>
               <TouchableOpacity
                 onPress={() => this.sendData(rowData)}
-                activeOpacity={0.7}
+                activeOpacity={1}
                 style={styles.commonview}>
                 <View style={styles.changeview}>
                   <Image style={styles.image} source={rowData.item.image} />
@@ -125,7 +128,7 @@ class Settings extends React.Component {
                   <Image style={styles.imgarrow} source={rowData.item.sign} />
                 )}
               </TouchableOpacity>
-            </View>
+            </>
           );
         }}
       />

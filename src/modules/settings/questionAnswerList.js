@@ -12,15 +12,15 @@ export default class QuestionAnswerList extends Component {
     this.height = new Animated.Value(0);
   }
 
-  StartImageRotateFunction(index) {
+  StartImageRotateFunction() {
     Animated.timing(this.toggle, {
       toValue: 1,
-      duration: 1000,
+      duration: 250,
       easing: Easing.linear,
     }).start();
     Animated.timing(this.height, {
       toValue: 1,
-      duration: 1000,
+      duration: 250, 
       easing: Easing.linear,
     }).start();
   }
@@ -42,7 +42,7 @@ export default class QuestionAnswerList extends Component {
 
           <TouchableOpacity
             onPress={() =>
-              this.StartImageRotateFunction(this.props.index.toString())
+              this.StartImageRotateFunction()
             }
             style={styles.questionToggleButton}>
             <Animated.Image

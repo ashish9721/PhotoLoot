@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {StickerAndImage} from '../../component/functionalComponent/functional';
 import {styles} from './styles';
 
-export class CurrentChallenges extends Component {
+ class CurrentChallenges extends Component {
   componentDidMount() {
     this.cardsToExport();
   }

@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {FlatList} from 'react-native';
 import {galleryData} from '../../action/action';
-import {connect} from 'react-redux';//Custom Imports
+import {connect} from 'react-redux';
+
+//Custom Imports
 import {GalleryModel} from './galleryModel';
 
-export class ImageDetail extends Component {
+ class ImageDetail extends Component {
   render() {
     return (
       <FlatList
@@ -37,8 +39,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   galleryData: payload => dispatch(galleryData(payload)),
-  updateState: (key, value) => dispatch(addUser(key, value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ImageDetail);
-
