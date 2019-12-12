@@ -6,7 +6,7 @@ import { Header } from '../../component/headers/header';
  const  Aboutus = props=> {
     return (
       <>
-      <Heade
+      <Header
             title = "About Us"
             showBackButton={true}
             navProps={props.navigation}

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   screenImg: {
     height: vw(125),
     width: vw(125),
-    marginTop:vh(31)
+    marginTop: vh(31),
   },
   screenTxtContainer: {
     width: vw(315),
@@ -57,15 +57,20 @@ export const styles = StyleSheet.create({
     marginTop: vh(30),
     width: vw(315),
   },
-  checkBoxImg: {
-    height: vh(20),
-    width: vh(20),
-    // todo remove
+  checkboxButtonContainer: {
+    height: vw(19),
+    width: vw(19),
+    borderRadius: vw(10),
     marginRight: vw(10),
+    borderWidth: vw(0.3),
+  },
+  checkBoxImg: {
+    height: vw(20),
+    width: vw(20),
   },
   clickableLinkTxt: {
     fontSize: vw(12),
-    color:color.brownishGray,
+    color: color.brownishGray,
     textAlign: 'left',
   },
   submitBtn: {
@@ -75,7 +80,7 @@ export const styles = StyleSheet.create({
     borderRadius: vh(10),
     shadowOffset: {height: vh(8), width: vw(1)},
     shadowColor: color.TAndC,
-    elevation:10,
+    elevation: 10,
     shadowOpacity: 0.4,
     marginTop: vh(30),
     justifyContent: 'center',
@@ -84,7 +89,7 @@ export const styles = StyleSheet.create({
   TAndC: {
     fontSize: vw(12),
     textAlign: 'left',
-    fontWeight:'500',
+    fontWeight: '500',
     color: color.TAndC,
   },
   submitTxt: {
@@ -100,8 +105,8 @@ export const styles = StyleSheet.create({
     width: vw(315),
     marginTop: vh(10),
     marginBottom: vh(12),
-    fontSize:vw(15),
-    color:color.brownishGray
+    fontSize: vw(15),
+    color: color.brownishGray,
   },
   createAccountContainer: {
     flex: 1,
@@ -129,7 +134,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: color.white,
     alignItems: 'center',
-    paddingHorizontal:vw(29)
+    paddingHorizontal: vw(29),
   },
   forgotButton: {
     alignSelf: 'flex-end',
@@ -140,51 +145,51 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
     color: color.gray,
   },
-  connectText:{
-      fontSize:vw(15),
-      color:color.gray,
-      marginTop:vh(20),
+  connectText: {
+    fontSize: vw(15),
+    color: color.gray,
+    marginTop: vh(20),
   },
-  socialView:{
-    flexDirection:'row',
-    width:vw(315),
-    justifyContent:'space-between',
-    marginTop:vh(20)
+  socialView: {
+    flexDirection: 'row',
+    width: vw(315),
+    justifyContent: 'space-between',
+    marginTop: vh(20),
   },
-  socialButton:{
-    backgroundColor:'white',
-    flexDirection:'row',
-    alignItems:'center',
-    width:vw(145),
-    height:vh(45),
-    justifyContent:'center',
-    alignItems:'center',
-    borderRadius:vw(10),
-    elevation:5,
-    shadowOffset:{
-      width:vw(1),
-      height:vh(1)
+  socialButton: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: vw(145),
+    height: vh(45),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: vw(10),
+    elevation: 5,
+    shadowOffset: {
+      width: vw(1),
+      height: vh(1),
     },
-    shadowOpacity:vw(0.3)
+    shadowOpacity: vw(0.3),
   },
-  sociaImage:{
-      width:vw(20),
-      height:vh(20),
-      marginRight:vw(10)
+  sociaImage: {
+    width: vw(20),
+    height: vh(20),
+    marginRight: vw(10),
   },
-  socialText:{
-      fontSize:vw(15),
-      fontWeight:'600'
-  },
-  dontHaveText:{
+  socialText: {
     fontSize: vw(15),
-    color:color.brownishGray,
-    textAlign: 'left', 
+    fontWeight: '600',
   },
-  SignUpText:{
+  dontHaveText: {
     fontSize: vw(15),
-    fontWeight:'700',
+    color: color.brownishGray,
+    textAlign: 'left',
+  },
+  SignUpText: {
+    fontSize: vw(15),
+    fontWeight: '700',
     textAlign: 'left',
     color: color.TAndC,
-  }
+  },
 });

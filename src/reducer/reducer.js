@@ -29,7 +29,7 @@ export const galleryReducer = (
       return state;
   }
 };
-export const faqReducer = (state = {faqData:faqData}, action) => {
+export const faqReducer = (state = {faqData: faqData}, action) => {
   switch (action.type) {
     case 'faqReducer':
       return {...faqData, ...action.payload};
@@ -37,10 +37,35 @@ export const faqReducer = (state = {faqData:faqData}, action) => {
       return state;
   }
 };
+
+const signUpData = [{name: '', userName: '', email: '', password: ''}];
+export const signingReducer = (state = signUpData, action) => {
+  switch (action.type) {
+    case 'name':
+    case 'userName':
+    case 'email':
+    case 'password':
+      return updateName(state, action);
+    default:
+      return {...state};
+  }
+};
+
+/**
+ * Test
+ */
+const updateName = (currentState, action) => {
+  let newState = currentState;
+  const {type, payload} = action;
+  newState[0][type] = payload;
+  debugger;
+  return {...newState};
+};
+
 export const reducer = combineReducers({
   cardReducer: cardReducer,
   homeReducer: homeReducer,
   galleryReducer: galleryReducer,
   faqReducer: faqReducer,
-
+  signingReducer: signingReducer,
 });
