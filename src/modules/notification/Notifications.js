@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{Component} from 'react';
 import {View, Text, FlatList, Image} from 'react-native';
 import Strings from '../../Constants/Strings';
 import {styles} from './styles';
+import { Header } from '../../component/headers/header';
+
+
+export default class Notifications extends Component {
 
 renderItem = rowData => {
   if (rowData.item.name.length > 0) {
@@ -21,6 +25,7 @@ renderItem = rowData => {
   } else {
     return (
       <>
+    
         <View style={styles.parent}>
           <Image style={styles.notificationImage} />
           <Text style={styles.startText}>
@@ -35,16 +40,24 @@ renderItem = rowData => {
     );
   }
 };
-
-const Notifications = props => {
-  return (
-    <FlatList
-      data={notificationData}
-      keyExtractor={(item, index) => index.toString()}
-      renderItem={this.renderItem}
-    />
-  );
-};
+  render() {
+    return (
+      <>
+      <Header
+      showBackButton={false}
+      title="Notifications"
+      showVotebutton={false}
+      navProps={this.props.navigation}
+      />
+      <FlatList
+        data={notificationData}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={this.renderItem}
+      />
+      </>
+    );
+  }
+}
 notificationData = [
   {
     name: 'Manny Dolores',
@@ -77,4 +90,3 @@ notificationData = [
     time: Strings.time5ForNotification,
   },
 ];
-export default Notifications;

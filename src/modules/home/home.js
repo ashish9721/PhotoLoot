@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
+import {connect} from 'react-redux';
+//Custom Imports
 import {StickerAndImage} from '../../component/functionalComponent/functional';
 import {styles} from './styles';
 import {homeData} from '../../action/action';
-import {Images, vh, vw} from '../../Constants';
-import {connect} from 'react-redux';
+import {Images} from '../../Constants';
+import {Header} from '../../component/headers/header'
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -58,7 +60,15 @@ class Home extends Component {
     console.log(' props.homedata', this.props.HomeTempdata);
 
     return (
+      <>
+      <Header
+      showBackButton={false}
+      title="Home"
+      showVotebutton={true}
+      
+      />
       <ScrollView
+      showsVerticalScrollIndicator={false}
         style={styles.scrollViewStyle}
         bounces={true}
         contentContainerStyle={styles.container}>
@@ -66,6 +76,7 @@ class Home extends Component {
 
         {this.props.HomeTempdata && this.rendermap()}
       </ScrollView>
+      </>
     );
   }
 }

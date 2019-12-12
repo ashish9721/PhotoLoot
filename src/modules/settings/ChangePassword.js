@@ -2,10 +2,16 @@ import React from 'react';
 import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 import {styles} from './styles';
 import {Images} from '../../Constants'
+import { Header } from '../../component/headers/header';
 
-export default class ChangePassword extends React.Component {
-  render() {
+ const ChangePassword =(props)=> {
     return (
+      <>
+      <Header
+      title="Change Password"
+      showBackButton={true}
+      navProps={props.navigation}
+      />
       <View style={styles.parent}>
         <TextInput
           style={styles.oldpassword}
@@ -30,6 +36,7 @@ export default class ChangePassword extends React.Component {
           <Text style={styles.updatestyle}>Update</Text>
         </TouchableOpacity>
       </View>
+      </>
     );
   }
-}
+export default ChangePassword;

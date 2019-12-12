@@ -10,6 +10,7 @@ import {
 import Strings from '../../Constants/Strings';
 import Images from '../../Constants/Images';
 import {styles} from './styles';
+import { Header } from '../../component/headers/header';
 notifydata = [
   {
     title: Strings.CHANGEPASSWORD,
@@ -103,6 +104,13 @@ class Settings extends React.Component {
   };
   render() {
     return (
+      <>
+      <Header
+       showBackButton={false}
+       title="Settings"
+       showVotebutton={false}
+       navProps={this.props.navigation}
+      />
       <FlatList
         bounces={false}
         data={notifydata}
@@ -132,6 +140,7 @@ class Settings extends React.Component {
           );
         }}
       />
+      </>
     );
   }
 }

@@ -39,17 +39,27 @@ import Faq from './modules/settings/Faq';
 import HelpnSupport from './modules/settings/Helpnsupport';
 import Aboutus from './modules/settings/AboutUs';
 
-const HomeStack = createStackNavigator(
-  {
-    Home: {screen: Home, navigationOptions: {header: null}},
-    CurrentChallenges: {screen: CurrentChallenges,
-    navigationOptions:{
-      header:null
-    }},
-    HallOfFame: {screen: HallOfFame},
-    UpComingChallenges: {screen: UpComingChallenges},
+const HomeStack = createStackNavigator({
+  Home: {screen: Home, navigationOptions: {header: null}},
+  CurrentChallenges: {
+    screen: CurrentChallenges,
+    navigationOptions: {
+      header: null,
+    },
   },
-);
+  HallOfFame: {
+    screen: HallOfFame,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  UpComingChallenges: {
+    screen: UpComingChallenges,
+    navigationOptions: {
+      header: null,
+    },
+  },
+});
 
 const TabNavigator = createBottomTabNavigator({
   Home: {
@@ -189,11 +199,36 @@ const AppNavigator = createStackNavigator(
     Search: {screen: search, navigationOptions: null},
     Notification: {screen: Notifications, navigationOptions: null},
     Settings: {screen: Settings, navigationOptions: null},
-    ChangePassword:{screen:ChangePassword},
-    TnC:{screen:TermsAndCondition},
-    FAQ:{screen:Faq},
-    HelpnSupport:{screen:HelpnSupport},
-    AboutUs:{screen:Aboutus}
+    ChangePassword: {
+      screen: ChangePassword,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    TnC: {
+      screen: TermsAndCondition,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    FAQ: {
+      screen: Faq,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    HelpnSupport: {
+      screen: HelpnSupport,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    AboutUs: {
+      screen: Aboutus,
+      navigationOptions: {
+        header: null,
+      },
+    },
   },
   {
     navigationOptions: {
@@ -212,7 +247,7 @@ const ModalStack = createStackNavigator(
     OutOfVotes: {screen: OutOfVotes},
     ImageRemove: {screen: ImageRemove},
     UpdateAvailable: {screen: UpdateAvailable},
-    showConfirmationModal:{screen:showConfirmationModal}
+    showConfirmationModal: {screen: showConfirmationModal},
   },
   {
     headerMode: 'none',
@@ -220,7 +255,7 @@ const ModalStack = createStackNavigator(
     transparentCard: true,
     cardStyle: {
       backgroundColor: color.transparentColorBlack,
-      opacity:1
+      opacity: 1,
     },
   },
 );

@@ -2,9 +2,15 @@ import React from 'react';
 import {ScrollView, Text} from 'react-native';
 import {Strings} from '../../Constants';
 import {styles} from './styles';
-export default class TermsAndCondition extends React.Component {
-  render() {
+import { Header } from '../../component/headers/header';
+ const TermsAndCondition =(props) => {
     return (
+      <>
+      <Header
+       title="Terms and Condition"
+       showBackButton={true}
+       navProps={props.navigation}
+      />
       <ScrollView
         showsVerticalScrollIndicator={false}
         bounces={false}
@@ -17,6 +23,7 @@ export default class TermsAndCondition extends React.Component {
         <Text style={styles.condTextTnC}>{Strings.Conddesc}</Text>
         <Text style={styles.condDescText}>{Strings.Conditiondesc}</Text>
       </ScrollView>
+      </>
     );
   }
-}
+export default TermsAndCondition;
