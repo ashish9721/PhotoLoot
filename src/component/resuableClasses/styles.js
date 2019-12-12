@@ -18,4 +18,9 @@ export const styles = StyleSheet.create({
       borderTopLeftRadius: vw(10),
       borderTopRightRadius: vw(10),
     },
+    backButtonAbsolute:{
+      position:'absolute',
+      top:vh(25),
+      left:vw(15),
+    }
   });

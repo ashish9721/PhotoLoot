@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, ScrollView} from 'react-native';
+import {Image, ScrollView, TouchableOpacity} from 'react-native';
 import {
   PrizeViews,
   Description,
@@ -9,7 +9,7 @@ import {
 } from '../functionalComponent/functional';
 //Custom Imports
 import {vh, Images} from '../../Constants';
-import {styles} from './styles'
+import {styles} from './styles';
 
 // currently working
 export default class ChallengesInfo extends Component {
@@ -21,7 +21,13 @@ export default class ChallengesInfo extends Component {
           source={Images.PLACEHOLDERIMAGE}
           resizeMode="cover"
         />
-
+        <TouchableOpacity activeOpacity={0.9}
+        onPress={()=>this.props.navigation.goBack()}
+        style={styles.backButtonAbsolute}>
+          <Image 
+          source={Images.BACKBUTTON}
+          style={styles.backButtonImage} />
+        </TouchableOpacity>
         <ScrollView
           style={styles.scrollView}
           bounces={false}

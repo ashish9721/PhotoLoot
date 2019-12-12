@@ -206,7 +206,9 @@ const AppNavigator = createStackNavigator(
     },
     ChallengesInfo: {
       screen: ChallengesInfo,
-      navigationOptions: null,
+      navigationOptions: {
+        header:null
+      },
     },
     Search: {screen: search, navigationOptions: null},
     Notification: {screen: Notifications, navigationOptions: null},
