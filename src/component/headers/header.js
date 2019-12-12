@@ -9,7 +9,7 @@ const Header = props => {
         {props.showBackButton && (
           <TouchableOpacity
             style={styles.backButton}
-            onPress={() => props.navprops.navigation.goBack()}>
+            onPress={() => props.navProps.goBack()}>
             <Image
               source={Images.BACKBUTTON}
               style={styles.backButtonImg}

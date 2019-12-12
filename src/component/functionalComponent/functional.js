@@ -15,7 +15,7 @@ const StickerAndImage = props => {
   // navigate to next screen
   return (
     <TouchableOpacity
-      style={styles.container}
+      style={styles.stickerAndImageContainer}
       activeOpacity={0.85}
       onPress={() => {
         console.log('StickerImage', props.navProps);
@@ -72,7 +72,7 @@ const StickerAndImage = props => {
 };
 const SmallSticker = props => {
   return (
-    <TouchableOpacity style={styles.smallsticker}>
+    <TouchableOpacity activeOpacity={0.9} style={styles.smallsticker}>
       <View style={styles.smallstickerImg} />
       <View style={styles.smallstickerCard}>
         <View style={styles.smallcardContainer}>
@@ -86,7 +86,7 @@ const SmallSticker = props => {
 
 const ThreeStickerContainer = props => {
   return (
-    <View style={styles.container}>
+    <View style={styles.threeStickerContainer}>
       <View style={styles.imageContainer}>
         <View style={styles.smallstickerContainer}>
           <SmallSticker place="1st" />

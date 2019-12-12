@@ -3,9 +3,10 @@ import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 import {cardData} from '../../action/action';
 import {connect} from 'react-redux';
+//Custom Imports
 import {StickerAndImage} from '../../component/functionalComponent/functional';
 import {styles} from './styles';
-
+import {Header} from '../../component/headers/header'
  class CurrentChallenges extends Component {
   componentDidMount() {
     this.cardsToExport();
@@ -50,12 +51,21 @@ import {styles} from './styles';
   }
   render() {
     return (
+      <>
+      <Header 
+      showBackButton={true}
+      title="Current Challenges"
+      showVotebutton={true}
+      navProps={this.props.navigation}
+      />
       <ScrollView
         style={styles.scrollViewStyle}
+        showsVerticalScrollIndicator={false}
         bounces={false}
         contentContainerStyle={styles.container}>
         {this.props.Tempdata && this.renderData()}
       </ScrollView>
+      </>
     );
   }
 }

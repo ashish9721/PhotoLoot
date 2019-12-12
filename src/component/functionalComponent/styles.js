@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Platform} from 'react-native';
 import {vh, vw, color,} from '../../Constants';
 export const styles = StyleSheet.create({
   container: {
@@ -9,6 +9,23 @@ export const styles = StyleSheet.create({
     // justifyContent:'center',
     // alignItems:'center',
     marginTop: vh(25),
+  },
+  stickerAndImageContainer: {
+    height:vh(195), 
+    // flex:1,
+    // backgroundColor:'lightblue',
+    // justifyContent:'center',
+    // alignItems:'center',
+    marginVertical: vh(5),
+  },
+  threeStickerContainer: {
+    height:vh(190),
+    // todo height:vh(205) correct viewing
+    // flex:1,
+    // backgroundColor:'lightblue',
+    // justifyContent:'center',
+    // alignItems:'center',
+    marginVertical: vh(5),
   },
   imageContainer: {
     height: vh(160),

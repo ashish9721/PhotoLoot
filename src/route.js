@@ -42,7 +42,10 @@ import Aboutus from './modules/settings/AboutUs';
 const HomeStack = createStackNavigator(
   {
     Home: {screen: Home, navigationOptions: {header: null}},
-    CurrentChallenges: {screen: CurrentChallenges},
+    CurrentChallenges: {screen: CurrentChallenges,
+    navigationOptions:{
+      header:null
+    }},
     HallOfFame: {screen: HallOfFame},
     UpComingChallenges: {screen: UpComingChallenges},
   },

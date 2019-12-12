@@ -24,6 +24,7 @@ export default class UpComingChallenges extends Component {
     return (
       <ScrollView
         style={styles.scrollViewStyle}
+        showsVerticalScrollIndicator={false}
         bounces={false}
         contentContainerStyle={styles.container}>
         {this.renderData()}

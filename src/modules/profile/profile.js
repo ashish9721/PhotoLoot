@@ -4,6 +4,7 @@ import {Text, View, TouchableOpacity, Image} from 'react-native';
 import {styles} from './styles';
 import {vh, color, Strings, Images} from '../../Constants';
 import NavTabBar from './index';
+import { Header } from '../../component/headers/header';
 
 export default class Profile extends Component {
   componentDidMount(){
@@ -25,6 +26,11 @@ export default class Profile extends Component {
   render() {
     return (
       <>
+      <Header
+      title="Patricia.cau88"
+      showBackButton={false}
+      showVotebutton={false}
+      />
         <View style={styles.container}>
           <View style={styles.profileImgStyle} />
           <View style={styles.texts}>

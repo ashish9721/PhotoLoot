@@ -37,6 +37,7 @@ export default class HallOfFame extends Component {
                 paddingHorizontal: vw(15),
                 height: vh(30),
                 backgroundColor: 'white',
+                alignItems:'center',
               }}>
               <Text
                 style={{color: 'black', fontWeight: 'bold', fontSize: vw(18)}}>

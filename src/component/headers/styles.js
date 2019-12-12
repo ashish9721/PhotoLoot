@@ -10,7 +10,9 @@ const styles = StyleSheet.create({
     headerInnerContainer:{
         flexDirection:'row',
         alignItems:'center',
-        paddingHorizontal:vw(15)
+        paddingHorizontal:vw(15),
+        justifyContent:'space-between',
+        marginTop:vh(20)
     },
     backButton:{
         alignSelf:'flex-start'
@@ -23,6 +25,7 @@ const styles = StyleSheet.create({
         fontSize:vw(16),
         color:color.white,
         alignSelf:'center',
+        fontWeight:'700'
     },
     voteButton:{
         flexDirection:'row',
