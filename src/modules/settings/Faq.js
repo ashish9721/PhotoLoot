@@ -5,19 +5,26 @@ import {faqDataList} from '../../action/action';
 import {connect} from 'react-redux';
 // Custom Imports
 import QuestionAnswerList from './questionAnswerList';
+import {Header} from '../../component/headers/header';
 
 class Faq extends React.Component {
   render() {
-    console.log('state return is');
     return (
-      <FlatList
-        data={this.props.faqData}
-        keyExtractor={(item, index) => index.toString}
-        bounces={false}
-        renderItem={({item, index}) => (
-          <QuestionAnswerList index={index} item={item} />
-        )}
-      />
+      <>
+        <Header
+          title="FAQ"
+          showBackButton={true}
+          navProps={this.props.navigation}
+        />
+        <FlatList
+          data={this.props.faqData}
+          keyExtractor={(item, index) => index.toString}
+          bounces={false}
+          renderItem={({item, index}) => (
+            <QuestionAnswerList index={index} item={item} />
+          )}
+        />
+      </>
     );
   }
 }

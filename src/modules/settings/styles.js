@@ -98,7 +98,7 @@ export const styles = StyleSheet.create({
   FaqAnswerView: {
     marginHorizontal: vw(15),
     backgroundColor: color.white,
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.1,
     elevation: 5,
     shadowOffset: {
       width: vw(1),

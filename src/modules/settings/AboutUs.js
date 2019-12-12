@@ -2,9 +2,15 @@ import React from 'react';
 import {View, Text,ScrollView} from 'react-native';
 import {styles} from './styles';
 import Strings from '../../Constants/Strings';
-export default class Aboutus extends React.Component {
-  render() {
+import { Header } from '../../component/headers/header';
+ const  Aboutus = props=> {
     return (
+      <>
+      <Heade
+            title = "About Us"
+            showBackButton={true}
+            navProps={props.navigation}
+            />
       <ScrollView
       bounces={false}
       showsVerticalScrollIndicator={false}
@@ -17,6 +23,7 @@ export default class Aboutus extends React.Component {
           <Text style={styles.textAmet}>{Strings.ContentDesc}</Text>
         </View>
       </ScrollView>
+      </>
     );
   }
-}
+export default Aboutus;
