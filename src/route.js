@@ -1,4 +1,4 @@
-import {createAppContainer} from 'react-navigation';
+import {createAppContainer, NavigationActions} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import React from 'react';
@@ -62,25 +62,36 @@ const HomeStack = createStackNavigator({
 });
 
 const TabNavigator = createBottomTabNavigator({
+
+  
   Home: {
     screen: HomeStack,
-    navigationOptions: {
+    navigationOptions:({navigation})=> ({
       header: null,
       title: '',
-      tabBarIcon: ({tintColor, focused}) => (
-        <Image
+      tabBarOnPress: (props) => {
+          // console.log("scene", props);
+          props.navigation.popToTop()
+         
+      },
+      tabBarIcon: ({tintColor, focused}) => {
+        // if(!focused){
+        //   navigation.popToTop()
+        // }
+       return <Image
           source={focused ? Images.HOME : Images.UNHOME}
           style={styles.bottomTabImg}
           resizeMode="contain"
-        />
-      ),
-    },
+        />}
+      ,
+    })
   },
   Search: {
     screen: search,
     navigationOptions: {
       title: '',
       tabBarIcon: ({tintColor, focused}) => (
+        
         <Image
           source={focused ? Images.SEARCH : Images.UNSEARCH}
           style={styles.bottomTabImg}
@@ -91,6 +102,7 @@ const TabNavigator = createBottomTabNavigator({
   },
   Profile: {
     screen: Profile,
+
     navigationOptions: {
       title: '',
       tabBarIcon: ({tintColor, focused}) => (
