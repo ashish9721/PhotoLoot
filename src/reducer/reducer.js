@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {Tempdata,HomeTempdata,imageTempData,faqData} from '../Constants/constData'
+import {Tempdata,HomeTempdata,imageTempData,faqData,signUpData} from '../Constants/constData'
 
 export const cardReducer = (state = Tempdata, action) => {
   switch (action.type) {
@@ -38,7 +38,6 @@ export const faqReducer = (state = {faqData: faqData}, action) => {
   }
 };
 
-const signUpData = [{name: '', userName: '', email: '', password: ''}];
 export const signingReducer = (state = signUpData, action) => {
   switch (action.type) {
     case 'name':
@@ -58,7 +57,6 @@ const updateName = (currentState, action) => {
   let newState = currentState;
   const {type, payload} = action;
   newState[0][type] = payload;
-  debugger;
   return {...newState};
 };
 

@@ -1,12 +1,21 @@
 import React from 'react';
-import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 import {connect} from 'react-redux';
-import {signUpDataList, updateState} from '../../action/action';
+import AsyncStorage from '@react-native-community/async-storage';
 
 //Custom Imports
 import {styles} from './styles';
 import {color, Images} from '../../Constants/';
+import {signUpDataList, updateState} from '../../action/action';
+
 class SignUp extends React.Component {
   state = {
     check: false,
@@ -15,7 +24,33 @@ class SignUp extends React.Component {
   updateInputText(key, value) {
     return this.props.updateState(key, value);
   }
-
+  checkTerms = () => {
+    this.setState({
+      check: !this.state.check,
+    });
+  };
+  onSubmit = () => {
+    const name = ['name', this.props.name];
+    const userName = ['username', this.props.userName];
+    const email = ['email', this.props.email];
+    const password = ['password', this.props.password];
+    try {
+      AsyncStorage.multiSet([name, userName, email, password]);
+    } catch (e) {
+      //save error
+    }
+    if (
+      this.state.check &&
+      this.props.name.length > 0 &&
+      this.props.userName.length > 0 &&
+      this.props.email.length > 0 &&
+      this.props.password.length > 0
+    )
+      this.props.navigation.navigate('Verification');
+    else {
+      Alert.alert('Please fill all the details');
+    }
+  };
   render() {
     return (
       <KeyboardAwareScrollView>
@@ -70,11 +105,7 @@ class SignUp extends React.Component {
             <View style={styles.checkBoxAndClickableLink}>
               <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => {
-                  this.setState({
-                    check: !this.state.check,
-                  });
-                }}
+                onPress={this.checkTerms}
                 style={styles.checkboxButtonContainer}>
                 {this.state.check && (
                   <Image
@@ -98,7 +129,8 @@ class SignUp extends React.Component {
             </View>
             <TouchableOpacity
               activeOpacity={0.8}
-              onPress={() => this.props.navigation.navigate('Verification')}
+              disabled={this.state.disabled}
+              onPress={this.onSubmit}
               style={styles.submitBtn}>
               <Text style={styles.submitTxt}>Submit</Text>
             </TouchableOpacity>
@@ -111,7 +143,7 @@ class SignUp extends React.Component {
 
 const mapStateToProps = state => {
   console.log('state return is', state.signingReducer);
-  // const {signUpData} = state.faqReducer;
+  // const {signUpData} = state.signingReducern;
   const {name, userName, email, password} = state.signingReducer[0];
   return {
     // signUpData,

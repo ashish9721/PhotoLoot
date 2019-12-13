@@ -4,7 +4,7 @@ import {color} from '../../Constants';
 export const styles = StyleSheet.create({
   SignUpContainer: {
     flex: 1,
-    // justifyContent: 'center',
+    justifyContent: 'center',
     backgroundColor: color.white,
     alignItems: 'center',
   },
@@ -131,6 +131,7 @@ export const styles = StyleSheet.create({
   },
   // Sign In
   SignInContainer: {
+    justifyContent:'center',
     flex: 1,
     backgroundColor: color.white,
     alignItems: 'center',

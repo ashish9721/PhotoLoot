@@ -203,5 +203,6 @@ const faqData = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed adipiscing diam donec. ',
   },
 ];
+const signUpData = [{name: '', userName: '', email: '', password: ''}];
 
-export {imageTempData,HomeTempdata,Tempdata,faqData}
+export {imageTempData,HomeTempdata,Tempdata,faqData,signUpData}
