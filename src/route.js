@@ -38,6 +38,7 @@ import TermsAndCondition from './modules/settings/TnC';
 import Faq from './modules/settings/Faq';
 import HelpnSupport from './modules/settings/Helpnsupport';
 import Aboutus from './modules/settings/AboutUs';
+import Invitecontact from './modules/settings/Invitecontact';
 
 const HomeStack = createStackNavigator(
   {
@@ -190,7 +191,8 @@ const AppNavigator = createStackNavigator(
     TnC:{screen:TermsAndCondition},
     FAQ:{screen:Faq},
     HelpnSupport:{screen:HelpnSupport},
-    AboutUs:{screen:Aboutus}
+    AboutUs:{screen:Aboutus},
+    //Invitecontact:{screen:Invitecontact}
   },
   {
     navigationOptions: {
