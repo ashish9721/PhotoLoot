@@ -1,17 +1,30 @@
 import React from 'react';
 import {
   View,
-  StyleSheet,
   Text,
   TouchableOpacity,
   TextInput,
   Image,
+  Alert,
 } from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 // Custom Imports
 import {Images} from '../../Constants';
 import {styles} from './styles';
+import AsyncStorage from '@react-native-community/async-storage';
 export default class ForgotPassword extends React.Component {
+  state = {
+    email: '',
+  };
+  onSubmit = () => {
+    AsyncStorage.getItem('email', (err, res) => {
+      if (this.state.email === res) {
+        this.props.navigation.navigate('Verification');
+      } else {
+        Alert.alert('Email Address does not exist.');
+      }
+    });
+  };
   render() {
     return (
       <KeyboardAwareScrollView>
@@ -29,12 +42,18 @@ export default class ForgotPassword extends React.Component {
 
           <TextInput
             style={styles.inputTextField2Container}
+            value={this.state.email}
+            onChangeText={text =>
+              this.setState({
+                email: text,
+              })
+            }
             placeholder="Email Address"
             placeholderTextColor="#b3b3b3"
           />
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => this.props.navigation.navigate('Verification')}
+            onPress={this.onSubmit}
             style={styles.submitBtn}>
             <Text style={styles.submitTxt}>Submit</Text>
           </TouchableOpacity>

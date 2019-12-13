@@ -29,10 +29,18 @@ class SignUp extends React.Component {
       check: !this.state.check,
     });
   };
+  validateEmail = email => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  };
   onSubmit = () => {
-    const name = ['name', this.props.name];
-    const userName = ['username', this.props.userName];
-    const email = ['email', this.props.email];
+    let cName = this.props.name.replace(/\s+/g, ' ').trim();
+    let cUserName = this.props.userName.replace(/\s+/g, ' ').trim();
+    // const email = []
+    console.log('cname', cUserName);
+
+    const name = ['name', cName];
+    const userName = ['username', cUserName];
     const password = ['password', this.props.password];
     try {
       AsyncStorage.multiSet([name, userName, email, password]);
@@ -44,11 +52,12 @@ class SignUp extends React.Component {
       this.props.name.length > 0 &&
       this.props.userName.length > 0 &&
       this.props.email.length > 0 &&
-      this.props.password.length > 0
+      this.props.password.length > 0 &&
+      this.validateEmail(this.props.email)
     )
       this.props.navigation.navigate('Verification');
     else {
-      Alert.alert('Please fill all the details');
+      Alert.alert('Please fill all the details or valid email');
     }
   };
   render() {

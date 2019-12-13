@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'black',
     alignSelf: 'flex-start',
+    marginTop:vh(30)
   },
   InputFieldContainer: {
     alignItems: 'center',
@@ -193,4 +194,5 @@ export const styles = StyleSheet.create({
     textAlign: 'left',
     color: color.TAndC,
   },
+ 
 });
