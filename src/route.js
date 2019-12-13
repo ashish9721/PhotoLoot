@@ -59,39 +59,38 @@ const HomeStack = createStackNavigator({
       header: null,
     },
   },
+  initialRouteName: 'Home',
 });
 
 const TabNavigator = createBottomTabNavigator({
-
-  
   Home: {
     screen: HomeStack,
-    navigationOptions:({navigation})=> ({
+    navigationOptions: ({navigation}) => ({
       header: null,
       title: '',
-      tabBarOnPress: (props) => {
-          // console.log("scene", props);
-          props.navigation.popToTop()
-         
+      tabBarOnPress: props => {
+        if (props.navigation.state.index > 0) {
+          props.navigation.pop();
+        } else {
+          props.navigation.navigate('Home');
+        }
       },
       tabBarIcon: ({tintColor, focused}) => {
-        // if(!focused){
-        //   navigation.popToTop()
-        // }
-       return <Image
-          source={focused ? Images.HOME : Images.UNHOME}
-          style={styles.bottomTabImg}
-          resizeMode="contain"
-        />}
-      ,
-    })
+        return (
+          <Image
+            source={focused ? Images.HOME : Images.UNHOME}
+            style={styles.bottomTabImg}
+            resizeMode="contain"
+          />
+        );
+      },
+    }),
   },
   Search: {
     screen: search,
     navigationOptions: {
       title: '',
       tabBarIcon: ({tintColor, focused}) => (
-        
         <Image
           source={focused ? Images.SEARCH : Images.UNSEARCH}
           style={styles.bottomTabImg}
@@ -207,7 +206,7 @@ const AppNavigator = createStackNavigator(
     ChallengesInfo: {
       screen: ChallengesInfo,
       navigationOptions: {
-        header:null
+        header: null,
       },
     },
     Search: {screen: search, navigationOptions: null},
