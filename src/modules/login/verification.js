@@ -32,9 +32,7 @@ export default class Verification extends Component {
             </View>
             <TouchableOpacity
               activeOpacity={0.8}
-              onPress={() =>
-               this.props.navigation.navigate('Resend')
-              }
+              onPress={() => this.props.navigation.navigate('Resend')}
               style={styles.submitBtn}>
               <Text style={styles.submitTxt}>Submit</Text>
             </TouchableOpacity>
@@ -45,9 +43,10 @@ export default class Verification extends Component {
                   onPress={() => {
                     this.props.navigation.navigate('VerificationModal', {
                       title: 'Verification Successful',
-                      detail:Strings.VERIFYTEXT,
-                      image:Images.SUCCESSGRAPHIC
-                    })                  }}
+                      detail: Strings.VERIFYTEXT,
+                      image: Images.SUCCESSGRAPHIC,
+                    });
+                  }}
                   style={styles.SignUpText}>
                   {' '}
                   Resend
