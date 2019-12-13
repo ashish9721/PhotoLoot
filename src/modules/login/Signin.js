@@ -18,9 +18,9 @@ export default class Signin extends React.Component {
   state = {
     email: '',
     password: '',
-    EyeActive: false,
+    EyeActive: true,
   };
-  eyeActivity = () => {
+  eyeActivity = () => {    
     this.setState({
       EyeActive: !this.state.EyeActive,
     });
