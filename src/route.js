@@ -1,4 +1,4 @@
-import {createAppContainer} from 'react-navigation';
+import {createAppContainer, NavigationActions} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import React from 'react';
@@ -38,31 +38,53 @@ import TermsAndCondition from './modules/settings/TnC';
 import Faq from './modules/settings/Faq';
 import HelpnSupport from './modules/settings/Helpnsupport';
 import Aboutus from './modules/settings/AboutUs';
-import Invitecontact from './modules/settings/Invitecontact';
 
-const HomeStack = createStackNavigator(
-  {
-    Home: {screen: Home, navigationOptions: {header: null}},
-    CurrentChallenges: {screen: CurrentChallenges},
-    HallOfFame: {screen: HallOfFame},
-    UpComingChallenges: {screen: UpComingChallenges},
+const HomeStack = createStackNavigator({
+  Home: {screen: Home, navigationOptions: {header: null}},
+  CurrentChallenges: {
+    screen: CurrentChallenges,
+    navigationOptions: {
+      header: null,
+    },
   },
-);
+  HallOfFame: {
+    screen: HallOfFame,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  UpComingChallenges: {
+    screen: UpComingChallenges,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  initialRouteName: 'Home',
+});
 
 const TabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomeStack,
-    navigationOptions: {
+    navigationOptions: ({navigation}) => ({
       header: null,
       title: '',
-      tabBarIcon: ({tintColor, focused}) => (
-        <Image
-          source={focused ? Images.HOME : Images.UNHOME}
-          style={styles.bottomTabImg}
-          resizeMode="contain"
-        />
-      ),
-    },
+      tabBarOnPress: props => {
+        if (props.navigation.state.index > 0) {
+          props.navigation.pop();
+        } else {
+          props.navigation.navigate('Home');
+        }
+      },
+      tabBarIcon: ({tintColor, focused}) => {
+        return (
+          <Image
+            source={focused ? Images.HOME : Images.UNHOME}
+            style={styles.bottomTabImg}
+            resizeMode="contain"
+          />
+        );
+      },
+    }),
   },
   Search: {
     screen: search,
@@ -79,6 +101,7 @@ const TabNavigator = createBottomTabNavigator({
   },
   Profile: {
     screen: Profile,
+
     navigationOptions: {
       title: '',
       tabBarIcon: ({tintColor, focused}) => (
@@ -182,17 +205,43 @@ const AppNavigator = createStackNavigator(
     },
     ChallengesInfo: {
       screen: ChallengesInfo,
-      navigationOptions: null,
+      navigationOptions: {
+        header: null,
+      },
     },
     Search: {screen: search, navigationOptions: null},
     Notification: {screen: Notifications, navigationOptions: null},
     Settings: {screen: Settings, navigationOptions: null},
-    ChangePassword:{screen:ChangePassword},
-    TnC:{screen:TermsAndCondition},
-    FAQ:{screen:Faq},
-    HelpnSupport:{screen:HelpnSupport},
-    AboutUs:{screen:Aboutus},
-    //Invitecontact:{screen:Invitecontact}
+    ChangePassword: {
+      screen: ChangePassword,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    TnC: {
+      screen: TermsAndCondition,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    FAQ: {
+      screen: Faq,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    HelpnSupport: {
+      screen: HelpnSupport,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    AboutUs: {
+      screen: Aboutus,
+      navigationOptions: {
+        header: null,
+      },
+    },
   },
   {
     navigationOptions: {
@@ -211,7 +260,7 @@ const ModalStack = createStackNavigator(
     OutOfVotes: {screen: OutOfVotes},
     ImageRemove: {screen: ImageRemove},
     UpdateAvailable: {screen: UpdateAvailable},
-    showConfirmationModal:{screen:showConfirmationModal}
+    showConfirmationModal: {screen: showConfirmationModal},
   },
   {
     headerMode: 'none',
@@ -219,7 +268,7 @@ const ModalStack = createStackNavigator(
     transparentCard: true,
     cardStyle: {
       backgroundColor: color.transparentColorBlack,
-      opacity:1
+      opacity: 1,
     },
   },
 );

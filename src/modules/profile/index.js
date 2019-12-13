@@ -13,9 +13,9 @@ const NavTabBar = createMaterialTopTabNavigator(
       screen: Posts,
       navigationOptions: ({navigation}) => {
           
-          console.log(navigation.state)
+          console.log("navigation state",navigation.state)
           return ({
-        title: `${"Posts"}`,
+        title: "Posts"
       })},
     },
     Followers: {

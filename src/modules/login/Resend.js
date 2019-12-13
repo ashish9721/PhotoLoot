@@ -2,10 +2,37 @@ import React, {Component} from 'react';
 import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 //Custom Imports
 import {styles} from './styles';
-import {Images, color,Strings} from '../../Constants';
+import {Images, color, Strings} from '../../Constants';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
+import AsyncStorage from '@react-native-community/async-storage';
 
 export default class Resend extends Component {
+  state = {
+    EyeActive: false,
+    pass: '',
+  };
+  eyeActivity = () => {
+    this.setState({
+      EyeActive: !this.state.EyeActive,
+    });
+  };
+  onSubmit = () => {
+    this.props.navigation.navigate('VerificationModal', {
+      title: 'Password reset successfully',
+      detail: Strings.RESETPASSWORDTEXT,
+      image: Images.SUCCESSGRAPHIC,
+    });
+    AsyncStorage.setItem('password', this.state.pass, () => {
+      console.log(
+        AsyncStorage.multiGet(
+          ['name', 'username', 'email', 'password'],
+          (err, res) => {
+            console.log(res);
+          },
+        ),
+      );
+    });
+  };
   render() {
     return (
       <KeyboardAwareScrollView>
@@ -24,23 +51,34 @@ export default class Resend extends Component {
             </Text>
             <View style={styles.inputTextField2Container}>
               <TextInput
+                value={this.state.pass}
+                onChangeText={text => {
+                  this.setState({
+                    pass: text,
+                  });
+                }}
                 style={styles.inputTextField2}
                 placeholder="New Password"
+                secureTextEntry={!this.state.EyeActive}
+                textContentType="password"
                 placeholderTextColor={color.placeholderText}></TextInput>
-              <Image
-                style={styles.inputTextField2Img}
-                source={Images.EYEINACTIVE}
-              />
+              <TouchableOpacity activeOpacity={0.7} onPress={this.eyeActivity}>
+                {this.state.EyeActive ? (
+                  <Image
+                    style={styles.inputTextField2Img}
+                    source={Images.EYEACTIVE}
+                  />
+                ) : (
+                  <Image
+                    style={styles.inputTextField2Img}
+                    source={Images.EYEINACTIVE}
+                  />
+                )}
+              </TouchableOpacity>
             </View>
             <TouchableOpacity
               activeOpacity={0.8}
-              onPress={() =>
-                this.props.navigation.navigate('VerificationModal',{
-                  title: 'Password reset successfully',
-                  detail:Strings.RESETPASSWORDTEXT,
-                  image:Images.SUCCESSGRAPHIC
-                })
-              }
+              onPress={this.onSubmit}
               style={styles.submitBtn}>
               <Text style={styles.submitTxt}>Submit</Text>
             </TouchableOpacity>

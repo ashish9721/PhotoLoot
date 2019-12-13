@@ -8,8 +8,11 @@ import {styles} from './styles';
 export const Edit = () => {
   return (
     <View style={styles.editContainer}>
+      <Image 
+      style={styles.editImage}
+      source={Images.PROFILEPIC}resizeMode="contain"/>
       <Image
-        style={styles.editImage}
+        style={styles.editCameraImage}
         source={Images.TRANSCAMERA}
         resizeMode="contain"
       />
@@ -18,6 +21,7 @@ export const Edit = () => {
       <TextInput
         style={styles.editTextView}
         multiline={true}
+        textAlignVertical="top"
         placeholder="Bio"
       />
       <TextInput value="email" style={styles.emailEmailInput} />

@@ -1,9 +1,16 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+//Custom Imports
 import {styles} from './styles'
-export default class HelpnSupport extends React.Component {
-  render() {
+import {Header} from '../../component/headers/header'
+ const HelpnSupport = (props) => {
     return (
+      <>
+       <Header
+      title = "Help & Support"
+      showBackButton={true}
+      navProps={props.navigation}
+      />
       <View style={styles.parentHelpnSupport}>
         <TextInput
           style={styles.name}
@@ -31,6 +38,7 @@ export default class HelpnSupport extends React.Component {
           <Text style={styles.submitstyle}>Submit</Text>
         </TouchableOpacity>
       </View>
+      </>
     );
   }
-}
+export default HelpnSupport;

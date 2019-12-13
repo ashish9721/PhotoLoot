@@ -3,6 +3,8 @@ import {Text, View, SectionList} from 'react-native';
 import {vh, vw} from '../../Constants';
 import {styles} from './styles';
 import {ThreeStickerContainer} from '../../component/functionalComponent/functional';
+import { Header } from '../../component/headers/header';
+
 export default class HallOfFame extends Component {
   renderData(result) {
     console.log('my result is ', result);
@@ -20,6 +22,13 @@ export default class HallOfFame extends Component {
 
   render() {
     return (
+      <>
+      <Header
+       showBackButton={true}
+       title="Hall of Fame"
+       showVotebutton={true}
+       navProps={this.props.navigation}
+      />
       <View style={styles.container}>
         <SectionList
           sections={DATA}
@@ -37,6 +46,7 @@ export default class HallOfFame extends Component {
                 paddingHorizontal: vw(15),
                 height: vh(30),
                 backgroundColor: 'white',
+                alignItems:'center',
               }}>
               <Text
                 style={{color: 'black', fontWeight: 'bold', fontSize: vw(18)}}>
@@ -50,6 +60,7 @@ export default class HallOfFame extends Component {
           )}
         />
       </View>
+      </>
     );
   }
 }

@@ -98,7 +98,7 @@ export const styles = StyleSheet.create({
   FaqAnswerView: {
     marginHorizontal: vw(15),
     backgroundColor: color.white,
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.1,
     elevation: 5,
     shadowOffset: {
       width: vw(1),
@@ -130,7 +130,7 @@ export const styles = StyleSheet.create({
   ParentTnC: {
     //TnC
     paddingHorizontal: vw(15),
-    marginTop: vh(25),
+    marginTop: vh(10),
   },
   termsTextTnC: {
     //TnC
@@ -170,7 +170,6 @@ export const styles = StyleSheet.create({
     color: '#ff9803',
     fontWeight: 'bold',
     marginTop: vh(40),
-    marginLeft: vw(13),
   },
   condDescText: {
     //TnC
@@ -186,7 +185,7 @@ export const styles = StyleSheet.create({
     color: '#ff9803',
     fontWeight: 'bold',
     marginLeft: vw(12),
-    marginTop: vh(40),
+    marginTop: vh(10),
   },
   middleView: {
     //Aboutus

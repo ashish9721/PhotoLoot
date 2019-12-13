@@ -88,7 +88,6 @@ export const styles = StyleSheet.create({
         width: vw(80),
         height: vw(80),
         borderRadius: vw(40),
-        backgroundColor: 'blue',
         marginBottom:vh(25)
     },
     editContainer:{
@@ -102,7 +101,7 @@ export const styles = StyleSheet.create({
         backgroundColor:color.whiteTwo,
         borderRadius:vw(10),
         marginTop:vh(15),
-        padding:vw(15),
+        padding:vw(10),
         fontSize:vh(15)
 
     },
@@ -122,9 +121,13 @@ export const styles = StyleSheet.create({
         backgroundColor:color.whiteTwo,
         borderRadius:vw(10),
         marginTop:vh(15),
-        padding:vw(15),
+        padding:vw(10),
         color:'gray',
         fontWeight:'700',
         fontSize:vw(15)
+    },
+    editCameraImage:{
+        position:'absolute',
+        top:vh(28)
     }
 })

@@ -7,11 +7,10 @@ import {
   TouchableOpacity,
   Switch,
 } from 'react-native';
-import Share from 'react-native-share';
-
 import Strings from '../../Constants/Strings';
 import Images from '../../Constants/Images';
 import {styles} from './styles';
+import { Header } from '../../component/headers/header';
 notifydata = [
   {
     title: Strings.CHANGEPASSWORD,
@@ -48,7 +47,7 @@ notifydata = [
     title: Strings.INVITECONTACT,
     image: Images.INVITE,
     sign: Images.ARROW,
-    //goto:'null'
+    // goto:null
   },
   {
     title: Strings.NOTIFICATION,
@@ -75,35 +74,11 @@ notifydata = [
   },
 ];
 
-
-
 class Settings extends React.Component {
-  state = {switchValue: false, result: ''};
+  state = {switchValue: false};
   toggleSwitch = value => {
     this.setState({switchValue: value});
   };
-
-  shareApp = async () => {
-    const shareOptions = {
-      title: 'Share Via',
-      message: 'some message',
-      url: 'some share url',
-      social: Share.Social.WHATSAPP,
-    };
-    try {
-      const ShareResponse = await Share.open(shareOptions);
-      console.log('data', ShareResponse);
-      this.setState({
-        result: JSON.stringify(ShareResponse),
-      });
-    } catch (error) {
-      console.log('Error =>', error);
-      this.setState({
-        result: getErrorString(error),
-      });
-    }
-  };
-
   sendData = rowData => {
     switch (rowData.item.title) {
       case 'Clear Search History':
@@ -121,9 +96,7 @@ class Settings extends React.Component {
           title: rowData.item.title,
         });
         break;
-      case 'Invite Contact' :
-        this.shareApp()
-        break;  
+
       default: {
         rowData.item.goto && this.props.navigation.navigate(rowData.item.goto);
       }
@@ -131,6 +104,13 @@ class Settings extends React.Component {
   };
   render() {
     return (
+      <>
+      <Header
+       showBackButton={false}
+       title="Settings"
+       showVotebutton={false}
+       navProps={this.props.navigation}
+      />
       <FlatList
         bounces={false}
         data={notifydata}
@@ -160,6 +140,7 @@ class Settings extends React.Component {
           );
         }}
       />
+      </>
     );
   }
 }

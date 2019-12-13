@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 import {StickerAndImage} from '../../component/functionalComponent/functional';
 import {styles} from './styles';
+import { Header } from '../../component/headers/header';
 export default class UpComingChallenges extends Component {
   renderData() {
     return Tempdata.map((result, index) => {
@@ -22,12 +23,21 @@ export default class UpComingChallenges extends Component {
 
   render() {
     return (
+      <>
+      <Header
+       showBackButton={true}
+       title="Upcoming Challenges"
+       showVotebutton={true}
+       navProps={this.props.navigation}
+      />
       <ScrollView
         style={styles.scrollViewStyle}
+        showsVerticalScrollIndicator={false}
         bounces={false}
         contentContainerStyle={styles.container}>
         {this.renderData()}
       </ScrollView>
+      </>
     );
   }
 }

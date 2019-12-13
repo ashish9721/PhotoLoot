@@ -25,7 +25,7 @@ export const VerificationModal = props => {
 <Text style={styles.verifyText}>{props.navigation.getParam('title')}</Text>
         <Text style={styles.detailTxt}>{props.navigation.getParam('detail')}</Text>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate('Home')}
+          onPress={() => props.navigation.navigate('Login')}
           style={styles.goButton}>
           <Text style={styles.letsGo}>Let's Go</Text>
         </TouchableOpacity>

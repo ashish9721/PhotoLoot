@@ -59,6 +59,7 @@ const Images = {
   CALENDER: require('../Assets/Images/icCalendar.png'),
   HOMETROPHY: require('../Assets/Images/ic-trophy.png'),
   WHITESEARCH: require('../Assets/Images/icWhiteSearch.png'),
+  HEADERPLUS: require('../Assets/Images/icPlusSign.png'),
   // Settings
   LOCK: require('../Assets/Images/icChangPass.png'),
   ARROW: require('../Assets/Images/icArrow.png'),
@@ -73,8 +74,8 @@ const Images = {
   SIGN: require('../Assets/Images/icSignOut.png'),
   YES: require('../Assets/Images/icYes.png'),
   NO: require('../Assets/Images/icNo.png'),
-  OPENQUESTION:require('../Assets/Images/icOpenQues.png'),
-  CLOSEQUESTION:require('../Assets/Images/icCloseQues.png'),
+  OPENQUESTION: require('../Assets/Images/icOpenQues.png'),
+  CLOSEQUESTION: require('../Assets/Images/icCloseQues.png'),
 };
 
 export default Images;
