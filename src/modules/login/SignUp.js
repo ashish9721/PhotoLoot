@@ -34,13 +34,9 @@ class SignUp extends React.Component {
     return re.test(email);
   };
   onSubmit = () => {
-    let cName = this.props.name.replace(/\s+/g, ' ').trim();
-    let cUserName = this.props.userName.replace(/\s+/g, ' ').trim();
-    // const email = []
-    console.log('cname', cUserName);
-
-    const name = ['name', cName];
-    const userName = ['username', cUserName];
+    const name = ['name', this.props.name];
+    const userName = ['username', this.props.userName];
+    const email = ['email', this.props.email];
     const password = ['password', this.props.password];
     try {
       AsyncStorage.multiSet([name, userName, email, password]);
@@ -52,12 +48,11 @@ class SignUp extends React.Component {
       this.props.name.length > 0 &&
       this.props.userName.length > 0 &&
       this.props.email.length > 0 &&
-      this.props.password.length > 0 &&
-      this.validateEmail(this.props.email)
+      this.props.password.length > 0
     )
-      this.props.navigation.navigate('Verification');
+      this.props.navigation.navigate('Login');
     else {
-      Alert.alert('Please fill all the details or valid email');
+      Alert.alert('Please fill all the details');
     }
   };
   render() {

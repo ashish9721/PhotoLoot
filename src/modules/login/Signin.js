@@ -13,14 +13,16 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview';
 //Custom Imports add here
 import {Images, color} from '../../Constants';
 import {styles} from './styles';
+import {LoginButton, AccessToken, LoginManager} from 'react-native-fbsdk';
 
+import {GraphRequest, GraphRequestManager} from 'react-native-fbsdk';
 export default class Signin extends React.Component {
   state = {
     email: '',
     password: '',
     EyeActive: true,
   };
-  eyeActivity = () => {    
+  eyeActivity = () => {
     this.setState({
       EyeActive: !this.state.EyeActive,
     });
@@ -38,6 +40,53 @@ export default class Signin extends React.Component {
         else {
           Alert.alert('Invalid email or password');
         }
+      },
+    );
+  };
+
+  fblogin = () => {
+    LoginManager.logInWithPermissions(['public_profile']).then(
+      function(result) {
+        if (result.isCancelled) {
+          console.log('Login cancelled');
+        } else {
+          console.log(
+            'Login success with permissions: ' +
+              result.grantedPermissions.toString(),
+          );
+        }
+        {
+          AccessToken.getCurrentAccessToken().then(data => {
+            let accessToken = data.accessToken;
+            console.log(data.accessToken.toString());
+            const responseInfoCallback = (error, result) => {
+              if (error) {
+                console.log(error);
+                alert('Error fetching data: ' + error.toString());
+              } else {
+                console.log(result);
+                alert('Success fetching data: ' + result.toString());
+                this.props.navigation.navigate('Home');
+              }
+            };
+            const infoRequest = new GraphRequest(
+              '/me',
+              {
+                accessToken: accessToken,
+                parameters: {
+                  fields: {
+                    string: 'email,name,first_name,middle_name,last_name',
+                  },
+                },
+              },
+              responseInfoCallback,
+            );
+            new GraphRequestManager().addRequest(infoRequest).start();
+          });
+        }
+      },
+      function(error) {
+        console.log('Login fail with error: ' + error);
       },
     );
   };
@@ -103,7 +152,10 @@ export default class Signin extends React.Component {
           </TouchableOpacity>
           <Text style={styles.connectText}>or Connect With</Text>
           <View style={styles.socialView}>
-            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
+            <TouchableOpacity
+              activeOpacity={0.8}
+              style={styles.socialButton}
+              onPress={this.fblogin}>
               <Image
                 style={styles.sociaImage}
                 source={Images.FACEBOOK}
@@ -111,6 +163,7 @@ export default class Signin extends React.Component {
               />
               <Text style={styles.socialText}>FaceBook</Text>
             </TouchableOpacity>
+
             <TouchableOpacity
               onPress={() => {
                 this.props.navigation.navigate('OutOfVotes');
