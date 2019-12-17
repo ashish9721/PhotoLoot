@@ -22,6 +22,17 @@ export default class Signin extends React.Component {
     password: '',
     EyeActive: true,
   };
+
+  // constructor(props) {
+    // super(props);
+    // debugger;
+  // }
+
+  navigateWithParams(result) {
+    // this.props.navigation.navigate("Home",{userData: result})
+    console.warn(result);
+  }
+
   eyeActivity = () => {
     this.setState({
       EyeActive: !this.state.EyeActive,
@@ -43,10 +54,9 @@ export default class Signin extends React.Component {
       },
     );
   };
-
   fblogin = () => {
     LoginManager.logInWithPermissions(['public_profile']).then(
-      function(result) {
+      result => {
         if (result.isCancelled) {
           console.log('Login cancelled');
         } else {
@@ -62,12 +72,18 @@ export default class Signin extends React.Component {
             const responseInfoCallback = (error, result) => {
               if (error) {
                 console.log(error);
-                alert('Error fetching data: ' + error.toString());
+                // alert('Error fetching data: ' + error.toString());
               } else {
-                console.log(result);
-                alert('Success fetching data: ' + result.toString());
+                // console.log(result);
+                console.warn('Success fetching data: ' + result);
+                // this.navigateWithParams("hello")
+                // this.navigationfb();
+                // console.warn(this.state)
+                // fbresult=result;
+                // this.navigateWithParams();
                 this.props.navigation.navigate('Home');
               }
+              console.warn(fbresult);
             };
             const infoRequest = new GraphRequest(
               '/me',
@@ -89,6 +105,11 @@ export default class Signin extends React.Component {
         console.log('Login fail with error: ' + error);
       },
     );
+  };
+
+  navigationfb = () => {
+    // this.props.navigation.navigate('Home');
+    console.warn(this.state);
   };
   render() {
     return (
@@ -180,7 +201,7 @@ export default class Signin extends React.Component {
           </View>
           <View style={styles.clickableLinkContVerification}>
             <Text style={styles.dontHaveText}>
-              Don't have an account
+              Don't have an account?
               <Text
                 style={styles.SignUpText}
                 onPress={() => {
@@ -196,3 +217,5 @@ export default class Signin extends React.Component {
     );
   }
 }
+
+var fbresult = [];
